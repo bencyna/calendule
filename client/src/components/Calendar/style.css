@@ -1,0 +1,15 @@
+.fc,
+.fc-media-screen,
+.fc-direction-ltr,
+.fc-theme-standard {
+  padding: 3%;
+}
+
+.fc-daygrid-day-number,
+.fc-col-header-cell-cushion {
+  color: black;
+}
+
+.fc-daygrid-day-frame .fc-scrollgrid-sync-inner {
+  background-color: black;
+}
