@@ -8,6 +8,7 @@
 .fc-daygrid-day-number,
 .fc-col-header-cell-cushion {
   color: black;
+  text-decoration: nonen;
 }
 
 .fc-daygrid-day-frame .fc-scrollgrid-sync-inner {
