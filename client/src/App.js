@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import PrivateRoute from "./components/PrivateRoute";
 import { StoreProvider } from "./utils/GlobalState";
 import MyMonthlyCalendar from "./pages/calendar";
+import Day from "./components/Day";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Switch>
             <Route exact path="/login" component={Login} />
             <Route exact path="/" component={MyMonthlyCalendar} />
+            <Route exact path="/date/:id" component={Day} />
           </Switch>
         </StoreProvider>
       </div>

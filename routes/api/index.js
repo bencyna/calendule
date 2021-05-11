@@ -3,6 +3,6 @@ const userRoutes = require("./userRoutes.js");
 const bookingRoutes = require("./bookingRoutes");
 
 router.use("/users", userRoutes);
-router.use("/bookings", bookingRoutes);
+router.use("/date", bookingRoutes);
 
 module.exports = router;

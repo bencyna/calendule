@@ -16,6 +16,17 @@ const reducer = (state, action) => {
         ...state,
         login: true,
       };
+    case "DATECLICKED":
+      return {
+        ...state,
+        dateClicked: !state.dateClicked,
+      };
+    case "userClicked":
+      return {
+        ...state,
+        dateClicked: false,
+      };
+
     default:
       return state;
   }
@@ -25,14 +36,14 @@ const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     events: [],
     currentBooking: {
-      id: 0,
       title: "",
       description: "",
-      bookee: "",
-      booker: "",
       location: "",
+      date: "",
     },
     login: true,
+    dateClicked: false,
+    date: "",
   });
   return <Provider value={[state, dispatch]} {...props} />;
 };

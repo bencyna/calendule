@@ -31,7 +31,6 @@ function LoginForm() {
     e.preventDefault();
     dispatch({
       type: "SIGNUP",
-      login: false,
     });
   };
 

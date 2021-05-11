@@ -1,10 +1,65 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect } from "react";
+import API from "../../utils/API";
+import { useParams, Link } from "react-router-dom";
 
-function Day(props) {
-  return <div>{props.date}hello</div>;
-  // okay so, you will set the date in the onclick funtion before this page renders to the state, then when someone adds an event to the day, we set the date of the event to the state date, we
-  // onlci to the page, we use a get axios to get all events with the date_id of the date (if there are none none will appear and render a day)
-  // when adding an event, we set the event date_id to the day which is already a parameter in that function. Boom we have the component fucl uah
+function Day() {
+  const [currentBooking, setCurrentBooking] = useState([""]);
+  const [noEvents, setNoEvents] = useState(false);
+
+  const { id } = useParams();
+
+  useEffect(() => {
+    API.getBookings(id).then((res) => {
+      if (res.data.length > 0) {
+        setNoEvents(true);
+      }
+      setCurrentBooking(res.data);
+      console.log(res.data);
+    });
+  }, [noEvents]);
+
+  // const clickTitle = () => {
+  //   dispatch({
+  //     type: "DATECLICKED",
+  //     // type: "",
+  //   });
+  // };
+
+  return (
+    <div>
+      {noEvents ? (
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Title (click me to see details)</th>
+              <th scope="col">description</th>
+              <th scope="col">date</th>
+              <th scope="col">time</th>
+            </tr>
+          </thead>
+          <tbody>
+            {currentBooking.map((booked) => {
+              return (
+                <tr className="table-info" key={booked.id}>
+                  <td>
+                    {" "}
+                    <Link to={`./date/booking/${booked.id}`}>
+                      <th scope="row">{booked.title}</th>
+                    </Link>
+                  </td>
+                  <td>{booked.description}</td>
+                  <td>{booked.date}</td>
+                  <td>Time</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      ) : (
+        <h1>You have nothing but time today!</h1>
+      )}
+    </div>
+  );
 }
 
 export default Day;

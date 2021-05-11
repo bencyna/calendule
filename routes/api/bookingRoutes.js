@@ -1,20 +1,17 @@
 const { Booking } = require("../../models");
 const router = require("express").Router();
+const bookingController = require("../../controllers/bookingsController");
 
-router.post("booking", async (req, res) => {
-  try {
-    const bookingData = await Booking.create({
-      title: req.body.title,
-      date: req.body.date,
-      decription: req.body.description,
-      location: req.body.location,
-    });
+// Matches with "/api/books"
+router.route("/").get(bookingController.findAll).post(bookingController.create);
 
-    res.status(200).json(bookingData);
-  } catch (error) {
-    console.log(error);
-    res.status(400).json(error);
-  }
-});
+// Matches with "/api/books/:id"
+router
+  .route("/:id")
+  .get(bookingController.findAllWhere)
+  .put(bookingController.update)
+  .delete(bookingController.remove);
+
+module.exports = router;
 
 module.exports = router;

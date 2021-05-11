@@ -1,29 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import "./style.css";
 import Day from "../Day";
+import { useStoreContext } from "../../utils/GlobalState";
+import { useHistory } from "react-router-dom";
 
 function Calendar() {
-  const [date, setDate] = useState();
-  const [dateClicked, setDateClicked] = useState(false);
+  const [state, dispatch] = useStoreContext();
+  const history = useHistory();
 
   const handleDateClick = (arg) => {
-    setDate(arg.dateStr);
-    setDateClicked(true);
+    dispatch({
+      type: "DATECLICKED",
+      // type: "",
+    });
+    history.push(`/date/${arg.dateStr}`);
   };
   return (
     <div>
-      {!dateClicked ? (
-        <FullCalendar
-          plugins={[dayGridPlugin, interactionPlugin]}
-          initialView="dayGridMonth"
-          dateClick={handleDateClick}
-        />
-      ) : (
-        <Day props={(date, dateClicked, "Hi")} />
-      )}
+      <FullCalendar
+        plugins={[dayGridPlugin, interactionPlugin]}
+        initialView="dayGridMonth"
+        dateClick={handleDateClick}
+      />
     </div>
   );
 }

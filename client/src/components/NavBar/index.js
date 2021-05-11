@@ -1,9 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useStoreContext } from "../../utils/GlobalState";
 
 function NavBar() {
+  const [state, dispatch] = useStoreContext();
+
+  const setCalendarFalse = (e) => {
+    e.preventDefault();
+    dispatch({
+      type: "userClicked",
+    });
+  };
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           Navbar
@@ -23,7 +32,7 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarColor03">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/" onClick={setCalendarFalse}>
                 User
               </Link>
             </li>
