@@ -34,8 +34,8 @@ function SignUpForm() {
     }
   };
   // This is not returning the state back to true
-  const hanldeSignUpFinish = (e) => {
-    e.preventDefault();
+  const hanldeSignUpFinish = () => {
+    // e.preventDefault();
     console.log("hey");
     dispatch({
       type: "LOGIN",

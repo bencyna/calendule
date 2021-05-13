@@ -16,11 +16,6 @@ const reducer = (state, action) => {
         ...state,
         login: true,
       };
-    case "DATECLICKED":
-      return {
-        ...state,
-        dateClicked: !state.dateClicked,
-      };
     case "userClicked":
       return {
         ...state,

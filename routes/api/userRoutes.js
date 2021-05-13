@@ -1,5 +1,6 @@
 const { User } = require("../../models");
 const router = require("express").Router();
+const userController = require("../../controllers/userControllers");
 
 router.post("/login", async (req, res) => {
   try {
@@ -49,5 +50,7 @@ router.post("/logout", (req, res) => {
     res.status(404).end();
   }
 });
+
+router.route("/find").get(userController.findAll);
 
 module.exports = router;

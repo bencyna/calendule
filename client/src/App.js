@@ -5,8 +5,10 @@ import Login from "./pages/login";
 import NavBar from "./components/NavBar";
 import PrivateRoute from "./components/PrivateRoute";
 import { StoreProvider } from "./utils/GlobalState";
-import MyMonthlyCalendar from "./pages/calendar";
+import Calendar from "./pages/Calendar";
 import Day from "./components/Day";
+import Find from "./pages/find";
+import altUserCalendar from "./components/AltUserCal";
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/login" component={Login} />
-            <Route exact path="/" component={MyMonthlyCalendar} />
+            <Route exact path="/" component={Calendar} />
             <Route exact path="/date/:id" component={Day} />
+            <Route exact path="/find" component={Find} />
+            <Route exact path="/user/:id" component={altUserCalendar} />
           </Switch>
         </StoreProvider>
       </div>
