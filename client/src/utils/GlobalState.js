@@ -22,6 +22,38 @@ const reducer = (state, action) => {
         dateClicked: false,
       };
 
+    case "modalClick":
+      return {
+        ...state,
+        modal: !state.modal,
+        date: action.date,
+      };
+    case "eventSubmit":
+      return {
+        ...state,
+        eventAdded: true,
+      };
+    case "eventSubmitDone":
+      return {
+        ...state,
+        eventAdded: false,
+      };
+    case "searchInvoked":
+      return {
+        ...state,
+        search: action.search,
+      };
+    case "addUsers":
+      return {
+        ...state,
+        users: action.users,
+      };
+    case "LOGGINGIN":
+      return {
+        ...state,
+        logged_in: action.logged_in,
+        user_id: action.id,
+      };
     default:
       return state;
   }
@@ -30,15 +62,15 @@ const reducer = (state, action) => {
 const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     events: [],
-    currentBooking: {
-      title: "",
-      description: "",
-      location: "",
-      date: "",
-    },
+    users: [],
     login: true,
     dateClicked: false,
     date: "",
+    modal: false,
+    eventAdded: false,
+    search: "",
+    logged_in: false,
+    user_id: "",
   });
   return <Provider value={[state, dispatch]} {...props} />;
 };

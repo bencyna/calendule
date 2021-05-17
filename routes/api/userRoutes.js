@@ -17,10 +17,11 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
 
       res.json({ user: userData, message: "You are now logged in" });
+
+      console.log(req.session);
     });
   } catch (error) {
     res.status(400).json(error);
-    console.log(error);
     res.json(error);
   }
 });
@@ -52,5 +53,17 @@ router.post("/logout", (req, res) => {
 });
 
 router.route("/find").get(userController.findAll);
+
+router.get("/user", (req, res) => {
+  try {
+    console.log("getting user data!");
+    console.log(req.session);
+    res.json(req.session);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.route("/:id").get(userController.findByPk);
 
 module.exports = router;

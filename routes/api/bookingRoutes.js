@@ -1,11 +1,10 @@
-const { Booking } = require("../../models");
 const router = require("express").Router();
 const bookingController = require("../../controllers/bookingsController");
 
-// Matches with "/api/books"
-// router.route("/").get(bookingController.findAll).post(bookingController.create);
+// Matches with "/api/date"
+router.route("/").get(bookingController.findAll).post(bookingController.create);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/date/:id"
 router
   .route("/:id")
   .get(bookingController.findAllWhere)

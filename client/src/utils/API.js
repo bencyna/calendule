@@ -13,4 +13,10 @@ export default {
   getUsers: function () {
     return axios.get("/api/users/find");
   },
+  getUser: function (id) {
+    return axios.get("/api/users/" + id);
+  },
+  createEvent: function (eventData) {
+    return axios.post("/api/date/", eventData);
+  },
 };

@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
-import API from "../../utils/API";
+import CardList from "../Cards/CardList";
+// import { data } from "../../data";
+import _ from "lodash";
+import { useHistory } from "react-router-dom";
 
 function LoginForm() {
+  // const [userData] = useContext(UserProvider.context);
+  // const loginType = !_.isEmpty(userData)
+  // ? _.find(data, (d) => d.name === userData.provider)
+  // : {};
+
+  const history = useHistory();
   const [state, dispatch] = useStoreContext();
 
   const handleLogin = async (e) => {
@@ -20,10 +28,21 @@ function LoginForm() {
       });
       if (response.ok) {
         console.log(response);
-        document.location.replace("/");
-      } else {
-        console.log("Failed to log in");
+        fetch("/api/users/user")
+          .then((res) => res.json())
+          .then((res) => {
+            dispatch({
+              type: "LOGGINGIN",
+              logged_in: res.logged_in,
+              id: res.user_id,
+            });
+            console.log(res);
+            history.push("/");
+          })
+          .catch((err) => console.log(err));
       }
+    } else {
+      console.log("Failed to log in");
     }
   };
 
@@ -52,6 +71,7 @@ function LoginForm() {
           <button onClick={hanldeSignUpBtn}>Sign up here</button>
         </div>
       </form>
+      <CardList />
     </div>
   );
 }

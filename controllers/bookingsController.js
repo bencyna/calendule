@@ -8,14 +8,14 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findAllWhere: function (req, res) {
-    console.log(req.params);
+    console.log(req.query);
     db.Booking.findAll({
       where: {
         date: req.params.id,
       },
     })
       .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.status(422).json(err));
+      .catch((err) => console.log(err)); //res.status(422).json(err));
   },
   findById: function (req, res) {
     db.Booking.findById(req.params.id)
@@ -25,7 +25,7 @@ module.exports = {
   create: function (req, res) {
     db.Booking.create(req.body)
       .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.status(422).json(err));
+      .catch((err) => console.log(err)); //res.status(422).json(err));
   },
   update: function (req, res) {
     db.Booking.findOneAndUpdate({ _id: req.params.id }, req.body)

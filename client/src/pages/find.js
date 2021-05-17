@@ -1,16 +1,21 @@
 // import "./style.css";
 import { useHistory } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useStoreContext } from "../utils/GlobalState";
+
 import API from "../utils/API";
 
 function Find() {
-  const [users, setUsers] = useState([]);
+  const [state, dispatch] = useStoreContext();
+
   const history = useHistory();
 
   useEffect(() => {
     API.getUsers().then((res) => {
-      console.log(res.data);
-      setUsers(res.data);
+      dispatch({
+        type: "addUsers",
+        users: res.data,
+      });
     });
   }, []);
 
@@ -19,9 +24,25 @@ function Find() {
     console.log(userId);
     history.push(`/user/${userId}`);
   };
+
+  const onClik = () => {
+    const searchingFor = state.users.filter(
+      (user) => user.first_name === state.search //.toLowerCase() === state.search.toLowerCase()
+    );
+    console.log(state.users);
+    console.log(state.search);
+    console.log(searchingFor);
+  };
+
+  const searchingFor = state.users.filter(
+    (user) => user.first_name.toUpperCase().includes(state.search.toUpperCase())
+    // make a full name in the data so we can search by full name
+    // make an if this is empty, show no one by that name
+  );
+
   return (
     <div>
-      <h1>Search for someone to make an event!</h1>
+      <h1 onClick={onClik}> Search for someone to make an event!</h1>
       <table className="table table-hover">
         <thead>
           <tr>
@@ -31,7 +52,7 @@ function Find() {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => {
+          {searchingFor.map((user) => {
             return (
               <tr
                 className="table-dark"

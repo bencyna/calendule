@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import { useParams, Link } from "react-router-dom";
 import "./style.css";
+import { useStoreContext } from "../../utils/GlobalState";
 
 function Day() {
   const [getBookings, setBookings] = useState([""]);
@@ -10,9 +11,10 @@ function Day() {
   const [currentBooking, setCurrentBooking] = useState({});
 
   const { id } = useParams();
+  const [state, dispatch] = useStoreContext();
 
   useEffect(() => {
-    API.getBookings(id).then((res) => {
+    API.getBookings(id, state.user_id).then((res) => {
       if (res.data.length > 0) {
         setNoEvents(true);
       }
@@ -50,14 +52,14 @@ function Day() {
                     {getBookings.map((booked) => {
                       return (
                         <li className="li events eventTitle" key={booked.id}>
-                          <a
-                            href="#"
+                          <Link
+                            to="#"
                             scope="row"
                             onClick={clickEvent}
                             id={booked.id}
                           >
                             {booked.title}
-                          </a>
+                          </Link>
                         </li>
                       );
                     })}
@@ -71,16 +73,16 @@ function Day() {
                   <h2 className="h2"> {currentBooking[0].title}</h2>
                   <ul className="ul">
                     <li className="li">
-                      <a href="#"> {currentBooking[0].description}</a>
+                      <Link to="#"> {currentBooking[0].description}</Link>
                     </li>
                     <li className="li">
-                      <a href="#"> {currentBooking[0].location}</a>
+                      <Link to="#"> {currentBooking[0].location}</Link>
                     </li>
                     <li className="li">
-                      <a href="#"> {currentBooking[0].start_time}</a>
+                      <Link to="#"> {currentBooking[0].start_time}</Link>
                     </li>
                     <li className="li">
-                      <a href="#"> {currentBooking[0].date}</a>
+                      <Link to="#"> {currentBooking[0].date}</Link>
                     </li>
                     <li className="li"></li>
                   </ul>
@@ -101,35 +103,3 @@ function Day() {
 }
 
 export default Day;
-
-{
-  /* <table className="table table-hover">
-<thead>
-  <tr>
-    <th scope="col">Title (click me to see details)</th>
-    <th scope="col">description</th>
-    <th scope="col">location</th>
-    <th scope="col">date</th>
-    <th scope="col">time</th>
-  </tr>
-</thead>
-<tbody>
-  {getBookings.map((booked) => {
-    return (
-      <tr className="table-info" key={booked.id}>
-        <td>
-          {" "}
-          <Link to={`/date/booking/${booked.id}`}>
-            <th scope="row">{booked.title}</th>
-          </Link>
-        </td>
-        <td>{booked.description}</td>
-        <td>{booked.location}</td>
-        <td>{booked.date}</td>
-        <td>Time</td>
-      </tr>
-    );
-  })}
-</tbody>
-</table> */
-}

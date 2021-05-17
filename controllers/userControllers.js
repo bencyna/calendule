@@ -1,4 +1,5 @@
 const db = require("../models/");
+const Bookings = require("../models/bookings");
 
 module.exports = {
   findAll: function (req, res) {
@@ -7,10 +8,10 @@ module.exports = {
       .catch((err) => console.log(err));
     //   res.status(422).json(err));
   },
-  findById: function (req, res) {
-    db.User.findById(req.params.id)
+  findByPk: function (req, res) {
+    db.User.findByPk(req.params.id)
       .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.status(422).json(err));
+      .catch((err) => console.log(err)); //res.status(422).json(err));
   },
   create: function (req, res) {
     db.User.create(req.body)
