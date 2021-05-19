@@ -1,0 +1,212 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/components/Login/index.js":
+/*!***************************************!*\
+  !*** ./src/components/Login/index.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.css */ "./src/components/Login/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+/* harmony import */ var _Cards_CardList__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Cards/CardList */ "./src/components/Cards/CardList.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../utils/API */ "./src/utils/API.js");
+
+
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\Login\\index.js";
+
+
+
+ // import { data } from "../../data";
+
+
+
+
+
+function LoginForm() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({
+    email: "",
+    password: ""
+  }),
+      _useState2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
+      formInput = _useState2[0],
+      setFormInput = _useState2[1];
+
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["useHistory"])();
+
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  var hanldeFormInput = function hanldeFormInput(event) {
+    var _event$target = event.target,
+        name = _event$target.name,
+        value = _event$target.value;
+    setFormInput(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({}, formInput), {}, Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, name, value)));
+    console.log(formInput);
+  };
+
+  var handleLogin = function handleLogin(e) {
+    e.preventDefault();
+
+    if (formInput.email && formInput.password) {
+      _utils_API__WEBPACK_IMPORTED_MODULE_9__["default"].loginUser({
+        email: formInput.email,
+        password: formInput.password
+      }) // const response = await fetch("/api/users/login", {
+      //   method: "POST",
+      //   body: JSON.stringify({ email, password }),
+      //   headers: { "Content-Type": "application/json" },
+      // });
+      // if (response.ok) {
+      //   console.log(response);
+      //   fetch("/api/users/user")
+      // .then((res) => res.json())
+      .then(function (res) {
+        dispatch({
+          type: "LOGGINGIN",
+          logged_in: res.logged_in,
+          id: res.user_id
+        });
+        console.log(res);
+        history.push("/");
+      }).catch(function (err) {
+        return console.log(err);
+      }); // password / email doesnt match error
+    } else {
+      console.log("Failed to log in"); // error password email and password cannot be blank
+    }
+  };
+
+  var hanldeSignUpBtn = function hanldeSignUpBtn(e) {
+    e.preventDefault();
+    dispatch({
+      type: "SIGNUP"
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "col-md-4 loginContainer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("form", {
+    className: "form login-form login",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 11
+    }
+  }, "email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    className: "form-input",
+    type: "text",
+    id: "email-login",
+    name: "email",
+    onChange: hanldeFormInput,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78,
+      columnNumber: 11
+    }
+  }, "password:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    className: "form-input",
+    type: "password",
+    id: "password-login",
+    name: "password",
+    onChange: hanldeFormInput,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    id: "signup",
+    className: "btn btn-primary",
+    onClick: handleLogin,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88,
+      columnNumber: 11
+    }
+  }, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    onClick: hanldeSignUpBtn,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 11
+    }
+  }, "Sign up here"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Cards_CardList__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94,
+      columnNumber: 7
+    }
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (LoginForm);
+
+/***/ })
+
+})
+//# sourceMappingURL=main.45e639e2ac8d0e948f65.hot-update.js.map

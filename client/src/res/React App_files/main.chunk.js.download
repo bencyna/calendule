@@ -1,0 +1,3636 @@
+(this["webpackJsonpmern"] = this["webpackJsonpmern"] || []).push([["main"],{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/App.css ***!
+  \************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".App {\n  text-align: center;\n}\n\n.App-logo {\n  height: 40vmin;\n  pointer-events: none;\n}\n\n@media (prefers-reduced-motion: no-preference) {\n  .App-logo {\n    -webkit-animation: App-logo-spin infinite 20s linear;\n            animation: App-logo-spin infinite 20s linear;\n  }\n}\n\n.App-header {\n  background-color: #282c34;\n  min-height: 100vh;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  font-size: calc(10px + 2vmin);\n  color: white;\n}\n\n.App-link {\n  color: #61dafb;\n}\n\n@-webkit-keyframes App-logo-spin {\n  from {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes App-logo-spin {\n  from {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Cards/style.css":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/Cards/style.css ***!
+  \*******************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".card {\r\n  background-color: white;\r\n  border-radius: 2px;\r\n  display: inline-block;\r\n  margin-right: 2em;\r\n  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);\r\n  transition: all ease-in-out 0.6s;\r\n}\r\n\r\n.card:hover {\r\n  -webkit-transform: translateY(-10px);\r\n          transform: translateY(-10px);\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Day/style.css":
+/*!*****************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/Day/style.css ***!
+  \*****************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".eventList {\r\n  margin-top: 15%;\r\n  background-color: white;\r\n  border-radius: 15px;\r\n  height: 70%;\r\n  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;\r\n}\r\n\r\n.noEventClicked {\r\n  padding: 30%;\r\n  text-align: center;\r\n  font-size: 30px;\r\n}\r\n\r\n.clickedEvent {\r\n  margin-left: 7%;\r\n  margin-top: 6% !important;\r\n  background-color: white;\r\n  border-radius: 15px;\r\n  height: 500px;\r\n  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;\r\n}\r\n\r\n.h2 {\r\n  font: 400 30px/1.5 Helvetica, Verdana, sans-serif;\r\n  margin: 0;\r\n  padding: 3%;\r\n  text-align: center;\r\n  width: 100%;\r\n}\r\n\r\n.ul {\r\n  list-style-type: none;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n.li {\r\n  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;\r\n  border-bottom: 1px solid #ccc;\r\n}\r\n\r\n/* li:last-child {\r\n  border: none;\r\n} */\r\n\r\nli a,\r\n.input {\r\n  text-decoration: none;\r\n  color: #000;\r\n  display: block;\r\n  transition: font-size 0.3s ease, background-color 0.3s ease;\r\n}\r\n\r\n.events a:hover {\r\n  font-size: 25px;\r\n  /* background: #f6f6f6; */\r\n}\r\n\r\n.centre {\r\n  text-align: center;\r\n}\r\n\r\n.backBtn {\r\n  color: #004e7c;\r\n}\r\n.backBtn:hover {\r\n  font-size: 50px;\r\n  transition: font-size 0.5s ease;\r\n  cursor: pointer;\r\n}\r\n\r\n.hide {\r\n  display: none;\r\n}\r\n\r\n.updatePosts {\r\n  text-align: right;\r\n}\r\n\r\n.updatePost:hover {\r\n  cursor: pointer;\r\n}\r\n\r\n.input {\r\n  position: relative;\r\n  float: left;\r\n  width: 95%;\r\n  border-left: none;\r\n  border-right: none;\r\n  border-top: none;\r\n  border-bottom: 1px solid #ccc;\r\n  text-align: left;\r\n}\r\n\r\n.input:hover {\r\n  cursor: pointer;\r\n}\r\n\r\n.updateValue {\r\n  vertical-align: bottom;\r\n  font-size: 10px;\r\n  width: 5%;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Login/style.css":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/Login/style.css ***!
+  \*******************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".loginContainer {\r\n  padding: 20% 10%;\r\n  border: green;\r\n  border-left: 10px;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/SignUp/style.css":
+/*!********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/SignUp/style.css ***!
+  \********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".signupContainer {\r\n  padding: 20% 10%;\r\n  border: green;\r\n  border-left: 10px;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Welcome/style.css":
+/*!*********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/Welcome/style.css ***!
+  \*********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "#welcomeTag {\r\n  padding-top: 30%;\r\n  text-align: center;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/index.css ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ":root {\n  --primary--red: #ff64f59;\n}\n\nbody {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\",\n    \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\",\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  background-color: #e0e0e0 !important;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n    monospace;\n}\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/pages/Calendar/style.css":
+/*!*****************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/pages/Calendar/style.css ***!
+  \*****************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".fc,\r\n.fc-media-screen,\r\n.fc-direction-ltr,\r\n.fc-theme-standard {\r\n  padding: 3%;\r\n}\r\n\r\n.fc-daygrid-day-number,\r\n.fc-col-header-cell-cushion {\r\n  color: black;\r\n  text-decoration: none;\r\n}\r\n\r\n.fc-daygrid-day-frame:hover .fc-scrollgrid-sync-inner:hover {\r\n  background-color: black;\r\n  cursor: pointer !important;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./src/App.css":
+/*!*********************!*\
+  !*** ./src/App.css ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css", function() {
+		var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.css */ "./src/App.css");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _pages_login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/login */ "./src/pages/login.js");
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/NavBar */ "./src/components/NavBar/index.js");
+/* harmony import */ var _components_PrivateRoute__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/PrivateRoute */ "./src/components/PrivateRoute/index.js");
+/* harmony import */ var _components_PrivateRoute__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_PrivateRoute__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/GlobalState */ "./src/utils/GlobalState.js");
+/* harmony import */ var _pages_Calendar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/Calendar */ "./src/pages/Calendar/index.js");
+/* harmony import */ var _components_Day__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Day */ "./src/components/Day/index.js");
+/* harmony import */ var _pages_find__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/find */ "./src/pages/find.js");
+/* harmony import */ var _components_AltUserCal__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/AltUserCal */ "./src/components/AltUserCal/index.js");
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\App.js";
+
+
+
+
+
+
+
+
+
+
+
+
+function App() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_6__["StoreProvider"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 11
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: "/login",
+    component: _pages_login__WEBPACK_IMPORTED_MODULE_3__["default"],
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: "/",
+    component: _pages_Calendar__WEBPACK_IMPORTED_MODULE_7__["default"],
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: "/date/:id",
+    component: _components_Day__WEBPACK_IMPORTED_MODULE_8__["default"],
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: "/find",
+    component: _pages_find__WEBPACK_IMPORTED_MODULE_9__["default"],
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: "/user/:id",
+    component: _components_AltUserCal__WEBPACK_IMPORTED_MODULE_10__["default"],
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 13
+    }
+  })))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/components/AltUserCal/index.js":
+/*!********************************************!*\
+  !*** ./src/components/AltUserCal/index.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _fullcalendar_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fullcalendar/react */ "../node_modules/@fullcalendar/react/dist/main.js");
+/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fullcalendar/daygrid */ "../node_modules/@fullcalendar/daygrid/main.js");
+/* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fullcalendar/interaction */ "../node_modules/@fullcalendar/interaction/main.js");
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/API */ "./src/utils/API.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _eventInput__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../eventInput */ "./src/components/eventInput/index.js");
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+
+
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\AltUserCal\\index.js";
+
+
+
+
+
+
+
+
+
+function AltUserCalendar() {
+  var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["useParams"])(),
+      id = _useParams.id;
+
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_10__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({}),
+      _useState2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
+      user = _useState2[0],
+      setUser = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(""),
+      _useState4 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState3, 2),
+      dateClicked = _useState4[0],
+      setDateClicked = _useState4[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
+    _utils_API__WEBPACK_IMPORTED_MODULE_7__["default"].getUser(id).then(function (res) {
+      console.log(res.data);
+      setUser(res.data);
+    });
+    console.log(state.logged_in + state.user_id);
+  }, []);
+
+  var handleDateClick = /*#__PURE__*/function () {
+    var _ref = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(arg) {
+      return C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              console.log(arg.dateStr);
+              _context.next = 3;
+              return setDateClicked(arg.dateStr);
+
+            case 3:
+              dispatch({
+                type: "modalClick",
+                date: arg.dateStr
+              });
+
+            case 4:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function handleDateClick(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h1", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 7
+    }
+  }, "Welcome to ", user.first_name, "'s Calendar! Cick a day to add en event!"), state.eventAdded ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "successMessage",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "alert alert-dismissible alert-success",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    className: "btn-close",
+    "data-bs-dismiss": "alert",
+    onClick: dispatch({
+      type: "eventSubmitDone"
+    }),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("strong", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 13
+    }
+  }, "Nice!"), " You successfully added an event to", " ", user.first_name, "'s Calendar,", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
+    to: "/myevents",
+    className: "alert-link",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 13
+    }
+  }, "Click me to see your events!"), " ")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 9
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_fullcalendar_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    plugins: [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_5__["default"], _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_6__["default"]],
+    initialView: "dayGridMonth",
+    dateClick: handleDateClick,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 7
+    }
+  }), state.modal ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_eventInput__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 22
+    }
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "hide",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 39
+    }
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (AltUserCalendar);
+
+/***/ }),
+
+/***/ "./src/components/Cards/Card.js":
+/*!**************************************!*\
+  !*** ./src/components/Cards/Card.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\Cards\\Card.js";
+
+
+
+var Card = function Card(_ref) {
+  var img = _ref.img,
+      name = _ref.name,
+      href = _ref.href,
+      color = _ref.color;
+  var NAME = name.charAt(0).toUpperCase() + name.substring(1, name.length);
+
+  var handleFacebookClick = /*#__PURE__*/function () {
+    var _ref2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              // const response = await fetch("/auth/facebook/", {
+              //   method: "GET",
+              //   headers: { "Content-Type": "application/json" },
+              // });
+              window.location.href = "/api/auth/facebook";
+
+            case 1:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function handleFacebookClick() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "card",
+    style: {
+      border: "1px solid ".concat(color),
+      borderRadius: 2
+    },
+    onClick: handleFacebookClick,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    style: {
+      margin: 0,
+      textAlign: "left",
+      padding: "5px 0px 5px 10px"
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 9
+    }
+  }, NAME)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    style: {
+      minHeight: 100,
+      minWidth: 100,
+      background: "url(\"".concat(img, "\") no repeat center center / 50% ").concat(color)
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 7
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Card);
+
+/***/ }),
+
+/***/ "./src/components/Cards/CardList.js":
+/*!******************************************!*\
+  !*** ./src/components/Cards/CardList.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Card */ "./src/components/Cards/Card.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data */ "./src/data/index.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "./src/components/Cards/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_3__);
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\Cards\\CardList.js";
+
+
+
+
+
+
+var CardList = function CardList() {
+  return _data__WEBPACK_IMPORTED_MODULE_2__["data"].map(function (app) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Card__WEBPACK_IMPORTED_MODULE_1__["default"], Object.assign({}, app, {
+      key: app.name,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8,
+        columnNumber: 12
+      }
+    }));
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CardList);
+
+/***/ }),
+
+/***/ "./src/components/Cards/style.css":
+/*!****************************************!*\
+  !*** ./src/components/Cards/style.css ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Cards/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Cards/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Cards/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/Day/index.js":
+/*!*************************************!*\
+  !*** ./src/components/Day/index.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/API */ "./src/utils/API.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.css */ "./src/components/Day/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+/* harmony import */ var _Event__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Event */ "./src/components/Event/index.js");
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\Day\\index.js";
+
+
+
+
+
+
+
+function Day() {
+  var _this = this;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([""]),
+      _useState2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState, 2),
+      getBookings = _useState2[0],
+      setBookings = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      _useState4 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState3, 2),
+      noEvents = _useState4[0],
+      setNoEvents = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(),
+      _useState6 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState5, 2),
+      bookingWith = _useState6[0],
+      setBookingWith = _useState6[1];
+
+  var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["useParams"])(),
+      id = _useParams.id;
+
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    _utils_API__WEBPACK_IMPORTED_MODULE_2__["default"].getBookings(id, state.user_id).then(function (res) {
+      if (res.data.length > 0) {
+        setNoEvents(true);
+      }
+
+      setBookings(res.data);
+      console.log(res.data);
+    });
+  }, [noEvents]);
+
+  var clickEvent = function clickEvent(event) {
+    var eventId = event.target.id;
+    var getEvent = getBookings.filter(function (event) {
+      return event.id == eventId;
+    });
+    console.log(getEvent);
+    dispatch({
+      type: "CURRENTBOOKING",
+      currentBooking: getEvent[0]
+    }); // setCurrentBooking(getEvent);
+
+    console.log("created by user id: " + getEvent[0].createdByUser.id);
+    console.log("received by user id: " + getEvent[0].receivedByUser.id);
+
+    if (state.user_id === getEvent[0].receivedByUser.id) {
+      setBookingWith(getEvent[0].createdByUser.first_name + " " + getEvent[0].createdByUser.last_name);
+    }
+
+    if (state.user_id === getEvent[0].createdByUser.id) {
+      setBookingWith(getEvent[0].receivedByUser.first_name + " " + getEvent[0].receivedByUser.last_name);
+    } else console.log("Booking with: " + bookingWith);
+
+    dispatch({
+      type: "CLICKEDEVENT",
+      clickedEvent: true
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    onClick: console.log(state.currentBooking),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 5
+    }
+  }, noEvents ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "/",
+    className: "backBtnW",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 13
+    }
+  }, "Click me to go back")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-5",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 13
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "eventList",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70,
+      columnNumber: 15
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "listContainer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
+      columnNumber: 17
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "h2",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72,
+      columnNumber: 19
+    }
+  }, " Today's Events"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
+    className: "ul",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73,
+      columnNumber: 19
+    }
+  }, " ", getBookings.map(function (booked) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+      className: "li events eventTitle",
+      key: booked.id,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 77,
+        columnNumber: 25
+      }
+    }, booked.booker_id === state.user_id ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      to: "#",
+      scope: "row",
+      onClick: clickEvent,
+      id: booked.id,
+      style: {
+        color: "red"
+      },
+      key: booked.id + "link",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79,
+        columnNumber: 29
+      }
+    }, booked.title) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      to: "#",
+      scope: "row",
+      onClick: clickEvent,
+      id: booked.id,
+      style: {
+        color: "blue"
+      },
+      key: booked.id + "link",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 90,
+        columnNumber: 29
+      }
+    }, booked.title));
+  }))))), state.clickedEvent ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Event__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    bookingWith: bookingWith,
+    setNoEvents: setNoEvents,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109,
+      columnNumber: 15
+    }
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "noEventClicked col-md-7",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111,
+      columnNumber: 15
+    }
+  }, "Click an event to view it!"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "centre",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119,
+      columnNumber: 11
+    }
+  }, "You have nothing but time today!", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 121,
+      columnNumber: 13
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "/",
+    className: "backBtn",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 122,
+      columnNumber: 15
+    }
+  }, "Click me to go back")))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Day);
+
+/***/ }),
+
+/***/ "./src/components/Day/style.css":
+/*!**************************************!*\
+  !*** ./src/components/Day/style.css ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Day/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Day/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Day/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/Event/index.js":
+/*!***************************************!*\
+  !*** ./src/components/Event/index.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var feather_icons_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! feather-icons-react */ "../node_modules/feather-icons-react/build/index.js");
+/* harmony import */ var feather_icons_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(feather_icons_react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/API */ "./src/utils/API.js");
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+/* harmony import */ var _UpdateEvent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../UpdateEvent */ "./src/components/UpdateEvent/index.js");
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\Event\\index.js";
+
+
+
+
+
+
+
+function Event(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      _useState2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState, 2),
+      deleteAnEvent = _useState2[0],
+      setDeleteAnEvent = _useState2[1];
+
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  var deleteEvent = function deleteEvent() {
+    if (window.confirm("Delete this Event?")) {
+      console.log(state.currentBooking + " Delete event");
+      _utils_API__WEBPACK_IMPORTED_MODULE_4__["default"].deletePost(state.currentBooking.id).then(function (res) {
+        console.log("Ben changhe this to re mount the other component maybe");
+        props.setNoEvents(false);
+        dispatch({
+          type: "CLICKEDEVENT",
+          clickedEvent: false
+        });
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    }
+  };
+
+  var updateEvent = function updateEvent() {
+    console.log("update clicked");
+    dispatch({
+      type: "modalClick",
+      date: state.currentBooking.date
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "clickedEvent col-md-6",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 5
+    }
+  }, deleteAnEvent ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    class: "alert alert-dismissible alert-warning",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    type: "button",
+    class: "btn-close",
+    "data-bs-dismiss": "alert",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 11
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
+    class: "alert-heading",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 11
+    }
+  }, "Warning!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    class: "mb-0",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 11
+    }
+  }, "Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna,", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "#",
+    class: "alert-link",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 13
+    }
+  }, "vel scelerisque nisl consectetur et"), ".")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "hide",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 9
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "listCOntainer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "updatePosts",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(feather_icons_react__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    icon: "edit",
+    className: "updatePost",
+    onClick: updateEvent,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 11
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(feather_icons_react__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    icon: "trash-2",
+    className: "updatePost",
+    onClick: deleteEvent,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "h2",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
+      columnNumber: 9
+    }
+  }, " ", state.currentBooking.title, " ~ ", props.bookingWith), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
+    className: "ul",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "li",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "#",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77,
+      columnNumber: 13
+    }
+  }, " ", state.currentBooking.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "li",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "#",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80,
+      columnNumber: 13
+    }
+  }, " ", state.currentBooking.location)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "li",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "#",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83,
+      columnNumber: 13
+    }
+  }, " ", state.currentBooking.time)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "li",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "#",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86,
+      columnNumber: 13
+    }
+  }, " ", state.currentBooking.date)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "li",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88,
+      columnNumber: 11
+    }
+  }))), state.modal ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_UpdateEvent__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 22
+    }
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "hide",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 40
+    }
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Event);
+
+/***/ }),
+
+/***/ "./src/components/Login/index.js":
+/*!***************************************!*\
+  !*** ./src/components/Login/index.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.css */ "./src/components/Login/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+/* harmony import */ var _Cards_CardList__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Cards/CardList */ "./src/components/Cards/CardList.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../utils/API */ "./src/utils/API.js");
+
+
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\Login\\index.js";
+
+
+
+ // import { data } from "../../data";
+
+
+
+
+
+function LoginForm() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({
+    email: "",
+    password: ""
+  }),
+      _useState2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
+      formInput = _useState2[0],
+      setFormInput = _useState2[1];
+
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["useHistory"])();
+
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  var hanldeFormInput = function hanldeFormInput(event) {
+    var _event$target = event.target,
+        name = _event$target.name,
+        value = _event$target.value;
+    setFormInput(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({}, formInput), {}, Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, name, value)));
+    console.log(formInput);
+  };
+
+  var handleLogin = function handleLogin(e) {
+    e.preventDefault();
+
+    if (formInput.email && formInput.password) {
+      _utils_API__WEBPACK_IMPORTED_MODULE_9__["default"].loginUser({
+        email: formInput.email,
+        password: formInput.password
+      }) // const response = await fetch("/api/users/login", {
+      //   method: "POST",
+      //   body: JSON.stringify({ email, password }),
+      //   headers: { "Content-Type": "application/json" },
+      // });
+      // if (response.ok) {
+      //   console.log(response);
+      //   fetch("/api/users/user")
+      // .then((res) => res.json())
+      .then(function (res) {
+        dispatch({
+          type: "LOGGINGIN",
+          logged_in: res.logged_in,
+          id: res.user_id
+        });
+        console.log(res);
+        history.push("/");
+      }).catch(function (err) {
+        return console.log(err);
+      }); // password / email doesnt match error
+    } else {
+      console.log("Failed to log in"); // error password email and password cannot be blank
+    }
+  };
+
+  var hanldeSignUpBtn = function hanldeSignUpBtn(e) {
+    e.preventDefault();
+    dispatch({
+      type: "SIGNUP"
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "col-md-4 loginContainer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("form", {
+    className: "form login-form login",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 11
+    }
+  }, "email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    className: "form-input",
+    type: "text",
+    id: "email-login",
+    name: "email",
+    onChange: hanldeFormInput,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78,
+      columnNumber: 11
+    }
+  }, "password:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    className: "form-input",
+    type: "password",
+    id: "password-login",
+    name: "password",
+    onChange: hanldeFormInput,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    id: "signup",
+    className: "btn btn-primary",
+    onClick: handleLogin,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88,
+      columnNumber: 11
+    }
+  }, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    onClick: hanldeSignUpBtn,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 11
+    }
+  }, "Sign up here"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Cards_CardList__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94,
+      columnNumber: 7
+    }
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (LoginForm);
+
+/***/ }),
+
+/***/ "./src/components/Login/style.css":
+/*!****************************************!*\
+  !*** ./src/components/Login/style.css ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Login/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Login/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Login/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/NavBar/index.js":
+/*!****************************************!*\
+  !*** ./src/components/NavBar/index.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+/* harmony import */ var _SearchForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SearchForm */ "./src/components/SearchForm/index.js");
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/API */ "./src/utils/API.js");
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\NavBar\\index.js";
+
+
+
+
+
+
+function NavBar() {
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_3__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  var setCalendarFalse = function setCalendarFalse(e) {
+    e.preventDefault();
+    dispatch({
+      type: "userClicked"
+    });
+  };
+
+  var logout = function logout() {
+    _utils_API__WEBPACK_IMPORTED_MODULE_5__["default"].logoutUser().then(function (res) {
+      // set user to loggout
+      window.location.replace("/login");
+    }).catch(function (err) {
+      console.log(err);
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", {
+    className: "navbar navbar-expand-lg navbar-dark bg-dark",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container-fluid",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "navbar-brand",
+    to: "/",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 9
+    }
+  }, "Calendule"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    className: "navbar-toggler",
+    type: "button",
+    "data-bs-toggle": "collapse",
+    "data-bs-target": "#navbarColor03",
+    "aria-controls": "navbarColor03",
+    "aria-expanded": "false",
+    "aria-label": "Toggle navigation",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "navbar-toggler-icon",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "collapse navbar-collapse",
+    id: "navbarColor03",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
+    className: "navbar-nav me-auto",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "nav-item",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 13
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "nav-link",
+    to: "/",
+    onClick: setCalendarFalse,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 15
+    }
+  }, "User")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "nav-item",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 13
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "nav-link",
+    to: "/find",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 15
+    }
+  }, "Book")), !state.logged_in ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "nav-item",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 15
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "nav-link",
+    to: "/login",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 17
+    }
+  }, "Login")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "nav-item",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 15
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "nav-link",
+    to: "#",
+    onClick: logout,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 17
+    }
+  }, "Logout"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SearchForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72,
+      columnNumber: 11
+    }
+  }))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBar);
+
+/***/ }),
+
+/***/ "./src/components/PrivateRoute/index.js":
+/*!**********************************************!*\
+  !*** ./src/components/PrivateRoute/index.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./src/components/SearchForm/index.js":
+/*!********************************************!*\
+  !*** ./src/components/SearchForm/index.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\SearchForm\\index.js";
+
+
+
+
+function SearchForm() {
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_3__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  var handleInputChange = function handleInputChange(event) {
+    dispatch({
+      type: "searchInvoked",
+      search: event.target.value
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
+    className: "d-flex",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+    className: "form-control me-sm-2",
+    type: "text",
+    placeholder: "Search for a person",
+    onChange: handleInputChange,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/find",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    className: "btn btn-secondary my-2 my-sm-0",
+    type: "submit",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 9
+    }
+  }, "Search")));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SearchForm);
+
+/***/ }),
+
+/***/ "./src/components/SignUp/index.js":
+/*!****************************************!*\
+  !*** ./src/components/SignUp/index.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.css */ "./src/components/SignUp/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+
+
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\SignUp\\index.js";
+
+
+
+
+function SignUpForm() {
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  var HandleSignUpBtn = /*#__PURE__*/function () {
+    var _ref = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+      var email, password, firstName, lastName, response;
+      return C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              e.preventDefault();
+              email = document.querySelector("#email-signup").value.trim();
+              password = document.querySelector("#password-signup").value.trim();
+              firstName = document.querySelector("#firstname-signup").value.trim();
+              lastName = document.querySelector("#lastname-signup").value.trim();
+
+              if (!(email && password && firstName && lastName)) {
+                _context.next = 10;
+                break;
+              }
+
+              _context.next = 8;
+              return fetch("/api/users/signup", {
+                method: "POST",
+                body: JSON.stringify({
+                  firstName: firstName,
+                  lastName: lastName,
+                  email: email,
+                  password: password
+                }),
+                headers: {
+                  "Content-Type": "application/json"
+                }
+              });
+
+            case 8:
+              response = _context.sent;
+
+              if (response.ok) {
+                alert("you have successfully signed up! Login to use all the cool features!");
+                hanldeSignUpFinish();
+              } else {
+                alert(response.statusText);
+              }
+
+            case 10:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function HandleSignUpBtn(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }(); // This is not returning the state back to true
+
+
+  var hanldeSignUpFinish = function hanldeSignUpFinish() {
+    // e.preventDefault();
+    console.log("hey");
+    dispatch({
+      type: "LOGIN",
+      login: true
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "col-md-4 signupContainer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("form", {
+    className: "form signup-form signup",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 11
+    }
+  }, "First Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    className: "form-input",
+    type: "name",
+    id: "firstname-signup",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 11
+    }
+  }, " Last Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    className: "form-input",
+    type: "name",
+    id: "lastname-signup",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 11
+    }
+  }, "email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    className: "form-input",
+    type: "text",
+    id: "email-signup",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 11
+    }
+  }, "password:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    className: "form-input",
+    type: "password",
+    id: "password-signup",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "form-group",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    id: "signup",
+    className: "btn btn-primary",
+    onClick: HandleSignUpBtn,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 11
+    }
+  }, "signup"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    onClick: hanldeSignUpFinish,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73,
+      columnNumber: 11
+    }
+  }, "Back to Login"))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SignUpForm);
+
+/***/ }),
+
+/***/ "./src/components/SignUp/style.css":
+/*!*****************************************!*\
+  !*** ./src/components/SignUp/style.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/SignUp/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/SignUp/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/SignUp/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/UpdateEvent/index.js":
+/*!*********************************************!*\
+  !*** ./src/components/UpdateEvent/index.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/API */ "./src/utils/API.js");
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\UpdateEvent\\index.js";
+
+
+
+
+
+function UpdateEvent() {
+  var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["useParams"])(),
+      id = _useParams.id;
+
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({
+    duration: "",
+    startTime: "",
+    endTime: "",
+    date: ""
+  }),
+      _useState2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
+      eventInput = _useState2[0],
+      setUpdateEvent = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState4 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState3, 2),
+      error = _useState4[0],
+      setError = _useState4[1];
+
+  var handleExitClick = function handleExitClick(e) {
+    e.preventDefault();
+    setError(false);
+    dispatch({
+      type: "modalClick"
+    });
+  };
+
+  var handleInputChange = function handleInputChange(event) {
+    var _event$target = event.target,
+        name = _event$target.name,
+        value = _event$target.value;
+    setUpdateEvent(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({}, eventInput), {}, Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, name, value)));
+  };
+
+  var handleEventSubmit = function handleEventSubmit(e) {
+    e.preventDefault();
+    setError(false);
+    console.log(eventInput.title);
+
+    if (eventInput.title && eventInput.description, eventInput.time, eventInput.location) {
+      dispatch({
+        type: "modalClick"
+      }); // api call then setEventinpiut to ()
+
+      _utils_API__WEBPACK_IMPORTED_MODULE_4__["default"].updatePost({
+        body: JSON.stringify({
+          title: eventInput.title,
+          description: eventInput.description,
+          time: eventInput.time,
+          location: eventInput.location,
+          id: state.currentBooking.id
+        })
+      }).then(function (res) {
+        alert("Event updated succesfully!");
+        console.log(res);
+      }).catch(function (err) {
+        console.log(err);
+      });
+    } else {
+      setError(true);
+    }
+
+    console.log(eventInput);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal fade show",
+    id: "source-modal",
+    style: {
+      display: "block"
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal-dialog",
+    role: "document",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal-content",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal-header",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h5", {
+    className: "modal-title",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76,
+      columnNumber: 13
+    }
+  }, "Update the event ", state.currentBooking.title, " ", state.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    className: "btn-close",
+    "data-bs-dismiss": "modal",
+    "aria-label": "Close",
+    onClick: handleExitClick,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79,
+      columnNumber: 13
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal-body",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    className: "col-form-label mt-4",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90,
+      columnNumber: 13
+    }
+  }, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    placeholder: "Title your event",
+    id: "inputTitle",
+    name: "title",
+    onChange: handleInputChange,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    className: "col-form-label mt-4",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99,
+      columnNumber: 13
+    }
+  }, "Description"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    placeholder: "Provide a description",
+    id: "inputDescription",
+    name: "description",
+    onChange: handleInputChange,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    className: "col-form-label mt-4",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108,
+      columnNumber: 13
+    }
+  }, "Time"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    placeholder: "e.g. 2pm-3pm",
+    id: "inputTime",
+    name: "time",
+    onChange: handleInputChange,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    className: "col-form-label mt-4",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118,
+      columnNumber: 13
+    }
+  }, "Location"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    placeholder: "e.g. Adelaide",
+    id: "inputLocation",
+    name: "location",
+    onChange: handleInputChange,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("br", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127,
+      columnNumber: 13
+    }
+  }), error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "alert alert-dismissible alert-danger",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129,
+      columnNumber: 15
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    className: "btn-close",
+    "data-bs-dismiss": "alert",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 130,
+      columnNumber: 17
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("strong", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 135,
+      columnNumber: 17
+    }
+  }, "Oh snap!"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+    to: "#",
+    className: "alert-link",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 136,
+      columnNumber: 17
+    }
+  }, "Input fields cannot be left empty, add some information"), " ", "and try submitting again.") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 142,
+      columnNumber: 15
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal-footer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    className: "btn btn-primary",
+    onClick: handleEventSubmit,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146,
+      columnNumber: 13
+    }
+  }, "Save Event"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    className: "btn btn-secondary",
+    "data-bs-dismiss": "modal",
+    onClick: handleExitClick,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 153,
+      columnNumber: 13
+    }
+  }, "Close")))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (UpdateEvent);
+
+/***/ }),
+
+/***/ "./src/components/Welcome/index.js":
+/*!*****************************************!*\
+  !*** ./src/components/Welcome/index.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Login */ "./src/components/Login/index.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "./src/components/Welcome/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+/* harmony import */ var _SignUp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../SignUp */ "./src/components/SignUp/index.js");
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\Welcome\\index.js";
+
+
+
+
+
+
+function Welcome() {
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_4__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-8",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    id: "welcomeTag",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 11
+    }
+  }, "Welcome to Calendule"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 11
+    }
+  }, "The best Scheduling app"))), state.login ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Login__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 22
+    }
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SignUp__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 38
+    }
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Welcome);
+
+/***/ }),
+
+/***/ "./src/components/Welcome/style.css":
+/*!******************************************!*\
+  !*** ./src/components/Welcome/style.css ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Welcome/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Welcome/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Welcome/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/eventInput/index.js":
+/*!********************************************!*\
+  !*** ./src/components/eventInput/index.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/API */ "./src/utils/API.js");
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/GlobalState */ "./src/utils/GlobalState.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\components\\eventInput\\index.js";
+
+
+
+
+
+function EventInput() {
+  var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["useParams"])(),
+      id = _useParams.id;
+
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_5__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({
+    duration: "",
+    startTime: "",
+    endTime: "",
+    date: ""
+  }),
+      _useState2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
+      eventInput = _useState2[0],
+      setEventInput = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState4 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState3, 2),
+      error = _useState4[0],
+      setError = _useState4[1];
+
+  var handleExitClick = function handleExitClick(e) {
+    e.preventDefault();
+    setError(false);
+    dispatch({
+      type: "modalClick"
+    });
+  };
+
+  var handleInputChange = function handleInputChange(event) {
+    var _event$target = event.target,
+        name = _event$target.name,
+        value = _event$target.value;
+    setEventInput(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({}, eventInput), {}, Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, name, value)));
+  };
+
+  var handleEventSubmit = function handleEventSubmit(e) {
+    e.preventDefault();
+    setError(false);
+
+    if (eventInput.title && eventInput.description, eventInput.time, eventInput.location) {
+      dispatch({
+        type: "modalClick"
+      }); // api call then setEventinpiut to ()
+
+      _utils_API__WEBPACK_IMPORTED_MODULE_4__["default"].createEvent({
+        title: eventInput.title,
+        description: eventInput.description,
+        time: eventInput.time,
+        date: state.date,
+        location: eventInput.location,
+        booker_id: state.user_id,
+        bookee_id: id
+      }).then(function (res) {
+        alert("Event added succesfully!");
+      }).catch(function (err) {
+        console.log(err);
+      });
+    } else {
+      setError(true);
+    }
+
+    console.log(eventInput);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal fade show",
+    id: "source-modal",
+    style: {
+      display: "block"
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal-dialog",
+    role: "document",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal-content",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal-header",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h5", {
+    className: "modal-title",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74,
+      columnNumber: 13
+    }
+  }, "Add an event for ", state.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    className: "btn-close",
+    "data-bs-dismiss": "modal",
+    "aria-label": "Close",
+    onClick: handleExitClick,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75,
+      columnNumber: 13
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal-body",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    className: "col-form-label mt-4",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86,
+      columnNumber: 13
+    }
+  }, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    placeholder: "Title your event",
+    id: "inputTitle",
+    name: "title",
+    onChange: handleInputChange,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    className: "col-form-label mt-4",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95,
+      columnNumber: 13
+    }
+  }, "Description"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    placeholder: "Provide a description",
+    id: "inputDescription",
+    name: "description",
+    onChange: handleInputChange,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    className: "col-form-label mt-4",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 104,
+      columnNumber: 13
+    }
+  }, "Time"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    placeholder: "e.g. 2pm-3pm",
+    id: "inputTime",
+    name: "time",
+    onChange: handleInputChange,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    className: "col-form-label mt-4",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 114,
+      columnNumber: 13
+    }
+  }, "Location"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    placeholder: "e.g. Adelaide",
+    id: "inputLocation",
+    name: "location",
+    onChange: handleInputChange,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("br", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 123,
+      columnNumber: 13
+    }
+  }), error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "alert alert-dismissible alert-danger",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125,
+      columnNumber: 15
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    className: "btn-close",
+    "data-bs-dismiss": "alert",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126,
+      columnNumber: 17
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("strong", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 131,
+      columnNumber: 17
+    }
+  }, "Oh snap!"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+    to: "#",
+    className: "alert-link",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 132,
+      columnNumber: 17
+    }
+  }, "Input fields cannot be left empty, add some information"), " ", "and try submitting again.") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 138,
+      columnNumber: 15
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "modal-footer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 141,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    className: "btn btn-primary",
+    onClick: handleEventSubmit,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 142,
+      columnNumber: 13
+    }
+  }, "Save Event"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    className: "btn btn-secondary",
+    "data-bs-dismiss": "modal",
+    onClick: handleExitClick,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 149,
+      columnNumber: 13
+    }
+  }, "Close")))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (EventInput);
+
+/***/ }),
+
+/***/ "./src/data/index.js":
+/*!***************************!*\
+  !*** ./src/data/index.js ***!
+  \***************************/
+/*! exports provided: data */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "data", function() { return data; });
+/* harmony import */ var _res_facebook_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../res/facebook.png */ "./src/res/facebook.png");
+/* harmony import */ var _res_facebook_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_res_facebook_png__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _res_google_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../res/google.png */ "./src/res/google.png");
+/* harmony import */ var _res_google_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_res_google_png__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var data = [{
+  img: _res_facebook_png__WEBPACK_IMPORTED_MODULE_0___default.a,
+  name: "facebook",
+  href: "auth/facebook",
+  alt: "facebook-icon",
+  color: "#3B5899",
+  txt: "Login with Facebook"
+}, {
+  img: _res_google_png__WEBPACK_IMPORTED_MODULE_1___default.a,
+  name: "google",
+  href: "auth/google",
+  alt: "google-icon",
+  color: "#CB4024",
+  txt: "Login with Google"
+}];
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css", function() {
+		var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./src/App.js");
+/* harmony import */ var bootswatch_dist_slate_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bootswatch/dist/slate/bootstrap.min.css */ "../node_modules/bootswatch/dist/slate/bootstrap.min.css");
+/* harmony import */ var bootswatch_dist_slate_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(bootswatch_dist_slate_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\index.js";
+
+
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.StrictMode, {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8,
+    columnNumber: 3
+  }
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9,
+    columnNumber: 5
+  }
+})), document.getElementById("root"));
+
+/***/ }),
+
+/***/ "./src/pages/Calendar/index.js":
+/*!*************************************!*\
+  !*** ./src/pages/Calendar/index.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _fullcalendar_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/react */ "../node_modules/@fullcalendar/react/dist/main.js");
+/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fullcalendar/daygrid */ "../node_modules/@fullcalendar/daygrid/main.js");
+/* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fullcalendar/interaction */ "../node_modules/@fullcalendar/interaction/main.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.css */ "./src/pages/Calendar/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_Day__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Day */ "./src/components/Day/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\pages\\Calendar\\index.js";
+
+
+
+
+
+
+
+
+function Calendar() {
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["useHistory"])();
+
+  var handleDateClick = function handleDateClick(arg) {
+    history.push("/date/".concat(arg.dateStr));
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 7
+    }
+  }, "Welcome to your personalised Calendar, click a day to see your events"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fullcalendar_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    plugins: [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_2__["default"], _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_3__["default"]],
+    initialView: "dayGridMonth",
+    dateClick: handleDateClick,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 7
+    }
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Calendar);
+
+/***/ }),
+
+/***/ "./src/pages/Calendar/style.css":
+/*!**************************************!*\
+  !*** ./src/pages/Calendar/style.css ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/pages/Calendar/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/pages/Calendar/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/pages/Calendar/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/pages/find.js":
+/*!***************************!*\
+  !*** ./src/pages/find.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils_GlobalState__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/GlobalState */ "./src/utils/GlobalState.js");
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/API */ "./src/utils/API.js");
+
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\pages\\find.js";
+// import "./style.css";
+
+
+
+
+
+function Find() {
+  var _this = this;
+
+  var _useStoreContext = Object(_utils_GlobalState__WEBPACK_IMPORTED_MODULE_3__["useStoreContext"])(),
+      _useStoreContext2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useStoreContext, 2),
+      state = _useStoreContext2[0],
+      dispatch = _useStoreContext2[1];
+
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useHistory"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    _utils_API__WEBPACK_IMPORTED_MODULE_4__["default"].getUsers().then(function (res) {
+      dispatch({
+        type: "addUsers",
+        users: res.data
+      });
+    });
+  }, []);
+
+  var goToUser = function goToUser(event) {
+    var userId = event.target.id;
+    console.log(userId);
+    history.push("/user/".concat(userId));
+  };
+
+  var onClik = function onClik() {
+    var searchingFor = state.users.filter(function (user) {
+      return user.first_name === state.search;
+    } //.toLowerCase() === state.search.toLowerCase()
+    );
+    console.log(state.users);
+    console.log(state.search);
+    console.log(searchingFor);
+  };
+
+  var searchingFor = state.users.filter(function (user) {
+    return user.first_name.toUpperCase().includes(state.search.toUpperCase());
+  } // make a full name in the data so we can search by full name
+  // make an if this is empty, show no one by that name
+  );
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
+    onClick: onClik,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 7
+    }
+  }, " Search for someone to make an event!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("table", {
+    className: "table table-hover",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("thead", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tr", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("th", {
+    scope: "col",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 13
+    }
+  }, "Column heading"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("th", {
+    scope: "col",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 13
+    }
+  }, "Column heading"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("th", {
+    scope: "col",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 13
+    }
+  }, "Column heading"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tbody", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 9
+    }
+  }, searchingFor.map(function (user) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tr", {
+      className: "table-dark",
+      key: user.id,
+      id: user.id,
+      onClick: goToUser,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57,
+        columnNumber: 15
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", {
+      id: user.id,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63,
+        columnNumber: 17
+      }
+    }, user.first_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", {
+      id: user.id,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64,
+        columnNumber: 17
+      }
+    }, user.last_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", {
+      id: user.id,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65,
+        columnNumber: 17
+      }
+    }, user.id));
+  }))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Find);
+
+/***/ }),
+
+/***/ "./src/pages/login.js":
+/*!****************************!*\
+  !*** ./src/pages/login.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Welcome */ "./src/components/Welcome/index.js");
+var _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\pages\\login.js";
+
+
+
+function login() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Container",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 7
+    }
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (login);
+
+/***/ }),
+
+/***/ "./src/res/facebook.png":
+/*!******************************!*\
+  !*** ./src/res/facebook.png ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ "./src/res/google.png":
+/*!****************************!*\
+  !*** ./src/res/google.png ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ "./src/utils/API.js":
+/*!**************************!*\
+  !*** ./src/utils/API.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  loginUser: function loginUser(body) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/users/login", body);
+  },
+  logoutUser: function logoutUser() {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/users/logout");
+  },
+  getBookings: function getBookings(date, user_id) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/date/" + date, user_id);
+  },
+  getEvent: function getEvent(id) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/date/event" + id);
+  },
+  getUsers: function getUsers() {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users/find");
+  },
+  getUser: function getUser(id) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users/" + id);
+  },
+  createEvent: function createEvent(eventData) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/date/", eventData);
+  },
+  deletePost: function deletePost(id) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/date/" + id);
+  },
+  updatePost: function updatePost(id) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/date/" + id);
+  }
+});
+
+/***/ }),
+
+/***/ "./src/utils/GlobalState.js":
+/*!**********************************!*\
+  !*** ./src/utils/GlobalState.js ***!
+  \**********************************/
+/*! exports provided: StoreProvider, useStoreContext */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoreProvider", function() { return StoreProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useStoreContext", function() { return useStoreContext; });
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\benja\\OneDrive\\Desktop\\Code\\project3\\calendule\\client\\src\\utils\\GlobalState.js";
+
+
+var StoreContext = Object(react__WEBPACK_IMPORTED_MODULE_3__["createContext"])();
+var Provider = StoreContext.Provider;
+
+var reducer = function reducer(state, action) {
+  switch (action.type) {
+    case "SIGNUP":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        login: false
+      });
+
+    case "LOGIN":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        login: true
+      });
+
+    case "userClicked":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        dateClicked: false
+      });
+
+    case "modalClick":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        modal: !state.modal,
+        date: action.date
+      });
+
+    case "eventSubmit":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        eventAdded: true
+      });
+
+    case "eventSubmitDone":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        eventAdded: false
+      });
+
+    case "searchInvoked":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        search: action.search
+      });
+
+    case "addUsers":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        users: action.users
+      });
+
+    case "LOGGINGIN":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        logged_in: action.logged_in,
+        user_id: action.id
+      });
+
+    case "CURRENTBOOKING":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        currentBooking: action.currentBooking
+      });
+
+    case "CLICKEDEVENT":
+      return Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, state), {}, {
+        clickedEvent: action.clickedEvent
+      });
+
+    default:
+      return state;
+  }
+};
+
+var StoreProvider = function StoreProvider(_ref) {
+  var _ref$value = _ref.value,
+      value = _ref$value === void 0 ? [] : _ref$value,
+      props = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["value"]);
+
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_3__["useReducer"])(reducer, {
+    events: [],
+    users: [],
+    login: true,
+    dateClicked: false,
+    date: "",
+    modal: false,
+    eventAdded: false,
+    search: "",
+    logged_in: false,
+    user_id: "",
+    currentBooking: {},
+    clickedEvent: false
+  }),
+      _useReducer2 = Object(C_Users_benja_OneDrive_Desktop_Code_project3_calendule_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useReducer, 2),
+      state = _useReducer2[0],
+      dispatch = _useReducer2[1];
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Provider, Object.assign({
+    value: [state, dispatch]
+  }, props, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87,
+      columnNumber: 10
+    }
+  }));
+};
+
+var useStoreContext = function useStoreContext() {
+  return Object(react__WEBPACK_IMPORTED_MODULE_3__["useContext"])(StoreContext);
+};
+
+
+
+/***/ }),
+
+/***/ 1:
+/*!**************************************************************************************************************!*\
+  !*** multi (webpack)/hot/dev-server.js ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\benja\OneDrive\Desktop\Code\project3\calendule\client\node_modules\webpack\hot\dev-server.js */"./node_modules/webpack/hot/dev-server.js");
+__webpack_require__(/*! C:\Users\benja\OneDrive\Desktop\Code\project3\calendule\client\node_modules\react-dev-utils\webpackHotDevClient.js */"./node_modules/react-dev-utils/webpackHotDevClient.js");
+module.exports = __webpack_require__(/*! C:\Users\benja\OneDrive\Desktop\Code\project3\calendule\client\src\index.js */"./src/index.js");
+
+
+/***/ })
+
+},[[1,"runtime-main",0]]]);
+//# sourceMappingURL=main.chunk.js.map

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
-import CardList from "../Cards/CardList";
+// import CardList from "../Cards/CardList";
 // import { data } from "../../data";
 import _ from "lodash";
 import { useHistory } from "react-router-dom";
 import API from "../../utils/API";
+import Error from "../Error";
 
 function LoginForm() {
   const [formInput, setFormInput] = useState({
@@ -15,42 +16,42 @@ function LoginForm() {
 
   const history = useHistory();
   const [state, dispatch] = useStoreContext();
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const hanldeFormInput = (event) => {
     const { name, value } = event.target;
     setFormInput({ ...formInput, [name]: value });
-    console.log(formInput);
   };
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    if (formInput.email && formInput.password) {
+    console.log(formInput.password.length);
+    if (formInput.email.length > 1 && formInput.password.length > 8) {
       API.loginUser({
-        formInput,
-      });
-      // const response = await fetch("/api/users/login", {
-      //   method: "POST",
-      //   body: JSON.stringify({ email, password }),
-      //   headers: { "Content-Type": "application/json" },
-      // });
-      if (response.ok) {
-        console.log(response);
-        fetch("/api/users/user")
-          .then((res) => res.json())
-          .then((res) => {
-            dispatch({
-              type: "LOGGINGIN",
-              logged_in: res.logged_in,
-              id: res.user_id,
-            });
-            console.log(res);
-            history.push("/");
-          })
-          .catch((err) => console.log(err));
-      }
+        email: formInput.email,
+        password: formInput.password,
+      })
+        .then((res) => {
+          console.log(res);
+          dispatch({
+            type: "LOGGINGIN",
+            logged_in: res.data.logged_in,
+            id: res.data.user_id,
+          });
+          console.log(res);
+          history.push("/");
+        })
+        .catch((err) => {
+          console.log(err);
+          setError(true);
+        });
+      setErrorMessage("Incorrect Email or Password"); // password / email doesnt match error
     } else {
       console.log("Failed to log in");
-      // error password or email does not match
+      // error password email and password cannot be blank
+      setErrorMessage("Password must be atleast 8 characters");
+      setError(true);
     }
   };
 
@@ -91,7 +92,8 @@ function LoginForm() {
           <button onClick={hanldeSignUpBtn}>Sign up here</button>
         </div>
       </form>
-      <CardList />
+      {error ? <Error message={errorMessage} /> : <div className="hide"></div>}
+      {/* <CardList /> */}
     </div>
   );
 }

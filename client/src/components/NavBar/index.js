@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import SearchForm from "../SearchForm";
 import API from "../../utils/API";
+import "./style.css";
 
 function NavBar() {
   const [state, dispatch] = useStoreContext();
@@ -57,13 +58,13 @@ function NavBar() {
             </li>
             {!state.logged_in ? (
               <li className="nav-item">
-                <Link className="nav-link" to="/login">
+                <Link className="nav-link hover" to="/login">
                   Login
                 </Link>
               </li>
             ) : (
               <li className="nav-item">
-                <div className="nav-link" to="#" onClick={logout}>
+                <div className="nav-link hover" to="#" onClick={logout}>
                   Logout
                 </div>
               </li>

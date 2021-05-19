@@ -1,11 +1,14 @@
 import axios from "axios";
 
 export default {
-  loginUser: function () {
-    return axios.post("/api/users/login");
+  loginUser: function (body) {
+    return axios.post("/api/users/login", body);
   },
   logoutUser: function () {
     return axios.post("/api/users/logout");
+  },
+  signUp: function (body) {
+    return axios.post("/api/users/signup", body);
   },
   getBookings: function (date, user_id) {
     return axios.get("/api/date/" + date, user_id);

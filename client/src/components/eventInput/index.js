@@ -135,7 +135,7 @@ function EventInput() {
                 and try submitting again.
               </div>
             ) : (
-              <div></div>
+              <div class="hide"></div>
             )}
           </div>
           <div className="modal-footer">
