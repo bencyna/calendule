@@ -62,7 +62,7 @@ function AltUserCalendar() {
         initialView="dayGridMonth"
         dateClick={handleDateClick}
       />
-      {state.modal ? <EventInput /> : <div></div>}
+      {state.modal ? <EventInput /> : <div className="hide"></div>}
     </div>
   );
 }

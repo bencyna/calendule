@@ -3,12 +3,12 @@ import API from "../../utils/API";
 import { useParams, Link } from "react-router-dom";
 import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
+import Event from "../Event";
 
 function Day() {
   const [getBookings, setBookings] = useState([""]);
   const [noEvents, setNoEvents] = useState(false);
-  const [clickedEvent, setClickedEvent] = useState(false);
-  const [currentBooking, setCurrentBooking] = useState({});
+  const [bookingWith, setBookingWith] = useState();
 
   const { id } = useParams();
   const [state, dispatch] = useStoreContext();
@@ -23,25 +23,48 @@ function Day() {
     });
   }, [noEvents]);
 
-  // const clickTitle = () => {
-  //   dispatch({
-  //     type: "DATECLICKED",
-  //     // type: "",
-  //   });
-  // };
   const clickEvent = (event) => {
     const eventId = event.target.id;
     const getEvent = getBookings.filter((event) => event.id == eventId);
     console.log(getEvent);
-    setCurrentBooking(getEvent);
-    console.log(currentBooking);
-    setClickedEvent(true);
+    dispatch({
+      type: "CURRENTBOOKING",
+      currentBooking: getEvent[0],
+    });
+    // setCurrentBooking(getEvent);
+    console.log("created by user id: " + getEvent[0].createdByUser.id);
+    console.log("received by user id: " + getEvent[0].receivedByUser.id);
+
+    if (state.user_id === getEvent[0].receivedByUser.id) {
+      setBookingWith(
+        getEvent[0].createdByUser.first_name +
+          " " +
+          getEvent[0].createdByUser.last_name
+      );
+    }
+    if (state.user_id === getEvent[0].createdByUser.id) {
+      setBookingWith(
+        getEvent[0].receivedByUser.first_name +
+          " " +
+          getEvent[0].receivedByUser.last_name
+      );
+    } else console.log("Booking with: " + bookingWith);
+
+    dispatch({
+      type: "CLICKEDEVENT",
+      clickedEvent: true,
+    });
   };
 
   return (
-    <div>
+    <div onClick={console.log(state.currentBooking)}>
       {noEvents ? (
         <div className="container">
+          <div>
+            <Link to="/" className="backBtnW">
+              Click me to go back
+            </Link>
+          </div>
           <div className="row">
             <div className="col-md-5">
               <div className="eventList">
@@ -52,14 +75,29 @@ function Day() {
                     {getBookings.map((booked) => {
                       return (
                         <li className="li events eventTitle" key={booked.id}>
-                          <Link
-                            to="#"
-                            scope="row"
-                            onClick={clickEvent}
-                            id={booked.id}
-                          >
-                            {booked.title}
-                          </Link>
+                          {booked.booker_id === state.user_id ? (
+                            <Link
+                              to="#"
+                              scope="row"
+                              onClick={clickEvent}
+                              id={booked.id}
+                              style={{ color: "red" }}
+                              key={booked.id + "link"}
+                            >
+                              {booked.title}
+                            </Link>
+                          ) : (
+                            <Link
+                              to="#"
+                              scope="row"
+                              onClick={clickEvent}
+                              id={booked.id}
+                              style={{ color: "blue" }}
+                              key={booked.id + "link"}
+                            >
+                              {booked.title}
+                            </Link>
+                          )}
                         </li>
                       );
                     })}
@@ -67,27 +105,8 @@ function Day() {
                 </div>
               </div>
             </div>
-            {clickedEvent ? (
-              <div className="clickedEvent col-md-6">
-                <div className="listCOntainer">
-                  <h2 className="h2"> {currentBooking[0].title}</h2>
-                  <ul className="ul">
-                    <li className="li">
-                      <Link to="#"> {currentBooking[0].description}</Link>
-                    </li>
-                    <li className="li">
-                      <Link to="#"> {currentBooking[0].location}</Link>
-                    </li>
-                    <li className="li">
-                      <Link to="#"> {currentBooking[0].start_time}</Link>
-                    </li>
-                    <li className="li">
-                      <Link to="#"> {currentBooking[0].date}</Link>
-                    </li>
-                    <li className="li"></li>
-                  </ul>
-                </div>
-              </div>
+            {state.clickedEvent ? (
+              <Event bookingWith={bookingWith} setNoEvents={setNoEvents} />
             ) : (
               <div className="noEventClicked col-md-7">
                 Click an event to view it!
@@ -96,7 +115,16 @@ function Day() {
           </div>
         </div>
       ) : (
-        <h1>You have nothing but time today!</h1>
+        <div className="centre">
+          <h1>
+            You have nothing but time today!{" "}
+            <div>
+              <Link to="/" className="backBtn">
+                Click me to go back
+              </Link>
+            </div>
+          </h1>
+        </div>
       )}
     </div>
   );

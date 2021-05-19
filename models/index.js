@@ -2,12 +2,26 @@ const User = require("./user");
 const Booking = require("./bookings");
 
 Booking.belongsTo(User, {
-  foreignKey: "user_id",
+  as: "createdByUser",
+  foreignKey: "booker_id",
+  onDelete: "CASCADE",
+});
+
+Booking.belongsTo(User, {
+  as: "receivedByUser",
+  foreignKey: "bookee_id",
   onDelete: "CASCADE",
 });
 
 User.hasMany(Booking, {
-  foreignKey: "user_id",
+  as: "createdByUser",
+  foreignKey: "booker_id",
+  onDelete: "CASCADE",
+});
+
+User.hasMany(Booking, {
+  as: "receivedByUser",
+  foreignKey: "bookee_id",
   onDelete: "CASCADE",
 });
 

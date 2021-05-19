@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import SearchForm from "../SearchForm";
+import API from "../../utils/API";
 
 function NavBar() {
   const [state, dispatch] = useStoreContext();
@@ -12,6 +13,18 @@ function NavBar() {
       type: "userClicked",
     });
   };
+
+  const logout = () => {
+    API.logoutUser()
+      .then((res) => {
+        // set user to loggout
+        window.location.replace("/login");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -42,16 +55,19 @@ function NavBar() {
                 Book
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">
-                Login
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/logout">
-                Logout
-              </Link>
-            </li>
+            {!state.logged_in ? (
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">
+                  Login
+                </Link>
+              </li>
+            ) : (
+              <li className="nav-item">
+                <div className="nav-link" to="#" onClick={logout}>
+                  Logout
+                </div>
+              </li>
+            )}
           </ul>
           <SearchForm />
         </div>

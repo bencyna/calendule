@@ -48,8 +48,8 @@ function EventInput() {
         time: eventInput.time,
         date: state.date,
         location: eventInput.location,
-        booker_id: id,
-        bookee_id: id, // need this to be req.session.id
+        booker_id: state.user_id,
+        bookee_id: id,
       })
         .then((res) => {
           alert("Event added succesfully!");

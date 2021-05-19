@@ -54,6 +54,16 @@ const reducer = (state, action) => {
         logged_in: action.logged_in,
         user_id: action.id,
       };
+    case "CURRENTBOOKING":
+      return {
+        ...state,
+        currentBooking: action.currentBooking,
+      };
+    case "CLICKEDEVENT":
+      return {
+        ...state,
+        clickedEvent: action.clickedEvent,
+      };
     default:
       return state;
   }
@@ -71,6 +81,8 @@ const StoreProvider = ({ value = [], ...props }) => {
     search: "",
     logged_in: false,
     user_id: "",
+    currentBooking: {},
+    clickedEvent: false,
   });
   return <Provider value={[state, dispatch]} {...props} />;
 };

@@ -44,7 +44,8 @@
   border: none;
 } */
 
-li a {
+li a,
+.input {
   text-decoration: none;
   color: #000;
   display: block;
@@ -59,4 +60,50 @@ li a {
 .events a:hover {
   font-size: 25px;
   /* background: #f6f6f6; */
+}
+
+.centre {
+  text-align: center;
+}
+
+.backBtn {
+  color: #004e7c;
+}
+.backBtn:hover {
+  font-size: 50px;
+  transition: font-size 0.5s ease;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.updatePosts {
+  text-align: right;
+}
+
+.updatePost:hover {
+  cursor: pointer;
+}
+
+.input {
+  position: relative;
+  float: left;
+  width: 95%;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.input:hover {
+  cursor: pointer;
+}
+
+.updateValue {
+  vertical-align: bottom;
+  font-size: 10px;
+  width: 5%;
 }
