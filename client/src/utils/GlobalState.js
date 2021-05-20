@@ -71,12 +71,6 @@ const reducer = (state, action) => {
 };
 
 const StoreProvider = ({ value = [], ...props }) => {
-  useEffect(() => {
-    console.log("use effect running why not working");
-    API.isLoggedIn()
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  }, []);
   const [state, dispatch] = useReducer(reducer, {
     events: [],
     users: [],
@@ -91,6 +85,19 @@ const StoreProvider = ({ value = [], ...props }) => {
     currentBooking: {},
     clickedEvent: false,
   });
+  useEffect(() => {
+    console.log("use effect running why not working");
+    API.isLoggedIn()
+      .then((res) => {
+        console.log(res);
+        dispatch({
+          type: "LOGGINGIN",
+          logged_in: res.data.logged_in,
+          id: res.data.user_id,
+        });
+      })
+      .catch((err) => console.log(err));
+  }, []);
   return <Provider value={[state, dispatch]} {...props} />;
 };
 

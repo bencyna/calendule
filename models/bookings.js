@@ -26,6 +26,10 @@ Booking.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    // accepted: {
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: false,
+    // },
     booker_id: {
       type: DataTypes.UUID,
       allowNull: false,

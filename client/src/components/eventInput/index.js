@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import API from "../../utils/API";
 import { useStoreContext } from "../../utils/GlobalState";
 import { useParams, Link } from "react-router-dom";
-import TimeInput from "../TimePicker";
-import TextField from "@material-ui/core/TextField";
+import TimePicker from "react-bootstrap-time-picker";
 
 function EventInput() {
   const { id } = useParams();
@@ -30,8 +29,8 @@ function EventInput() {
 
   const handleInputChange = (event) => {
     console.log(event.target);
-    // const { name, value } = event.target;
-    // setEventInput({ ...eventInput, [name]: value });
+    const { name, value } = event.target;
+    setEventInput({ ...eventInput, [name]: value });
   };
 
   const handleEventSubmit = (e) => {
@@ -73,7 +72,7 @@ function EventInput() {
       id="source-modal"
       style={{ display: "block" }}
     >
-      {/* <div className="modal-dialog" role="document">
+      <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">Add an event for {state.date}</h5>
@@ -106,31 +105,10 @@ function EventInput() {
               name="description"
               onChange={handleInputChange}
             ></input>
-            <label className="col-form-label mt-4">Time</label> */}
-            {/* <TimeRangePicker
-              style={{ paddingBottom: "10%" }}
-              style={{ color: "white" }}
-              onChange={handleInputChange}
-              value={eventInput.timeValue}
-              name="timeValue"
-              disableClock={true}
-            /> */}
-            <form noValidate>
-              <TextField
-                id="time"
-                label="Alarm clock"
-                type="time"
-                defaultValue="07:30"
-                // className
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                inputProps={{
-                  step: 300, // 5 min
-                }}
-              />
-            </form>
-            {/* <label className="col-form-label mt-4">Location</label>
+            <label className="col-form-label mt-4">Time</label>
+            <TimePicker start="10:00" end="21:00" step={30} />
+
+            <label className="col-form-label mt-4">Location</label>
             <input
               type="text"
               className="form-control"
@@ -175,7 +153,7 @@ function EventInput() {
             </button>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

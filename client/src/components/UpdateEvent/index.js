@@ -3,7 +3,7 @@ import API from "../../utils/API";
 import { useStoreContext } from "../../utils/GlobalState";
 import { useParams, Link } from "react-router-dom";
 
-function UpdateEvent() {
+function UpdateEvent(props) {
   const { id } = useParams();
 
   const [state, dispatch] = useStoreContext();
@@ -52,7 +52,7 @@ function UpdateEvent() {
       })
         .then((res) => {
           alert("Event updated succesfully!");
-          console.log(res);
+          props.setNoEvents(false);
         })
         .catch((err) => {
           console.log(err);

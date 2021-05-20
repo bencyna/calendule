@@ -88,7 +88,11 @@ function Event(props) {
           <li className="li"></li>
         </ul>
       </div>
-      {state.modal ? <UpdateEvent /> : <div className="hide"></div>}
+      {state.modal ? (
+        <UpdateEvent setNoEvents={props.setNoEvents} />
+      ) : (
+        <div className="hide"></div>
+      )}
     </div>
   );
 }

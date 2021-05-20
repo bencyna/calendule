@@ -3,18 +3,21 @@
         "title": "Event One test",
         "description": "The description of the first test",
         "location": "Adelaide",
-        "date": "2021-05-12"
+        "date": "2021-05-12",
+        "accepted": false
     },
     {
         "title": "Event Two test",
         "description": "The description of the second test",
         "location": "Zoom",
-        "date": "2021-05-14"
+        "date": "2021-05-14",
+        "accepted": false
     },
     {
         "title": "Event Three test",
         "description": "The description of the Third test",
         "location": "Blue Mountains",
-        "date": "2021-05-12"
+        "date": "2021-05-12",
+        "accepted": true
     }
 ]

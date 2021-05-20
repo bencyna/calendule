@@ -19,7 +19,6 @@ function Day() {
         setNoEvents(true);
       }
       setBookings(res.data);
-      console.log(res.data);
     });
   }, [noEvents]);
 
