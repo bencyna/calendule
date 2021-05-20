@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import API from "../../utils/API";
 import { useStoreContext } from "../../utils/GlobalState";
 import { useParams, Link } from "react-router-dom";
+import TimeInput from "../TimePicker";
+import TextField from "@material-ui/core/TextField";
 
 function EventInput() {
   const { id } = useParams();
@@ -13,6 +15,7 @@ function EventInput() {
     startTime: "",
     endTime: "",
     date: "",
+    timeValue: ["09:00", "10:00"],
   });
 
   const [error, setError] = useState(false);
@@ -26,8 +29,9 @@ function EventInput() {
   };
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setEventInput({ ...eventInput, [name]: value });
+    console.log(event.target);
+    // const { name, value } = event.target;
+    // setEventInput({ ...eventInput, [name]: value });
   };
 
   const handleEventSubmit = (e) => {
@@ -62,13 +66,14 @@ function EventInput() {
     }
     console.log(eventInput);
   };
+
   return (
     <div
       className="modal fade show"
       id="source-modal"
       style={{ display: "block" }}
     >
-      <div className="modal-dialog" role="document">
+      {/* <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">Add an event for {state.date}</h5>
@@ -101,17 +106,31 @@ function EventInput() {
               name="description"
               onChange={handleInputChange}
             ></input>
-            <label className="col-form-label mt-4">Time</label>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="e.g. 2pm-3pm"
-              id="inputTime"
-              name="time"
+            <label className="col-form-label mt-4">Time</label> */}
+            {/* <TimeRangePicker
+              style={{ paddingBottom: "10%" }}
+              style={{ color: "white" }}
               onChange={handleInputChange}
-            />
-
-            <label className="col-form-label mt-4">Location</label>
+              value={eventInput.timeValue}
+              name="timeValue"
+              disableClock={true}
+            /> */}
+            <form noValidate>
+              <TextField
+                id="time"
+                label="Alarm clock"
+                type="time"
+                defaultValue="07:30"
+                // className
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                inputProps={{
+                  step: 300, // 5 min
+                }}
+              />
+            </form>
+            {/* <label className="col-form-label mt-4">Location</label>
             <input
               type="text"
               className="form-control"
@@ -135,7 +154,7 @@ function EventInput() {
                 and try submitting again.
               </div>
             ) : (
-              <div class="hide"></div>
+              <div className="hide"></div>
             )}
           </div>
           <div className="modal-footer">
@@ -156,7 +175,7 @@ function EventInput() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

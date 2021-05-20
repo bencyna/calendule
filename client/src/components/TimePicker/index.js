@@ -1,20 +1,15 @@
-// import MomentInput from "react-moment-input";
-// import React from "react";
+import React, { useState } from "react";
+import LuxonUtils from "@date-io/luxon";
+import { TimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
 
-// function Timepicker() {
-//   return (
-//     <MomentInput
-//       max={moment().add(1, "days")}
-//       min={moment()}
-//       format="YYYY-MM-DD"
-//       options={true}
-//       readOnly={false}
-//       icon={false}
-//       onChange={(date) => {
-//         console.log(date);
-//       }}
-//     />
-//   );
-// }
+export default function TimeInput() {
+  const [selectedDate, handleDateChange] = useState(new Date());
 
-// export default Timepicker;
+  return (
+    <div>
+      <MuiPickersUtilsProvider utils={LuxonUtils}>
+        <TimePicker value={selectedDate} onChange={handleDateChange} />
+      </MuiPickersUtilsProvider>
+    </div>
+  );
+}

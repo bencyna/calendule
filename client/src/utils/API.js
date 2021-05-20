@@ -7,6 +7,9 @@ export default {
   logoutUser: function () {
     return axios.post("/api/users/logout");
   },
+  isLoggedIn: function () {
+    return axios.get("/api/users/user");
+  },
   signUp: function (body) {
     return axios.post("/api/users/signup", body);
   },
@@ -28,7 +31,7 @@ export default {
   deletePost: function (id) {
     return axios.delete("/api/date/" + id);
   },
-  updatePost: function (id) {
-    return axios.put("/api/date/" + id);
+  updatePost: function (body) {
+    return axios.put("/api/date/", body);
   },
 };

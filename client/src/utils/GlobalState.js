@@ -1,4 +1,5 @@
-import React, { createContext, useReducer, useContext } from "react";
+import React, { createContext, useReducer, useContext, useEffect } from "react";
+import API from "../utils/API";
 
 const StoreContext = createContext();
 
@@ -70,6 +71,12 @@ const reducer = (state, action) => {
 };
 
 const StoreProvider = ({ value = [], ...props }) => {
+  useEffect(() => {
+    console.log("use effect running why not working");
+    API.isLoggedIn()
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }, []);
   const [state, dispatch] = useReducer(reducer, {
     events: [],
     users: [],

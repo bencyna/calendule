@@ -67,8 +67,6 @@ router.route("/find").get(userController.findAll);
 
 router.get("/user", (req, res) => {
   try {
-    console.log("getting user data!");
-    console.log(req.session);
     res.json(req.session);
   } catch (error) {
     console.log(error);

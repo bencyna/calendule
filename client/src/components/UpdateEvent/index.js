@@ -44,13 +44,11 @@ function UpdateEvent() {
       });
       // api call then setEventinpiut to ()
       API.updatePost({
-        body: JSON.stringify({
-          title: eventInput.title,
-          description: eventInput.description,
-          time: eventInput.time,
-          location: eventInput.location,
-          id: state.currentBooking.id,
-        }),
+        title: eventInput.title,
+        description: eventInput.description,
+        time: eventInput.time,
+        location: eventInput.location,
+        id: state.currentBooking.id,
       })
         .then((res) => {
           alert("Event updated succesfully!");

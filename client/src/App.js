@@ -9,6 +9,7 @@ import Calendar from "./pages/Calendar";
 import Day from "./components/Day";
 import Find from "./pages/find";
 import altUserCalendar from "./components/AltUserCal";
+import TimeInput from "./components/TimePicker";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <StoreProvider>
           <NavBar />
           <Switch>
+            <Route exact path="/time" component={TimeInput}></Route>
             <Route exact path="/login" component={Login} />
             <Route exact path="/" component={Calendar} />
             <Route exact path="/date/:id" component={Day} />
