@@ -22,14 +22,22 @@ Booking.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    time: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     location: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // accepted: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: false,
-    // },
+    accepted: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    bookerPending: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    },
     booker_id: {
       type: DataTypes.UUID,
       allowNull: false,

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import API from "../../utils/API";
 import { useStoreContext } from "../../utils/GlobalState";
 import { useParams, Link } from "react-router-dom";
+import TimePicker from "react-bootstrap-time-picker";
 
 function UpdateEvent(props) {
   const { id } = useParams();
@@ -13,6 +14,7 @@ function UpdateEvent(props) {
     startTime: "",
     endTime: "",
     date: "",
+    time: 0,
   });
 
   const [error, setError] = useState(false);
@@ -23,6 +25,10 @@ function UpdateEvent(props) {
     dispatch({
       type: "modalClick",
     });
+  };
+
+  const handleTimeChange = (time) => {
+    setUpdateEvent({ ...eventInput, time: time });
   };
 
   const handleInputChange = (event) => {
@@ -49,6 +55,8 @@ function UpdateEvent(props) {
         time: eventInput.time,
         location: eventInput.location,
         id: state.currentBooking.id,
+        accepted: false,
+        time: eventInput.time,
       })
         .then((res) => {
           alert("Event updated succesfully!");
@@ -104,13 +112,12 @@ function UpdateEvent(props) {
               onChange={handleInputChange}
             ></input>
             <label className="col-form-label mt-4">Time</label>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="e.g. 2pm-3pm"
-              id="inputTime"
-              name="time"
-              onChange={handleInputChange}
+            <TimePicker
+              start="10:00"
+              end="21:00"
+              step={30}
+              onChange={handleTimeChange}
+              value={eventInput.time}
             />
 
             <label className="col-form-label mt-4">Location</label>

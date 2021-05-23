@@ -4,6 +4,7 @@ import { useStoreContext } from "../../utils/GlobalState";
 import SearchForm from "../SearchForm";
 import API from "../../utils/API";
 import "./style.css";
+import Notification from "../Notifications";
 
 function NavBar() {
   const [state, dispatch] = useStoreContext();
@@ -69,10 +70,14 @@ function NavBar() {
                 </div>
               </li>
             )}
+            <li className="nav-item dropdown">
+              <Notification />
+            </li>
           </ul>
-          <SearchForm />
         </div>
       </div>
+
+      <SearchForm />
     </nav>
   );
 }

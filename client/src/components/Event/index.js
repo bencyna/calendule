@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import { useStoreContext } from "../../utils/GlobalState";
 import UpdateEvent from "../UpdateEvent";
+import TimePicker from "react-bootstrap-time-picker";
 
 function Event(props) {
   const [deleteAnEvent, setDeleteAnEvent] = useState(false);
@@ -80,12 +81,16 @@ function Event(props) {
             <Link to="#"> {state.currentBooking.location}</Link>
           </li>
           <li className="li">
-            <Link to="#"> {state.currentBooking.time}</Link>
-          </li>
-          <li className="li">
             <Link to="#"> {state.currentBooking.date}</Link>
           </li>
-          <li className="li"></li>
+          <li className="li">
+            <TimePicker
+              start="10:00"
+              end="21:00"
+              step={30}
+              value={state.currentBooking.time}
+            />
+          </li>
         </ul>
       </div>
       {state.modal ? (

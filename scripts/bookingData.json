@@ -4,20 +4,80 @@
         "description": "The description of the first test",
         "location": "Adelaide",
         "date": "2021-05-12",
-        "accepted": false
+        "accepted": false,
+        "time": 3600,
+        "bookerPending": false
     },
     {
         "title": "Event Two test",
         "description": "The description of the second test",
         "location": "Zoom",
         "date": "2021-05-14",
-        "accepted": false
+        "accepted": false,
+        "time": 3600,
+        "bookerPending": false
     },
     {
         "title": "Event Three test",
         "description": "The description of the Third test",
         "location": "Blue Mountains",
         "date": "2021-05-12",
-        "accepted": true
+        "accepted": true,
+        "time": 3600,
+        "bookerPending": true
+    },
+    {
+        "title": "Event One test",
+        "description": "The description of the first test",
+        "location": "Adelaide",
+        "date": "2021-05-12",
+        "accepted": false,
+        "time": 3600,
+        "bookerPending": true
+    },
+    {
+        "title": "Event Two test",
+        "description": "The description of the second test",
+        "location": "Zoom",
+        "date": "2021-05-14",
+        "accepted": false,
+        "time": 3600,
+        "bookerPending": true
+    },
+    {
+        "title": "Event Three test",
+        "description": "The description of the Third test",
+        "location": "Blue Mountains",
+        "date": "2021-05-12",
+        "accepted": true,
+        "time": 3600,
+        "bookerPending": true
+    },
+    {
+        "title": "Event One test",
+        "description": "The description of the first test",
+        "location": "Adelaide",
+        "date": "2021-05-12",
+        "accepted": false,
+        "time": 3600,
+        "bookerPending": false
+    },
+    {
+        "title": "Event Two test",
+        "description": "The description of the second test",
+        "location": "Zoom",
+        "date": "2021-05-14",
+        "accepted": false,
+        "time": 3600,
+        "bookerPending": false
+    },
+    {
+        "title": "Event Three test",
+        "description": "The description of the Third test",
+        "location": "Blue Mountains",
+        "date": "2021-05-12",
+        "accepted": true,
+        "time": 3600,
+        "bookerPending": false
     }
 ]

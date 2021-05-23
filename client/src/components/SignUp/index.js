@@ -44,8 +44,14 @@ function SignUpForm() {
         email: formInput.email,
         password: formInput.password,
       })
-        .then((res) => history.push("/"))
-
+        .then((res) => {
+          dispatch({
+            type: "LOGGINGIN",
+            logged_in: res.data.logged_in,
+            id: res.data.user_id,
+          });
+          history.push("/");
+        })
         .catch((err) => {
           setErrorMessage(
             "You must include: Your first name, last name, a valid email address and a password more than 8 characters long"

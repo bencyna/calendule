@@ -14,7 +14,7 @@ function EventInput() {
     startTime: "",
     endTime: "",
     date: "",
-    timeValue: ["09:00", "10:00"],
+    time: 0,
   });
 
   const [error, setError] = useState(false);
@@ -27,8 +27,11 @@ function EventInput() {
     });
   };
 
+  const handleTimeChange = (time) => {
+    setEventInput({ ...eventInput, time: time });
+  };
+
   const handleInputChange = (event) => {
-    console.log(event.target);
     const { name, value } = event.target;
     setEventInput({ ...eventInput, [name]: value });
   };
@@ -53,6 +56,8 @@ function EventInput() {
         location: eventInput.location,
         booker_id: state.user_id,
         bookee_id: id,
+        accepted: false,
+        bookerPending: false,
       })
         .then((res) => {
           alert("Event added succesfully!");
@@ -106,7 +111,13 @@ function EventInput() {
               onChange={handleInputChange}
             ></input>
             <label className="col-form-label mt-4">Time</label>
-            <TimePicker start="10:00" end="21:00" step={30} />
+            <TimePicker
+              start="10:00"
+              end="21:00"
+              step={30}
+              onChange={handleTimeChange}
+              value={eventInput.time}
+            />
 
             <label className="col-form-label mt-4">Location</label>
             <input

@@ -25,7 +25,6 @@ function Day() {
   const clickEvent = (event) => {
     const eventId = event.target.id;
     const getEvent = getBookings.filter((event) => event.id == eventId);
-    console.log(getEvent);
     dispatch({
       type: "CURRENTBOOKING",
       currentBooking: getEvent[0],
@@ -56,7 +55,7 @@ function Day() {
   };
 
   return (
-    <div onClick={console.log(state.currentBooking)}>
+    <div>
       {noEvents ? (
         <div className="container">
           <div>

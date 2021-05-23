@@ -34,4 +34,10 @@ export default {
   updatePost: function (body) {
     return axios.put("/api/date/", body);
   },
+  getPending: function () {
+    return axios.get("/api/date/pending/");
+  },
+  getAllPending: function () {
+    return axios.get("/api/date/allpending/");
+  },
 };

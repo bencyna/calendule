@@ -65,6 +65,26 @@ const reducer = (state, action) => {
         ...state,
         clickedEvent: action.clickedEvent,
       };
+    case "PENDINGEVENT":
+      return {
+        ...state,
+        pendingEvents: action.pendingEvents,
+      };
+    case "ACTIONREQUIRED":
+      return {
+        ...state,
+        actionRequired: action.actionRequired,
+      };
+    case "ALLPENDINGEVENTS":
+      return {
+        ...state,
+        allPendingEvents: action.allPendingEvents,
+      };
+    case "BOOKINGWITH":
+      return {
+        ...state,
+        bookingWith: action.bookingWith,
+      };
     default:
       return state;
   }
@@ -72,7 +92,8 @@ const reducer = (state, action) => {
 
 const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
-    events: [],
+    pendingEvents: [],
+    allPendingEvents: [],
     users: [],
     login: true,
     dateClicked: false,
@@ -84,9 +105,10 @@ const StoreProvider = ({ value = [], ...props }) => {
     user_id: "",
     currentBooking: {},
     clickedEvent: false,
+    actionRequired: false,
+    bookingWith: "",
   });
   useEffect(() => {
-    console.log("use effect running why not working");
     API.isLoggedIn()
       .then((res) => {
         console.log(res);
