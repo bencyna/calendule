@@ -76,6 +76,43 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
+  findWaiting: function (req, res) {
+    db.Booking.findAll({
+      // order by time here Ben!
+      include: [
+        {
+          model: User,
+          attributes: ["first_name", "last_name", "id"],
+          as: "createdByUser",
+        },
+        {
+          model: User,
+          attributes: ["first_name", "last_name", "id"],
+          as: "receivedByUser",
+        },
+      ],
+      where: {
+        [Op.or]: [
+          {
+            [Op.and]: [
+              { bookee_id: req.session.user_id },
+              { accepted: false },
+              { bookerPending: true },
+            ],
+          },
+          {
+            [Op.and]: [
+              { booker_id: req.session.user_id },
+              { accepted: false },
+              { bookerPending: false },
+            ],
+          },
+        ],
+      },
+    })
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
+  },
   findAllPending: function (req, res) {
     db.Booking.findAll({
       // order by time here Ben!

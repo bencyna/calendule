@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import TimePicker from "react-bootstrap-time-picker";
 import API from "../../utils/API";
+import EditBooking from "../EditBookingModal";
 
 function PendingEvent(props) {
   const [state, dispatch] = useStoreContext();
+  const [editEvent, setEditEvent] = useState(false);
 
   const acceptedEvent = () => {
     API.updatePost({
@@ -36,19 +38,8 @@ function PendingEvent(props) {
       .catch((err) => console.log(err));
   };
 
-  const editedEvent = () => {
-    API.updatePost({
-      bookerPending: !state.currentBooking.bookerPending,
-      id: state.currentBooking.id,
-    })
-      .then((res) => {
-        alert("Reshedule requested");
-        dispatch({
-          type: "CLICKEDEVENT",
-          clickedEvent: false,
-        });
-      })
-      .catch((err) => console.log(err));
+  const editEventClick = (e) => {
+    setEditEvent(true);
   };
 
   return (
@@ -90,7 +81,7 @@ function PendingEvent(props) {
               type="button"
               className="btn btn-outline-warning optBtn"
               style={{ borderColor: "#f89406" }}
-              onClick={editedEvent}
+              onClick={editEventClick}
             >
               Suggest Reschedule
             </button>
@@ -107,6 +98,14 @@ function PendingEvent(props) {
           <div className="pendingOptions">
             <h3>Waiting for their response</h3>
           </div>
+        )}
+        {editEvent ? (
+          <EditBooking
+            setEditEvent={setEditEvent}
+            bookingWith={props.bookingWith}
+          />
+        ) : (
+          <div className="hide"></div>
         )}
       </div>
     </div>

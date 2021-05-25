@@ -60,10 +60,12 @@ function EventInput() {
         bookerPending: false,
       })
         .then((res) => {
-          alert("Event added succesfully!");
+          alert("Event request succesful!");
         })
         .catch((err) => {
           console.log(err);
+          alert("Uh oh! Something went wrong");
+          setError(true);
         });
     } else {
       setError(true);

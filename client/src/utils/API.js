@@ -40,4 +40,7 @@ export default {
   getAllPending: function () {
     return axios.get("/api/date/allpending/");
   },
+  getWaiting: function () {
+    return axios.get("/api/date/waiting/");
+  },
 };

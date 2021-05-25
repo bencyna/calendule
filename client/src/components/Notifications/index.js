@@ -4,11 +4,9 @@ import FeatherIcon from "feather-icons-react";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
 import "./style.css";
-import { useHistory } from "react-router-dom";
 
 function Notifications() {
   const [state, dispatch] = useStoreContext();
-  const history = useHistory();
 
   useEffect(() => {
     API.getPending()
@@ -22,11 +20,7 @@ function Notifications() {
         });
       })
       .catch((err) => console.log(err));
-  }, []);
-
-  const notifcationClick = (e) => {
-    history.push(`/pending`);
-  };
+  }, [state.user_id, state.clickedEvent]);
 
   return (
     <div>

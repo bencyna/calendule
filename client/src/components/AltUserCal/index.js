@@ -6,6 +6,8 @@ import API from "../../utils/API";
 import { useParams, Link } from "react-router-dom";
 import EventInput from "../eventInput";
 import { useStoreContext } from "../../utils/GlobalState";
+import Success from "../SuccessMsg";
+import "./style.css";
 
 function AltUserCalendar() {
   const { id } = useParams();
@@ -34,29 +36,9 @@ function AltUserCalendar() {
 
   return (
     <div>
-      <h1>
-        Welcome to {user.first_name}'s Calendar! Cick a day to add en event!
+      <h1 className="title">
+        Welcome to {user.first_name}'s Calendar! Cick a day to add an event!
       </h1>
-      {state.eventAdded ? (
-        <div className="successMessage">
-          <div className="alert alert-dismissible alert-success">
-            <button
-              type="button"
-              className="btn-close"
-              data-bs-dismiss="alert"
-              onClick={dispatch({ type: "eventSubmitDone" })}
-            ></button>
-            <strong>Nice!</strong> You successfully added an event to{" "}
-            {user.first_name}'s Calendar,{" "}
-            <Link to="/myevents" className="alert-link">
-              Click me to see your events!
-            </Link>{" "}
-          </div>
-        </div>
-      ) : (
-        <div></div>
-      )}
-
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"

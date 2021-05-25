@@ -1,13 +1,12 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Login from "./pages/login";
+import Welcome from "./components/Welcome";
 import NavBar from "./components/NavBar";
-import PrivateRoute from "./components/PrivateRoute";
 import { StoreProvider } from "./utils/GlobalState";
 import Calendar from "./pages/Calendar";
 import Day from "./components/Day";
-import Find from "./pages/find";
+import Find from "./pages/Find";
 import altUserCalendar from "./components/AltUserCal";
 import Pending from "./components/Day/Pending";
 import PendingEvent from "./components/Event/PendingEvent";
@@ -17,15 +16,17 @@ function App() {
     <Router>
       <div>
         <StoreProvider>
-          <NavBar />
           <Switch>
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/" component={Calendar} />
-            <Route exact path="/date/:id" component={Day} />
-            <Route exact path="/find" component={Find} />
-            <Route exact path="/user/:id" component={altUserCalendar} />
-            <Route exact path="/pending" component={Pending} />
-            <Route exact path="/pending/event/" component={PendingEvent} />
+            <Route exact path="/login" component={Welcome} />
+            <div>
+              <NavBar />
+              <Route exact path="/" component={Calendar} />
+              <Route exact path="/date/:id" component={Day} />
+              <Route exact path="/find" component={Find} />
+              <Route exact path="/user/:id" component={altUserCalendar} />
+              <Route exact path="/pending" component={Pending} />
+              <Route exact path="/pending/event/" component={PendingEvent} />
+            </div>
           </Switch>
         </StoreProvider>
       </div>

@@ -10,7 +10,6 @@ function Pending() {
   const [bookingWith, setBookingWith] = useState();
 
   useEffect(() => {
-    console.log(state.allPendingEvents);
     API.getAllPending()
       .then((res) => {
         console.log(res);
@@ -23,7 +22,18 @@ function Pending() {
         });
       })
       .catch((err) => console.log(err));
-  }, []);
+    API.getWaiting()
+      .then((res) => {
+        if (res.data.length === 0) {
+          return;
+        }
+        dispatch({
+          type: "WAITINGEVENT",
+          awaitingEvents: res.data,
+        });
+      })
+      .catch((err) => console.log(err));
+  }, [state.clickedEvent]);
 
   const EventSelected = async (event) => {
     const eventId = event.target.id;
@@ -40,7 +50,6 @@ function Pending() {
       selectedEvent[0].bookerPending
     ) {
       // im owner but not my turn
-      console.log("I am bookee but it is their turn");
       await dispatch({
         type: "ACTIONREQUIRED",
         actionRequired: false,
@@ -55,7 +64,6 @@ function Pending() {
       !selectedEvent[0].bookerPending
     ) {
       // im owner and my turn
-      console.log("I am bookee and it is my turn");
       await dispatch({
         type: "ACTIONREQUIRED",
         actionRequired: true,
@@ -70,7 +78,6 @@ function Pending() {
       selectedEvent[0].bookerPending
     ) {
       // i booked but it is my turn
-      console.log("I am booker but it is my turn");
       await dispatch({
         type: "ACTIONREQUIRED",
         actionRequired: true,
@@ -85,7 +92,6 @@ function Pending() {
       !selectedEvent[0].bookerPending
     ) {
       // I booked and it is not my turn
-      console.log("I am booker but it is their turn");
       await dispatch({
         type: "ACTIONREQUIRED",
         actionRequired: false,
@@ -103,17 +109,8 @@ function Pending() {
     });
   };
 
-  const pendingNoAction = state.allPendingEvents.filter(
-    (pendingEvnt) => !state.pendingEvents.includes(pendingEvnt.id)
-  );
-
-  const log = () => {
-    console.log(state.pendingEvents);
-    console.log(pendingNoAction);
-  };
-
   return (
-    <div onClick={log}>
+    <div>
       <div className="container">
         <div>
           <Link to="/" className="backBtnW">
@@ -144,7 +141,7 @@ function Pending() {
                 </ul>
                 <h2 className="h2">Waiting Events</h2>
                 <ul className="ul">
-                  {state.allPendingEvents.map((event) => {
+                  {state.awaitingEvents.map((event) => {
                     return (
                       <li className="li events eventTitle" key={event.id}>
                         <Link

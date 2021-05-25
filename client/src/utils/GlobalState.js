@@ -80,6 +80,11 @@ const reducer = (state, action) => {
         ...state,
         allPendingEvents: action.allPendingEvents,
       };
+    case "WAITINGEVENT":
+      return {
+        ...state,
+        awaitingEvents: action.awaitingEvents,
+      };
     case "BOOKINGWITH":
       return {
         ...state,
@@ -94,6 +99,7 @@ const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     pendingEvents: [],
     allPendingEvents: [],
+    awaitingEvents: [],
     users: [],
     login: true,
     dateClicked: false,

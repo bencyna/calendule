@@ -66,7 +66,7 @@ function LoginForm() {
     <div className="col-md-4 loginContainer">
       <form className="form login-form login">
         <div className="form-group">
-          <label>email:</label>
+          <label>Email:</label>
           <input
             className="form-input"
             type="text"
@@ -76,12 +76,12 @@ function LoginForm() {
           />
         </div>
         <div className="form-group">
-          <label>password:</label>
+          <label>Password:</label>
           <input
             className="form-input"
             type="password"
             id="password-login"
-            name="password"
+            name="current-password"
             onChange={hanldeFormInput}
           />
         </div>
@@ -93,7 +93,6 @@ function LoginForm() {
         </div>
       </form>
       {error ? <Error message={errorMessage} /> : <div className="hide"></div>}
-      {/* <CardList /> */}
     </div>
   );
 }

@@ -7,7 +7,7 @@ import UpdateEvent from "../UpdateEvent";
 import TimePicker from "react-bootstrap-time-picker";
 
 function Event(props) {
-  const [deleteAnEvent, setDeleteAnEvent] = useState(false);
+  const [deleteAnEvent] = useState(false);
   const [state, dispatch] = useStoreContext();
 
   const deleteEvent = () => {

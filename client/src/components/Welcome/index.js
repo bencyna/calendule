@@ -8,14 +8,18 @@ function Welcome() {
   const [state, dispatch] = useStoreContext();
 
   return (
-    <div className="row">
-      <div className="col-md-8">
-        <div id="welcomeTag">
-          <h1>Welcome to Calendule</h1>
-          <h5>The best Scheduling app</h5>
+    <div className="Container">
+      <div className="row">
+        <div className="col-md-8">
+          <div id="welcomeTag">
+            <h1 className="title">Welcome to Calendule</h1>
+            <h5 className="title">
+              Login or Sign Up to use all the cool features!
+            </h5>
+          </div>
         </div>
+        {state.login ? <LoginForm /> : <SignUpForm />}
       </div>
-      {state.login ? <LoginForm /> : <SignUpForm />}
     </div>
   );
 }

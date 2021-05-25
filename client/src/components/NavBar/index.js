@@ -7,14 +7,7 @@ import "./style.css";
 import Notification from "../Notifications";
 
 function NavBar() {
-  const [state, dispatch] = useStoreContext();
-
-  const setCalendarFalse = (e) => {
-    e.preventDefault();
-    dispatch({
-      type: "userClicked",
-    });
-  };
+  const [state] = useStoreContext();
 
   const logout = () => {
     API.logoutUser()
@@ -48,7 +41,7 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarColor03">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={setCalendarFalse}>
+              <Link className="nav-link" to="/">
                 User
               </Link>
             </li>

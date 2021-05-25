@@ -14,7 +14,7 @@ function Calendar() {
   };
   return (
     <div>
-      <h1>
+      <h1 className="title">
         Welcome to your personalised Calendar, click a day to see your events
       </h1>
       <FullCalendar

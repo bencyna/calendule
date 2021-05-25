@@ -1,0 +1,20 @@
+.fc-daygrid-day-frame:hover,
+.fc-scrollgrid-sync-inner:hover,
+.fc-daygrid-day-number:hover {
+  cursor: pointer;
+  color: #001f3f;
+  transform: scale(1.1);
+}
+
+.fc-daygrid-day-frame,
+.fc-scrollgrid-sync-inner {
+  transition: all 0.3s ease-in-out;
+}
+
+.title,
+.fc-toolbar-title {
+  text-align: center;
+  color: #001f3f;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}

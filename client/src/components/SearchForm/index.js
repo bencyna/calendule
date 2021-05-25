@@ -19,6 +19,7 @@ function SearchForm() {
         type="text"
         placeholder="Search for a person"
         onChange={handleInputChange}
+        value={state.search}
       />
       <Link to="/find">
         <button className="btn btn-secondary my-2 my-sm-0" type="submit">

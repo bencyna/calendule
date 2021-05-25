@@ -11,6 +11,7 @@ router
 
 router.route("/pending").get(bookingController.findPending);
 router.route("/allpending").get(bookingController.findAllPending);
+router.route("/waiting").get(bookingController.findWaiting);
 
 // Matches with "/api/date/:id"
 router
