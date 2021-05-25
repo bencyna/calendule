@@ -121,11 +121,11 @@ function Pending() {
           <div className="col-md-5">
             <div className="eventList">
               <div className="listContainer">
-                <h2 className="h2">Pending Events</h2>
+                <h2 className="h2 title">Pending Events</h2>
                 <ul className="ul">
                   {state.pendingEvents.map((event) => {
                     return (
-                      <li className="li events eventTitle" key={event.id}>
+                      <li className="li events eventTitle title" key={event.id}>
                         <Link
                           to="#"
                           scope="row"
@@ -139,11 +139,11 @@ function Pending() {
                     );
                   })}
                 </ul>
-                <h2 className="h2">Waiting Events</h2>
+                <h2 className="h2 title">Waiting Events</h2>
                 <ul className="ul">
                   {state.awaitingEvents.map((event) => {
                     return (
-                      <li className="li events eventTitle" key={event.id}>
+                      <li className="li events eventTitle title" key={event.id}>
                         <Link
                           to="#"
                           scope="row"

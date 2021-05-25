@@ -20,6 +20,8 @@ function LoginForm() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const hanldeFormInput = (event) => {
+    console.log(formInput);
+    console.log(formInput.password);
     const { name, value } = event.target;
     setFormInput({ ...formInput, [name]: value });
   };
@@ -50,7 +52,7 @@ function LoginForm() {
     } else {
       console.log("Failed to log in");
       // error password email and password cannot be blank
-      setErrorMessage("Password must be atleast 8 characters");
+      setErrorMessage("Incorrect Email or Password");
       setError(true);
     }
   };
@@ -81,7 +83,7 @@ function LoginForm() {
             className="form-input"
             type="password"
             id="password-login"
-            name="current-password"
+            name="password"
             onChange={hanldeFormInput}
           />
         </div>

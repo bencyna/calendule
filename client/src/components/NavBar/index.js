@@ -23,7 +23,7 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand title" to="/">
           Calendule
         </Link>
         <button
@@ -69,8 +69,9 @@ function NavBar() {
           </ul>
         </div>
       </div>
-
-      <SearchForm />
+      <div className="collapse navbar-collapse" id="navbarColor03">
+        <SearchForm />
+      </div>
     </nav>
   );
 }

@@ -45,7 +45,7 @@ function PendingEvent(props) {
   return (
     <div className="clickedEvent col-md-6">
       <div className="listCOntainer">
-        <h2 className="h2">
+        <h2 className="h2 title">
           {state.currentBooking.title} ~ {props.bookingWith}
         </h2>
         <ul className="ul">
@@ -96,7 +96,7 @@ function PendingEvent(props) {
           </div>
         ) : (
           <div className="pendingOptions">
-            <h3>Waiting for their response</h3>
+            <h3 className="title">Waiting for their response</h3>
           </div>
         )}
         {editEvent ? (

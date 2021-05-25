@@ -67,7 +67,7 @@ function Day() {
             <div className="col-md-5">
               <div className="eventList">
                 <div className="listContainer">
-                  <h2 className="h2"> Today's Events</h2>
+                  <h2 className="h2 title"> Today's Events</h2>
                   <ul className="ul">
                     {" "}
                     {getBookings.map((booked) => {

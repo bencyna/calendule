@@ -103,15 +103,18 @@ function EventInput() {
               name="title"
               onChange={handleInputChange}
             ></input>
-            <label className="col-form-label mt-4">Description</label>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Provide a description"
-              id="inputDescription"
-              name="description"
-              onChange={handleInputChange}
-            ></input>
+            <div class="form-group">
+              <label class="form-label mt-4">Description</label>
+              <textarea
+                className="form-control"
+                placeholder="Provide a description"
+                id="inputDescription"
+                name="description"
+                rows="3"
+                spellcheck="true"
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
             <label className="col-form-label mt-4">Time</label>
             <TimePicker
               start="10:00"

@@ -57,9 +57,12 @@ function UpdateEvent(props) {
         id: state.currentBooking.id,
         accepted: false,
         time: eventInput.time,
+        bookerPending: !state.currentBooking.bookerPending,
       })
         .then((res) => {
-          alert("Event updated succesfully!");
+          alert(
+            "Reschedule request sent, check your pending events to see this event!"
+          );
           props.setNoEvents(false);
         })
         .catch((err) => {
@@ -80,7 +83,7 @@ function UpdateEvent(props) {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">
-              Update the event {state.currentBooking.title} {state.date}
+              Reschedule the event {state.currentBooking.title} {state.date}
             </h5>
             <button
               type="button"

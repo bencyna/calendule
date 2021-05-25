@@ -27,7 +27,6 @@ function Event(props) {
   };
 
   const updateEvent = () => {
-    console.log("update clicked");
     dispatch({
       type: "modalClick",
       date: state.currentBooking.date,
@@ -36,26 +35,6 @@ function Event(props) {
 
   return (
     <div className="clickedEvent col-md-6">
-      {deleteAnEvent ? (
-        <div class="alert alert-dismissible alert-warning">
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="alert"
-          ></button>
-          <h4 class="alert-heading">Warning!</h4>
-          <p class="mb-0">
-            Best check yo self, you're not looking too good. Nulla vitae elit
-            libero, a pharetra augue. Praesent commodo cursus magna,{" "}
-            <a href="#" class="alert-link">
-              vel scelerisque nisl consectetur et
-            </a>
-            .
-          </p>
-        </div>
-      ) : (
-        <div className="hide"></div>
-      )}
       <div className="listCOntainer">
         <div className="updatePosts">
           <FeatherIcon
@@ -69,7 +48,7 @@ function Event(props) {
             onClick={deleteEvent}
           />
         </div>
-        <h2 className="h2">
+        <h2 className="h2 title">
           {" "}
           {state.currentBooking.title} ~ {props.bookingWith}
         </h2>
