@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import FeatherIcon from "feather-icons-react";
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
@@ -7,7 +7,6 @@ import UpdateEvent from "../UpdateEvent";
 import TimePicker from "react-bootstrap-time-picker";
 
 function Event(props) {
-  const [deleteAnEvent] = useState(false);
   const [state, dispatch] = useStoreContext();
 
   const deleteEvent = () => {

@@ -18,7 +18,7 @@ function App() {
         <StoreProvider>
           <Switch>
             <Route exact path="/login" component={Welcome} />
-            <div>
+            <>
               <NavBar />
               <Route exact path="/" component={Calendar} />
               <Route exact path="/date/:id" component={Day} />
@@ -26,7 +26,7 @@ function App() {
               <Route exact path="/user/:id" component={altUserCalendar} />
               <Route exact path="/pending" component={Pending} />
               <Route exact path="/pending/event/" component={PendingEvent} />
-            </div>
+            </>
           </Switch>
         </StoreProvider>
       </div>
