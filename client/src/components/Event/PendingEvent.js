@@ -4,6 +4,8 @@ import { useStoreContext } from "../../utils/GlobalState";
 import TimePicker from "react-bootstrap-time-picker";
 import API from "../../utils/API";
 import EditBooking from "../EditBookingModal";
+import FeatherIcon from "feather-icons-react";
+import "./style.css";
 
 function PendingEvent(props) {
   const [state, dispatch] = useStoreContext();
@@ -44,26 +46,40 @@ function PendingEvent(props) {
 
   return (
     <div className="clickedEvent col-md-6">
-      <div className="listCOntainer">
+      <div className="listContainer">
         <h2 className="h2 title">
           {state.currentBooking.title} ~ {props.bookingWith}
         </h2>
-        <ul className="ul">
+        <ul className="ul" key={state.currentBooking.id}>
           <li className="li">
-            <Link to="#"> {state.currentBooking.description} </Link>
+            <Link to="#">
+              {" "}
+              <FeatherIcon icon="info" className="detailsIcon" />
+              {state.currentBooking.description}{" "}
+            </Link>
           </li>
           <li className="li">
-            <Link to="#"> {state.currentBooking.location}</Link>
+            <Link to="#">
+              {" "}
+              <FeatherIcon icon="map-pin" className="detailsIcon" />{" "}
+              {state.currentBooking.location}
+            </Link>
           </li>
           <li className="li">
-            <Link to="#"> {state.currentBooking.date}</Link>
+            <Link to="#">
+              {" "}
+              <FeatherIcon icon="calendar" className="detailsIcon" />{" "}
+              {state.currentBooking.date}
+            </Link>
           </li>
           <li className="li">
+            <FeatherIcon icon="clock" className="detailsIcon" />
             <TimePicker
               start="10:00"
               end="21:00"
               step={30}
               value={state.currentBooking.time}
+              className="time"
             />
           </li>
         </ul>

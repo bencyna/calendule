@@ -10,7 +10,7 @@ function Event(props) {
   const [state, dispatch] = useStoreContext();
 
   const deleteEvent = () => {
-    if (window.confirm("Delete this Event?")) {
+    if (window.confirm("Cancel this Event?")) {
       console.log(state.currentBooking + " Delete event");
       API.deletePost(state.currentBooking.id)
         .then((res) => {
@@ -53,20 +53,25 @@ function Event(props) {
         </h2>
         <ul className="ul">
           <li className="li">
+            <FeatherIcon icon="info" className="detailsIcon" />
             <Link to="#"> {state.currentBooking.description}</Link>
           </li>
           <li className="li">
+            <FeatherIcon icon="map-pin" className="detailsIcon" />{" "}
             <Link to="#"> {state.currentBooking.location}</Link>
           </li>
           <li className="li">
+            <FeatherIcon icon="calendar" className="detailsIcon" />{" "}
             <Link to="#"> {state.currentBooking.date}</Link>
           </li>
           <li className="li">
+            <FeatherIcon icon="clock" className="detailsIcon" />{" "}
             <TimePicker
               start="10:00"
               end="21:00"
               step={30}
               value={state.currentBooking.time}
+              className="time"
             />
           </li>
         </ul>

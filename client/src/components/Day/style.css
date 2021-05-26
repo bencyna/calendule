@@ -1,5 +1,5 @@
 .eventList {
-  margin-top: 15%;
+  margin-top: 3%;
   background-color: white;
   border-radius: 15px;
   height: 90%;
@@ -13,8 +13,9 @@
 }
 
 .clickedEvent {
+  display: block;
   margin-left: 7%;
-  margin-top: 6% !important;
+  margin-top: 8% !important;
   background-color: white;
   border-radius: 15px;
   height: 500px;
@@ -48,7 +49,7 @@ li a,
 .input {
   text-decoration: none;
   color: #000;
-  display: block;
+  /* display: block; */
 
   -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
   -moz-transition: font-size 0.3s ease, background-color 0.3s ease;

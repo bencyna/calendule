@@ -4,11 +4,13 @@ import { useParams, Link } from "react-router-dom";
 import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import Event from "../Event";
+import EventInput from "../eventInput";
 
 function Day() {
   const [getBookings, setBookings] = useState([""]);
   const [noEvents, setNoEvents] = useState(false);
   const [bookingWith, setBookingWith] = useState();
+  const [ownEvent, setOwnEvent] = useState();
 
   const { id } = useParams();
   const [state, dispatch] = useStoreContext();
@@ -19,6 +21,7 @@ function Day() {
         setNoEvents(true);
       }
       setBookings(res.data);
+      console.log(res.data);
     });
   }, [noEvents]);
 
@@ -54,8 +57,24 @@ function Day() {
     });
   };
 
+  const addOwnPost = () => {
+    dispatch({
+      type: "CLICKEDEVENT",
+      clickedEvent: false,
+    });
+    dispatch({
+      type: "modalClick",
+      date: id,
+    });
+  };
+
   return (
     <div>
+      {state.modal ? (
+        <EventInput ownPost={true} setNoEvents={setNoEvents} />
+      ) : (
+        <div className="hide"></div>
+      )}
       {noEvents ? (
         <div className="container">
           <div>
@@ -65,12 +84,24 @@ function Day() {
           </div>
           <div className="row">
             <div className="col-md-5">
+              <div>
+                <button
+                  type="button"
+                  className="btn addBtn btn-light"
+                  style={{ marginTop: "7%" }}
+                  onClick={addOwnPost}
+                >
+                  + Add Event for Today
+                </button>
+              </div>
               <div className="eventList">
                 <div className="listContainer">
                   <h2 className="h2 title"> Today's Events</h2>
                   <ul className="ul">
-                    {" "}
                     {getBookings.map((booked) => {
+                      {
+                        // console.log(booked.id);
+                      }
                       return (
                         <li className="li events eventTitle" key={booked.id}>
                           {booked.booker_id === state.user_id ? (
@@ -80,7 +111,6 @@ function Day() {
                               onClick={clickEvent}
                               id={booked.id}
                               style={{ color: "red" }}
-                              key={booked.id + "link"}
                             >
                               {booked.title}
                             </Link>
@@ -91,7 +121,6 @@ function Day() {
                               onClick={clickEvent}
                               id={booked.id}
                               style={{ color: "blue" }}
-                              key={booked.id + "link"}
                             >
                               {booked.title}
                             </Link>
@@ -122,6 +151,15 @@ function Day() {
               </Link>
             </div>
           </h1>
+          <div>
+            <button
+              type="button"
+              className="btn btn-light"
+              onClick={addOwnPost}
+            >
+              + Add Event for Today
+            </button>
+          </div>
         </div>
       )}
     </div>

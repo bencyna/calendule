@@ -36,7 +36,7 @@ function AltUserCalendar() {
 
   return (
     <div>
-      <h1 className="title">
+      <h1 className="altTitle">
         Welcome to {user.first_name}'s Calendar! Cick a day to add an event!
       </h1>
       <FullCalendar

@@ -4,7 +4,7 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { useParams, Link } from "react-router-dom";
 import TimePicker from "react-bootstrap-time-picker";
 
-function EventInput() {
+function EventInput(props) {
   const { id } = useParams();
 
   const [state, dispatch] = useStoreContext();
@@ -73,6 +73,44 @@ function EventInput() {
     console.log(eventInput);
   };
 
+  const handleOwnEvent = (e) => {
+    e.preventDefault();
+    setError(false);
+    if (
+      (eventInput.title && eventInput.description,
+      eventInput.time,
+      eventInput.location)
+    ) {
+      dispatch({
+        type: "modalClick",
+      });
+      // api call then setEventinpiut to ()
+      API.createEvent({
+        title: eventInput.title,
+        description: eventInput.description,
+        time: eventInput.time,
+        date: state.date,
+        location: eventInput.location,
+        booker_id: state.user_id,
+        bookee_id: state.user_id,
+        accepted: true,
+        bookerPending: true,
+      })
+        .then((res) => {
+          alert("Event added succesfully!");
+        })
+        .catch((err) => {
+          console.log(err);
+          alert("Uh oh! Something went wrong");
+          setError(true);
+        });
+    } else {
+      setError(true);
+    }
+    props.setNoEvents(false);
+    props.setNoEvents(true);
+  };
+
   return (
     <div
       className="modal fade show"
@@ -103,15 +141,15 @@ function EventInput() {
               name="title"
               onChange={handleInputChange}
             ></input>
-            <div class="form-group">
-              <label class="form-label mt-4">Description</label>
+            <div className="form-group">
+              <label className="form-label mt-4">Description</label>
               <textarea
                 className="form-control"
                 placeholder="Provide a description"
                 id="inputDescription"
                 name="description"
                 rows="3"
-                spellcheck="true"
+                spellCheck="true"
                 onChange={handleInputChange}
               ></textarea>
             </div>
@@ -152,13 +190,24 @@ function EventInput() {
             )}
           </div>
           <div className="modal-footer">
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={handleEventSubmit}
-            >
-              Save Event
-            </button>
+            {props.ownPost ? (
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={handleOwnEvent}
+              >
+                Save Event
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={handleEventSubmit}
+              >
+                Save Event
+              </button>
+            )}
+
             <button
               type="button"
               className="btn btn-secondary"
