@@ -30,17 +30,23 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
   console.log(req.url);
+  console.log("DEFAULT ROUTE");
+
   next();
 });
 
-app.use(express.static(path.join(__dirname, "/public")));
+// app.use(express.static(path.join(__dirname, "/public")));
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static(path.join(__dirname, "/client/build")));
 }
 // Add routes, both API and Auth
 
 app.use(routes);
+app.use(function (req, res) {
+  console.log("DEFAULT ROUTE");
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
+});
 
 // Start the API server
 sequelize.sync({ force: false }).then(() => {
