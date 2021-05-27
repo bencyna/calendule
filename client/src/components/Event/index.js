@@ -11,7 +11,6 @@ function Event(props) {
 
   const deleteEvent = () => {
     if (window.confirm("Cancel this Event?")) {
-      console.log(state.currentBooking + " Delete event");
       API.deletePost(state.currentBooking.id)
         .then((res) => {
           console.log("Ben changhe this to re mount the other component maybe");

@@ -70,7 +70,6 @@ function EventInput(props) {
     } else {
       setError(true);
     }
-    console.log(eventInput);
   };
 
   const handleOwnEvent = (e) => {
@@ -107,7 +106,6 @@ function EventInput(props) {
     } else {
       setError(true);
     }
-    props.setNoEvents(false);
     props.setNoEvents(true);
   };
 
@@ -127,9 +125,7 @@ function EventInput(props) {
               data-bs-dismiss="modal"
               aria-label="Close"
               onClick={handleExitClick}
-            >
-              {/* <span aria-hidden="true"></span> */}
-            </button>
+            ></button>
           </div>
           <div className="modal-body">
             <label className="col-form-label mt-4">Title</label>

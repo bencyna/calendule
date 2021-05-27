@@ -20,8 +20,6 @@ function LoginForm() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const hanldeFormInput = (event) => {
-    console.log(formInput);
-    console.log(formInput.password);
     const { name, value } = event.target;
     setFormInput({ ...formInput, [name]: value });
   };
