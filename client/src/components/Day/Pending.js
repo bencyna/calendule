@@ -16,7 +16,6 @@ function Pending() {
     });
     API.getAllPending()
       .then((res) => {
-        console.log(res);
         if (res.data.length === 0) {
           return;
         }
@@ -37,7 +36,7 @@ function Pending() {
         });
       })
       .catch((err) => console.log(err));
-  }, [state.clickedEvent]);
+  }, []);
 
   const EventSelected = async (event) => {
     const eventId = event.target.id;

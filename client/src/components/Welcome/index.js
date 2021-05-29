@@ -20,6 +20,21 @@ function Welcome() {
             <h5 className="title">
               Login or Sign Up to use all the cool features!
             </h5>
+            <small
+              style={{
+                display: "inline-block",
+                maxWidth: "500px",
+                textAlign: "center",
+              }}
+            >
+              {" "}
+              Calendule is the perfect scheduling app. With a clear simple
+              deisgn, making appointments, meetings or even booking in a slot to
+              meet up with friends can easily be done without the back and
+              fourth we've gotten so custom to. Simply find your friends,
+              collegues or organisation , reuqest a meet and bang, it can
+              already be seen in both you and your recepients calendar, Enjoy!
+            </small>
           </div>
         </div>
         {state.login ? <LoginForm /> : <SignUpForm />}

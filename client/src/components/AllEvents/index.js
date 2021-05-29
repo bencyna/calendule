@@ -19,7 +19,6 @@ function AllEvents() {
         setNoEvents(true);
       }
       setBookings(res.data);
-      console.log(res.data);
     });
   }, []);
 
@@ -31,8 +30,6 @@ function AllEvents() {
       currentBooking: getEvent[0],
     });
     // setCurrentBooking(getEvent);
-    console.log("created by user id: " + getEvent[0].createdByUser.id);
-    console.log("received by user id: " + getEvent[0].receivedByUser.id);
 
     if (state.user_id === getEvent[0].receivedByUser.id) {
       setBookingWith(

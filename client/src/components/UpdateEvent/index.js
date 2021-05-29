@@ -39,7 +39,6 @@ function UpdateEvent(props) {
   const handleEventSubmit = (e) => {
     e.preventDefault();
     setError(false);
-    console.log(eventInput.title);
     if (
       (eventInput.title && eventInput.description,
       eventInput.time,
@@ -71,7 +70,6 @@ function UpdateEvent(props) {
     } else {
       setError(true);
     }
-    console.log(eventInput);
   };
   return (
     <div

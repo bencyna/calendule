@@ -30,7 +30,6 @@ function PendingEvent(props) {
   const rejectedEvent = () => {
     API.deletePost(state.currentBooking.id)
       .then((res) => {
-        console.log("Ben changhe this to re mount the other component maybe");
         console.log(window.prompt("Rejection Reason: "));
         dispatch({
           type: "CLICKEDEVENT",

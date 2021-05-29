@@ -11,6 +11,7 @@ import altUserCalendar from "./components/AltUserCal";
 import Pending from "./components/Day/Pending";
 import PendingEvent from "./components/Event/PendingEvent";
 import AllEvents from "./components/AllEvents";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
             <Route exact path="/login" component={Welcome} />
             <>
               <NavBar />
-              <Route exact path="/" component={Calendar} />
+              <PrivateRoute component={Calendar} path="/" exact />
+              {/* <Route exact path="/" component={Calendar} /> */}
               <Route exact path="/date/:id" component={Day} />
               <Route exact path="/find" component={Find} />
               <Route exact path="/user/:id" component={altUserCalendar} />

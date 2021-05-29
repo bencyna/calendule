@@ -19,14 +19,11 @@ function AltUserCalendar() {
 
   useEffect(() => {
     API.getUser(id).then((res) => {
-      console.log(res.data);
       setUser(res.data);
     });
-    console.log(state.logged_in + state.user_id);
   }, []);
 
   const handleDateClick = async (arg) => {
-    console.log(arg.dateStr);
     await setDateClicked(arg.dateStr);
     dispatch({
       type: "modalClick",

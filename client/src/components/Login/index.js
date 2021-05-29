@@ -26,29 +26,24 @@ function LoginForm() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(formInput.password.length);
     if (formInput.email.length > 1 && formInput.password.length > 8) {
       API.loginUser({
         email: formInput.email,
         password: formInput.password,
       })
         .then((res) => {
-          console.log(res);
           dispatch({
             type: "LOGGINGIN",
             logged_in: res.data.logged_in,
             id: res.data.user_id,
           });
-          console.log(res);
           history.push("/");
         })
         .catch((err) => {
-          console.log(err);
           setError(true);
         });
       setErrorMessage("Incorrect Email or Password"); // password / email doesnt match error
     } else {
-      console.log("Failed to log in");
       // error password email and password cannot be blank
       setErrorMessage("Incorrect Email or Password");
       setError(true);

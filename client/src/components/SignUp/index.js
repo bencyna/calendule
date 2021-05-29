@@ -25,12 +25,6 @@ function SignUpForm() {
   };
 
   const HandleSignUpBtn = (e) => {
-    console.log(
-      formInput.first_name +
-        formInput.last_name +
-        formInput.email +
-        formInput.password
-    );
     e.preventDefault();
     if (
       formInput.email.length > 1 &&
@@ -68,7 +62,6 @@ function SignUpForm() {
   // This is not returning the state back to true
   const hanldeSignUpFinish = () => {
     // e.preventDefault();
-    console.log("hey");
     dispatch({
       type: "LOGIN",
       login: true,

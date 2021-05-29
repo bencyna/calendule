@@ -4,7 +4,7 @@ const { Op } = require("sequelize");
 const withAuth = require("../auth");
 
 module.exports = {
-  findAll: function (req, res) {
+  findAll: function withAuth(req, res) {
     db.Booking.findAll({
       order: [["date", "ASC"]],
       include: [

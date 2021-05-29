@@ -117,7 +117,6 @@ const StoreProvider = ({ value = [], ...props }) => {
   useEffect(() => {
     API.isLoggedIn()
       .then((res) => {
-        console.log(res);
         dispatch({
           type: "LOGGINGIN",
           logged_in: res.data.logged_in,
