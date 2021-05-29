@@ -16,6 +16,10 @@ function Day() {
   const [state, dispatch] = useStoreContext();
 
   useEffect(() => {
+    dispatch({
+      type: "CLICKEDEVENT",
+      clickedEvent: false,
+    });
     API.getBookings(id, state.user_id).then((res) => {
       if (res.data.length > 0) {
         setNoEvents(true);
@@ -99,9 +103,6 @@ function Day() {
                   <h2 className="h2 title"> Today's Events</h2>
                   <ul className="ul">
                     {getBookings.map((booked) => {
-                      {
-                        // console.log(booked.id);
-                      }
                       return (
                         <li className="li events eventTitle" key={booked.id}>
                           {booked.booker_id === state.user_id ? (

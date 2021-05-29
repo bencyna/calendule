@@ -16,6 +16,9 @@ export default {
   getBookings: function (date, user_id) {
     return axios.get("/api/date/" + date, user_id);
   },
+  getAllBookings: function (user_id) {
+    return axios.get("/api/date/");
+  },
   getEvent: function (id) {
     return axios.get("/api/date/event" + id);
   },

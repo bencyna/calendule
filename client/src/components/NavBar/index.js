@@ -5,9 +5,10 @@ import SearchForm from "../SearchForm";
 import API from "../../utils/API";
 import "./style.css";
 import Notification from "../Notifications";
+import FeatherIcon from "feather-icons-react";
 
 function NavBar() {
-  const [state] = useStoreContext();
+  const [state, dispatch] = useStoreContext();
 
   const logout = () => {
     API.logoutUser()
@@ -42,12 +43,17 @@ function NavBar() {
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/">
-                User
+                <FeatherIcon icon="calendar" />
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/find">
-                Book
+                <FeatherIcon icon="search" />
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/all">
+                <FeatherIcon icon="list" />
               </Link>
             </li>
             {!state.logged_in ? (
@@ -59,7 +65,7 @@ function NavBar() {
             ) : (
               <li className="nav-item">
                 <div className="nav-link hover" to="#" onClick={logout}>
-                  Logout
+                  <FeatherIcon icon="log-out" />
                 </div>
               </li>
             )}

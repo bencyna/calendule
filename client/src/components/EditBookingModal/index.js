@@ -85,7 +85,7 @@ function EditBooking(props) {
             <input
               type="text"
               className="form-control"
-              placeholder="e.g. 2022/05/19"
+              placeholder="e.g. 2022-05-19"
               id="inputDate"
               name="date"
               onChange={handleInputChange}

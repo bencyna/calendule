@@ -7,7 +7,7 @@
 }
 
 .noEventClicked {
-  padding: 30%;
+  padding: 30% 12%;
   text-align: center;
   font-size: 30px;
 }
@@ -125,5 +125,6 @@ li a,
 @media screen and (max-width: 768px) {
   .clickedEvent {
     margin: 2px;
+    margin-top: 0px !important;
   }
 }

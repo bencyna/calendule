@@ -4,15 +4,36 @@ const { Op } = require("sequelize");
 const withAuth = require("../auth");
 
 module.exports = {
-  findAll: function withAuth(req, res) {
-    db.Booking.find(req.query)
-      .sort({ date: -1 })
+  findAll: function (req, res) {
+    db.Booking.findAll({
+      order: [["date", "ASC"]],
+      include: [
+        {
+          model: User,
+          attributes: ["first_name", "last_name", "id"],
+          as: "createdByUser",
+        },
+        {
+          model: User,
+          attributes: ["first_name", "last_name", "id"],
+          as: "receivedByUser",
+        },
+      ],
+      where: {
+        [Op.or]: {
+          bookee_id: req.session.user_id,
+          booker_id: req.session.user_id,
+        },
+        accepted: true,
+      },
+    })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
-  findAllWhere: function withAuth(req, res) {
+  findAllWhere: function (req, res) {
     db.Booking.findAll({
       // order by time here Ben!
+      order: [["time", "ASC"]],
       include: [
         {
           model: User,
@@ -140,7 +161,7 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
-  findById: function withAuth(req, res) {
+  findById: function (req, res) {
     db.Booking.findById(req.params.id)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));

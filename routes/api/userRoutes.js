@@ -3,7 +3,6 @@ const router = require("express").Router();
 const userController = require("../../controllers/userControllers");
 
 router.post("/login", async (req, res) => {
-  console.log(req.body);
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 

@@ -10,6 +10,7 @@ import Find from "./pages/Find";
 import altUserCalendar from "./components/AltUserCal";
 import Pending from "./components/Day/Pending";
 import PendingEvent from "./components/Event/PendingEvent";
+import AllEvents from "./components/AllEvents";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route exact path="/user/:id" component={altUserCalendar} />
               <Route exact path="/pending" component={Pending} />
               <Route exact path="/pending/event/" component={PendingEvent} />
+              <Route exact path="/all" component={AllEvents} />
             </>
           </Switch>
         </StoreProvider>

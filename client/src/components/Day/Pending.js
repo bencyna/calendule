@@ -10,6 +10,10 @@ function Pending() {
   const [bookingWith, setBookingWith] = useState();
 
   useEffect(() => {
+    dispatch({
+      type: "CLICKEDEVENT",
+      clickedEvent: false,
+    });
     API.getAllPending()
       .then((res) => {
         console.log(res);
@@ -118,7 +122,7 @@ function Pending() {
           </Link>
         </div>
         <div className="row">
-          <div className="col-md-5">
+          <div className="col-md-5" style={{ marginTop: "6%" }}>
             <div className="eventList">
               <div className="listContainer">
                 <h2 className="h2 title">Pending Events</h2>
