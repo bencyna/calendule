@@ -17,7 +17,7 @@ function Welcome() {
             <div className="image">
               <img src={Calendula} alt="calendula plant" />
             </div>
-            <h5 className="title">
+            <h5 className="title" style={{ marginTop: "20px" }}>
               Login or Sign Up to use all the cool features!
             </h5>
             <small
@@ -25,7 +25,6 @@ function Welcome() {
                 display: "inline-block",
                 maxWidth: "500px",
                 textAlign: "center",
-                marginTop: "20px",
               }}
             >
               {" "}
