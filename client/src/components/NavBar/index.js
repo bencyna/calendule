@@ -24,7 +24,7 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand title" to="/">
+        <Link className="navbar-brand" to="/">
           Calendule
         </Link>
         <button

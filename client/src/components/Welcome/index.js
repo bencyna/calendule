@@ -25,6 +25,7 @@ function Welcome() {
                 display: "inline-block",
                 maxWidth: "500px",
                 textAlign: "center",
+                marginTop: "20px",
               }}
             >
               {" "}
