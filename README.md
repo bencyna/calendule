@@ -62,7 +62,7 @@ The above two images show what the page looks like on our dashboard and post pag
 
 ## Questions:
 
-      If you have any questions about the Code Noob project, you can follow the link below to navigate to my GitHub page:
+      If you have any questions about the Calendule project, you can follow the link below to navigate to my GitHub page:
 
 - [GitHub Profile](https://github.com/bencyna)
 
