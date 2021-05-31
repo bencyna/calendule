@@ -37,7 +37,7 @@ This project allows users to add events to their calendar and also to others to 
 
 ![image Events](./assets/screenshot2.jpg)
 
-The above two images show what the page looks like on our dashboard and post pages. The below image is an exmaple of code written for the application showing the single post html and also our post routes.
+The above two images show what the page looks like on our dashboard and post pages. The below image is an exmaple of code written for the application showing getting bookings data and also some front end code.
 
 ![REACT code used](./assets/screenshot3.jpg)
 
