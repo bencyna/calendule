@@ -7,6 +7,7 @@ import _ from "lodash";
 import { useHistory } from "react-router-dom";
 import API from "../../utils/API";
 import Error from "../Error";
+import Facebook from "../Facebook";
 
 function LoginForm() {
   const [formInput, setFormInput] = useState({
@@ -81,13 +82,23 @@ function LoginForm() {
           />
         </div>
         <div className="form-group">
-          <button id="signup" className="btn btn-primary" onClick={handleLogin}>
+          <button
+            id="signup"
+            className="btn btn-primary initBtns"
+            onClick={handleLogin}
+          >
             Login
           </button>
-          <button onClick={hanldeSignUpBtn}>Sign up here</button>
+          <button
+            className="btn btn-primary initBtns"
+            onClick={hanldeSignUpBtn}
+          >
+            Sign up here
+          </button>
         </div>
       </form>
       {error ? <Error message={errorMessage} /> : <div className="hide"></div>}
+      <Facebook />
     </div>
   );
 }

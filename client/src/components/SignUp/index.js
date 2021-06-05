@@ -47,9 +47,7 @@ function SignUpForm() {
           history.push("/");
         })
         .catch((err) => {
-          setErrorMessage(
-            "You must include: Your first name, last name, a valid email address and a password more than 8 characters long"
-          );
+          setErrorMessage("That email is already in use");
           setError(true);
         });
     } else {
@@ -114,12 +112,17 @@ function SignUpForm() {
         <div className="form-group">
           <button
             id="signup"
-            className="btn btn-primary"
+            className="btn btn-primary initBtns"
             onClick={HandleSignUpBtn}
           >
             signup
           </button>
-          <button onClick={hanldeSignUpFinish}>Back to Login</button>
+          <button
+            className="btn btn-primary initBtns"
+            onClick={hanldeSignUpFinish}
+          >
+            Back to Login
+          </button>
         </div>
       </form>
       {error ? <Error message={errorMessage} /> : <div className="hide"></div>}

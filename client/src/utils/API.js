@@ -46,4 +46,10 @@ export default {
   getWaiting: function () {
     return axios.get("/api/date/waiting/");
   },
+  facebook: function (body) {
+    return axios.post("api/users/facebook/", body);
+  },
+  saveSession: function (id) {
+    return axios.get("api/users/save", id);
+  },
 };

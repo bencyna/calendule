@@ -23,7 +23,6 @@ function App() {
             <>
               <NavBar />
               <PrivateRoute component={Calendar} path="/" exact />
-              {/* <Route exact path="/" component={Calendar} /> */}
               <Route exact path="/date/:id" component={Day} />
               <Route exact path="/find" component={Find} />
               <Route exact path="/user/:id" component={altUserCalendar} />

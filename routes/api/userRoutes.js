@@ -48,7 +48,7 @@ router.post("/signup", async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      res.json(req.session);
+      res.save(req.session);
     });
   } catch (error) {
     console.log(error);
@@ -70,6 +70,40 @@ router.route("/find").get(userController.findAll);
 
 router.get("/user", (req, res) => {
   try {
+    res.json(req.session);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.post("/facebook", async (req, res) => {
+  try {
+    const [response, created] = await User.findOrCreate({
+      where: { id: req.body.id },
+      defaults: {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        id: req.body.id,
+        password: "password12345",
+      },
+    });
+
+    return res.status(200).send({ status: 0, data: response });
+  } catch (err) {
+    console.log(`ERROR! => ${err.name}: ${err.message}`);
+    res.status(500).send(err.message);
+  }
+});
+
+router.get("/save", async (req, res) => {
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + req);
+  try {
+    req.session.save(() => {
+      req.session.user_id = "4097392050329395";
+      req.session.logged_in = true;
+    });
+    console.log(req.session);
     res.json(req.session);
   } catch (error) {
     console.log(error);

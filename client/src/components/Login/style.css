@@ -3,3 +3,9 @@
   border: green;
   border-left: 10px;
 }
+
+.initBtns {
+  width: 30%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}

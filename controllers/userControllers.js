@@ -29,4 +29,40 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
+  findOrCreate: async function (req, res) {
+    try {
+      console.log("~~~~~~~~~~~~~~~~~~~~~~~ " + req);
+      const [response, created] = await db.User.findOrCreate({
+        where: { id: req.body.id },
+        defaults: {
+          first_name: "req.body.userPass",
+        },
+      });
+      console.log(response);
+      return res.status(200).send({ status: 0, data: response });
+    } catch (err) {
+      console.log(`ERROR! => ${err.name}: ${err.message}`);
+      res.status(500).send(err.message);
+    }
+  },
+
+  //   const userData = await db.User.findOrCreate({
+  //     where: { id: req.body.id },
+  //   }).spread(function (user, created) {
+  //     console.log(
+  //       user.get({
+  //         plain: true,
+  //       })
+  //     );
+  //     if (created) {
+  //       console.log("created");
+  //     }
+  //   });
+  //   req.session.save(() => {
+  //     req.session.user_id = userData.id;
+  //     req.session.logged_in = true;
+
+  //     res.json(req.session);
+  //   });
+  // },
 };
