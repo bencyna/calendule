@@ -1,4 +1,4 @@
-# Code Noob
+# Calendule
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg "License Badge")
 
@@ -23,15 +23,15 @@ https://calendule.herokuapp.com/
 
 ## Description:
 
-This project allows users to add events to their calendar and also to others to ensure efficient scheduling methods.
+This project allows users to keep track of their events while also providing the option to schedule activities with other people all in one spot. This ensures efficient scheduling methods reducing the amount of time spent trying to keep track of everything.
 
 ## Installation:
 
-    User information and events are stored in the MySQL database, this allows users to add, update and cancel events and also rescheudle events. User's can choose to accept, reject or reschedule events that are added to their calendar by someone else
+    User information and events are stored in the MySQL database, this allows users to add, update and cancel events and also rescheudle events. User's can choose to accept, reject or reschedule events that are added to their calendar by someone else and once accepted can be seen by the user and organised effectivley.
 
 ## Usage:
 
-    The purpose of Calendule is to make it easier to use calendars as scheduling devices by reducing the tediousness of having to add everything that schedule into your calendar with it all being done at the same time
+    The purpose of Calendule is to make it easier to use calendars as scheduling devices by reducing the tediousness of having to add everything scheduled into your calendar as it all being done at the same time.
 
 ![image of Calendar](./assets/screenshot1.jpg)
 
@@ -53,6 +53,7 @@ The above two images show what the page looks like on our dashboard and post pag
 
 @materials-ui
 @fullCalendar
+@facebook
 
 ## License:
 
@@ -66,4 +67,4 @@ The above two images show what the page looks like on our dashboard and post pag
 
 - [GitHub Profile](https://github.com/bencyna)
 
-For further information on this project, if you'd like to discuss changes or work together - please reach out directly to: Please contact through the repository.
+For further information on this project, if you'd like to discuss changes or work together - please reach out directly to: https://www.linkedin.com/in/bencyna567/.

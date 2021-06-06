@@ -17,9 +17,9 @@ function Facebook() {
       email: response.email,
     })
       .then((res) => {
-        console.log("next working");
         API.saveSession(response.id).then((res) => {
           console.log(response.id);
+          console.log("res: " + res);
           dispatch({
             type: "LOGGINGIN",
             logged_in: true, // res.data.logged_in,
