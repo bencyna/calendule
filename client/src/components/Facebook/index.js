@@ -17,13 +17,12 @@ function Facebook() {
       email: response.email,
     })
       .then((res) => {
-        API.saveSession(response.id).then((res) => {
-          console.log(response.id);
-          console.log("res: " + res);
+        const id = response.id;
+        API.saveSession(id).then((res) => {
           dispatch({
             type: "LOGGINGIN",
-            logged_in: true, // res.data.logged_in,
-            id: response.id, //res.data.user_id,
+            logged_in: res.data.logged_in,
+            id: res.data.user_id,
           });
           history.push("/");
         });

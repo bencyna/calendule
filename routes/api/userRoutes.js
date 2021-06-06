@@ -85,7 +85,7 @@ router.post("/facebook", async (req, res) => {
         last_name: req.body.last_name,
         email: req.body.email,
         id: req.body.id,
-        password: "password12345",
+        password: "2$a@aa45xI%W2xR7glCmTVn1_",
       },
     });
 
@@ -96,15 +96,14 @@ router.post("/facebook", async (req, res) => {
   }
 });
 
-router.get("/save", async (req, res) => {
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + req);
+router.get("/save/:id", async (req, res) => {
   try {
     req.session.save(() => {
-      req.session.user_id = "4097392050329395";
+      req.session.user_id = req.params.id;
       req.session.logged_in = true;
+
+      res.json(req.session);
     });
-    console.log(req.session);
-    res.json(req.session);
   } catch (error) {
     console.log(error);
   }

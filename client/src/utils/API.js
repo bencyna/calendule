@@ -50,6 +50,6 @@ export default {
     return axios.post("api/users/facebook/", body);
   },
   saveSession: function (id) {
-    return axios.get("api/users/save", id);
+    return axios.get("api/users/save/" + id);
   },
 };
