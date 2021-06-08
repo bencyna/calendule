@@ -28,12 +28,12 @@ function Welcome() {
               }}
             >
               {" "}
-              Calendule is the perfect scheduling app. With a clear simple
-              deisgn, making appointments, meetings or even booking in a slot to
-              meet up with friends can easily be done without the back and
-              fourth we've gotten so custom to. Simply find your friends,
-              collegues or organisation , reuqest a meet and bang, it can
-              already be seen in both you and your recepients calendar, Enjoy!
+              Calendule is the perfect scheduling app. Making appointments,
+              meetings or even booking in a slot to meet up with friends can
+              easily be done without the back and fourth we've gotten so custom
+              to. Simply find your friends, collegues or organisation and
+              request an event. Once accepted it will be available to see in
+              both you and your recepients calendar, Enjoy!
             </small>
           </div>
         </div>

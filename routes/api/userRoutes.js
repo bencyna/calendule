@@ -48,7 +48,7 @@ router.post("/signup", async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      res.save(req.session);
+      res.json(req.session);
     });
   } catch (error) {
     console.log(error);
