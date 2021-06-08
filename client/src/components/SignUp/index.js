@@ -32,7 +32,6 @@ function SignUpForm() {
       formInput.first_name.length > 1 &&
       formInput.last_name.length > 1
     ) {
-      console.log("APi called");
       API.signUp({
         first_name: formInput.first_name,
         last_name: formInput.last_name,
@@ -40,13 +39,11 @@ function SignUpForm() {
         password: formInput.password,
       })
         .then((res) => {
-          console.log("then called");
           dispatch({
             type: "LOGGINGIN",
             logged_in: res.data.logged_in,
             id: res.data.user_id,
           });
-          console.log("location should work now");
           history.push("/");
         })
         .catch((err) => {
