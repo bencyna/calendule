@@ -24,10 +24,10 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   remove: function (req, res) {
-    db.User.findById({ _id: req.params.id })
-      .then((dbModel) => dbModel.remove())
+    db.User.findByPk(req.params.id)
+      .then((dbModel) => dbModel.destroy())
       .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.status(422).json(err));
+      .catch((err) => console.log(err)); // res.status(422).json(err));
   },
   findOrCreate: async function (req, res) {
     try {
@@ -45,24 +45,4 @@ module.exports = {
       res.status(500).send(err.message);
     }
   },
-
-  //   const userData = await db.User.findOrCreate({
-  //     where: { id: req.body.id },
-  //   }).spread(function (user, created) {
-  //     console.log(
-  //       user.get({
-  //         plain: true,
-  //       })
-  //     );
-  //     if (created) {
-  //       console.log("created");
-  //     }
-  //   });
-  //   req.session.save(() => {
-  //     req.session.user_id = userData.id;
-  //     req.session.logged_in = true;
-
-  //     res.json(req.session);
-  //   });
-  // },
 };

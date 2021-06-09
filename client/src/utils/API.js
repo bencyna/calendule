@@ -52,4 +52,7 @@ export default {
   saveSession: function (id) {
     return axios.get("api/users/save/" + id);
   },
+  deleteAcc: function (id) {
+    return axios.delete("api/users/delete/" + id);
+  },
 };

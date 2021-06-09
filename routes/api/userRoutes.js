@@ -109,6 +109,8 @@ router.get("/save/:id", async (req, res) => {
   }
 });
 
+router.route("/delete/:id").delete(userController.remove);
+
 router.route("/:id").get(userController.findByPk);
 
 module.exports = router;
