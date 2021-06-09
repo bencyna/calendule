@@ -34,7 +34,7 @@ function AltUserCalendar() {
   return (
     <div>
       <h1 className="altTitle">
-        Welcome to {user.first_name}'s Calendar! Cick a day to add an event!
+        Welcome to {user.first_name}'s calendar! Cick a day to add an event!
       </h1>
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
