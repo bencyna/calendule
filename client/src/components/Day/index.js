@@ -5,6 +5,7 @@ import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import Event from "../Event";
 import EventInput from "../eventInput";
+import Moment from 'moment';
 
 function Day() {
   const [getBookings, setBookings] = useState([""]);
@@ -141,7 +142,7 @@ function Day() {
       ) : (
         <div className="centre">
           <h1>
-            You have nothing but time today!{" "}
+            {Moment(id).format('dddd DD/MM/YY')}
             <div>
               <Link to="/" className="backBtn">
                 Click me to go back
