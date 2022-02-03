@@ -6,6 +6,7 @@ import "./style.css";
 import { useHistory } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
+import Popup from "../../components/DateClickPopup"
 
 function Calendar() {
   const [state, dispatch] = useStoreContext();
@@ -25,7 +26,11 @@ function Calendar() {
   }, []);
 
   const handleDateClick = (arg) => {
-    history.push(`/date/${arg.dateStr}`);
+    // add a popup of options (add new, view date)
+    
+
+    // Take you to events on this dat 
+    //history.push(`/date/${arg.dateStr}`);
   };
 
   const handleDeleteAcc = () => {
@@ -36,6 +41,10 @@ function Calendar() {
     }
   };
 
+  const eventHover = (info) => {
+    // add the hover css to the title, on click of event, go straight to specific event
+    console.log(info);
+  }
 
 
   return (
@@ -43,10 +52,13 @@ function Calendar() {
       <h1 className="title" onClick={console.log(all_events)}>
         Welcome to your personalised calendar, click a day to see your events
       </h1>
+      
+      <Popup id = "2022-01-01" message = "click me pls"/>
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
         dateClick={handleDateClick}
+        eventMouseEnter = {eventHover}
         events={
           all_events
         }

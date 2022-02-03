@@ -13,5 +13,4 @@
 
 .fc-daygrid-day-frame:hover .fc-scrollgrid-sync-inner:hover {
   background-color: black;
-  cursor: pointer !important;
 }

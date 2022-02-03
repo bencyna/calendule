@@ -22,7 +22,7 @@ function App() {
             <Route exact path="/login" component={Welcome} />
             <>
               <NavBar />
-              <PrivateRoute component={Calendar} path="/" exact />
+              <Route component={Calendar} path="/" exact />
               <Route exact path="/date/:id" component={Day} />
               <Route exact path="/find" component={Find} />
               <Route exact path="/user/:id" component={altUserCalendar} />
