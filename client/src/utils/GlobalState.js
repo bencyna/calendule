@@ -90,6 +90,16 @@ const reducer = (state, action) => {
         ...state,
         bookingWith: action.bookingWith,
       };
+    case "PREVENTCLOSE":
+      return {
+        ...state,
+        eventClick: true,
+      };
+    case "ENABLECLOSE":
+      return {
+        ...state,
+        eventClick: false,
+      };
     default:
       return state;
   }
@@ -113,6 +123,7 @@ const StoreProvider = ({ value = [], ...props }) => {
     clickedEvent: false,
     actionRequired: false,
     bookingWith: "",
+    eventClick: false,
   });
   useEffect(() => {
     API.isLoggedIn()

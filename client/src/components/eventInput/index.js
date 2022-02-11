@@ -63,6 +63,7 @@ function EventInput(props) {
           alert("Event request succesful!");
         })
         .catch((err) => {
+          console.log(err)
           alert("Uh oh! Something went wrong");
           setError(true);
         });

@@ -12,25 +12,26 @@ function Calendar() {
   const [state, dispatch] = useStoreContext();
   const history = useHistory();
   const [all_events, setAllEvents] = useState({});
+  const [detailedEvents, setDetailedEvents] = useState([])
 
 
   useEffect(() => {
       API.getAllBookings(state.user_id).then((res) => {
+        setDetailedEvents(res.data);
         const events =  res.data.map((event) => {
           // event
-          return {title: event.title, date: event.date}
+          return {title: event.title, date: event.date, id: event.id}
         })
         setAllEvents(events);
-
+        
     });
   }, []);
 
   const handleDateClick = (arg) => {
     // add a popup of options (add new, view date)
-    
-
+  
     // Take you to events on this dat 
-    //history.push(`/date/${arg.dateStr}`);
+    history.push(`/date/${arg.dateStr}`);
   };
 
   const handleDeleteAcc = () => {
@@ -43,13 +44,46 @@ function Calendar() {
 
   const eventHover = (info) => {
     // add the hover css to the title, on click of event, go straight to specific event
-    console.log(info);
+    // console.log(info);
   }
+
+  const eventClick = (info) => {
+    const getEvent = detailedEvents.filter((event) => event.id === info.event.id)
+    dispatch({
+      type: "CURRENTBOOKING",
+      currentBooking: getEvent[0],
+    });
+
+
+    // if (state.user_id === getEvent[0].receivedByUser.id) {
+    //   setBookingWith(
+    //     getEvent[0].createdByUser.first_name +
+    //       " " +
+    //       getEvent[0].createdByUser.last_name
+    //   );
+    // }
+    // if (state.user_id === getEvent[0].createdByUser.id) {
+    //   setBookingWith(
+    //     getEvent[0].receivedByUser.first_name +
+    //       " " +
+    //       getEvent[0].receivedByUser.last_name
+    //   );
+    // }
+    dispatch({
+      type: "CLICKEDEVENT",
+      clickedEvent: true,
+    });
+    dispatch({
+      type: "PREVENTCLOSE",
+    });
+    console.log(state.eventClick)
+    history.push(`/date/${info.event.startStr}`);
+    }
 
 
   return (
     <div>
-      <h1 className="title" onClick={console.log(all_events)}>
+      <h1 className="title">
         Welcome to your personalised calendar, click a day to see your events
       </h1>
       
@@ -59,6 +93,7 @@ function Calendar() {
         initialView="dayGridMonth"
         dateClick={handleDateClick}
         eventMouseEnter = {eventHover}
+        eventClick = {eventClick}
         events={
           all_events
         }

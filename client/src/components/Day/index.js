@@ -17,9 +17,14 @@ function Day() {
   const [state, dispatch] = useStoreContext();
 
   useEffect(() => {
+    if (!state.eventClick) {
+      console.log("close")
+      dispatch({
+        type: "CLICKEDEVENT",
+      });
+    }
     dispatch({
-      type: "CLICKEDEVENT",
-      clickedEvent: false,
+      type: "ENABLECLOSE",
     });
     API.getBookings(id, state.user_id).then((res) => {
       if (res.data.length > 0) {
