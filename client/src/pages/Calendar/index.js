@@ -86,7 +86,7 @@ function Calendar() {
       <h1 className="title">
         Welcome to your personalised calendar, click a day to see your events
       </h1>
-      
+        
       <Popup id = "2022-01-01" message = "click me pls"/>
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
