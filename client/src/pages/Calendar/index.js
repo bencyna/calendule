@@ -7,12 +7,14 @@ import { useHistory } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
 import Popup from "../../components/DateClickPopup"
+import {Link } from 'react-router-dom'
 
 function Calendar() {
   const [state, dispatch] = useStoreContext();
   const history = useHistory();
   const [all_events, setAllEvents] = useState({});
   const [detailedEvents, setDetailedEvents] = useState([])
+  const [show_popup, setShowPopup] = useState("")
 
 
   useEffect(() => {
@@ -29,9 +31,9 @@ function Calendar() {
 
   const handleDateClick = (arg) => {
     // add a popup of options (add new, view date)
-  
+    setShowPopup("show");
     // Take you to events on this dat 
-    history.push(`/date/${arg.dateStr}`);
+    // history.push(`/date/${arg.dateStr}`);
   };
 
   const handleDeleteAcc = () => {
@@ -87,7 +89,15 @@ function Calendar() {
         Welcome to your personalised calendar, click a day to see your events
       </h1>
         
-      <Popup id = "2022-01-01" message = "click me pls"/>
+
+      {/* <Popup id = "2022-01-01" message = "click me pls"/> */}
+      
+      <div class={`dropdown-menu ${show_popup}`} data-popper-placement="bottom-start">
+          <h3 class="dropdown-header">Actions</h3>
+          <div class="dropdown-divider"></div>
+          <Link class="dropdown-item" to="#">Create an event</Link>
+          <Link class="dropdown-item" to="#">View today</Link>
+      </div>
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"

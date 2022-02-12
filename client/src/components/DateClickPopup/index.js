@@ -10,12 +10,8 @@ const PopUp = ({id, message}) => {
         <div class="dropdown-menu show" data-popper-placement="bottom-start">
           <h3 class="dropdown-header">Actions</h3>
           <div class="dropdown-divider"></div>
-
-          <Link class="dropdown-item" to="#">Action</Link>
-          <Link class="dropdown-item" to="#">Another action</Link>
-          <Link class="dropdown-item" to="#">Something else here</Link>
-          <div class="dropdown-divider"></div>
-          <Link class="dropdown-item" to="#">Separated link</Link>
+          <Link class="dropdown-item" to="#">Create an event</Link>
+          <Link class="dropdown-item" to="#">View today</Link>
         </div>
     </>
   );
