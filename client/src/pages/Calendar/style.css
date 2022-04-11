@@ -22,5 +22,9 @@ a.fc-daygrid-day-number,
 }
 
 .fc .fc-daygrid-day.fc-day-today {
- background-color: var(--fc-today-bg-color, rgba(3, 3, 3, 0.15))
+ background-color: var(--fc-today-bg-color, rgba(3, 3, 3, 0.15));
+}
+
+.inline-block {
+  display: inline-block;
 }

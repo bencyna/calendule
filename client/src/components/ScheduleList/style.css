@@ -1,0 +1,6 @@
+.scheduleList {
+  border: .1px solid var(--fc-border-color, #e1a95f); 
+  display: inline-block;
+  width: 35%;
+  margin-bottom: 2rem;
+}

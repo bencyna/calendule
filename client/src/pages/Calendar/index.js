@@ -7,6 +7,7 @@ import { useHistory } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
 import {Link } from 'react-router-dom'
+import ScheduleList from "../../components/ScheduleList";
 
 function Calendar() {
   const [state, dispatch] = useStoreContext();
@@ -86,26 +87,24 @@ function Calendar() {
       <h1 className="title">
         Your Calendar
       </h1>
-
-      <div class={`dropdown-menu ${show_popup}`} data-popper-placement="bottom-start">
-          <h3 class="dropdown-header">Actions</h3>
-          <div class="dropdown-divider"></div>
-          <Link class="dropdown-item" to="#">Create an event</Link>
-          <Link class="dropdown-item" to="#">View today</Link>
-      </div>
-      <FullCalendar
-        plugins={[dayGridPlugin, interactionPlugin]}
-        initialView="dayGridMonth"
-        dateClick={handleDateClick}
-        eventMouseEnter = {eventHover}
-        eventClick = {eventClick}
-        events={
-          all_events
-        }
-      />
-      <button className="deleteBtn btn btn-primary" onClick={handleDeleteAcc}>
-        Delete account
-      </button>
+      <div style={{display: 'flex'}}>
+        <div className="calendarWidthController inline-block">
+          <FullCalendar
+            plugins={[dayGridPlugin, interactionPlugin]}
+            initialView="dayGridMonth"
+            dateClick={handleDateClick}
+            eventMouseEnter = {eventHover}
+            eventClick = {eventClick}
+            events={
+              all_events
+            }
+          />
+          {/* <button className="deleteBtn btn btn-primary" onClick={handleDeleteAcc}>
+            Delete account
+          </button> */}
+          </div>
+          <ScheduleList/>
+        </div>
     </div>
   );
 }

@@ -100,6 +100,16 @@ const reducer = (state, action) => {
         ...state,
         eventClick: false,
       };
+      case "DAYSELECTED":
+        return {
+          ...state,
+          daySelected: true,
+        };
+        case "DAYUNSELECTED":
+        return {
+          ...state,
+          daySelected: false,
+        };
     default:
       return state;
   }
@@ -124,6 +134,7 @@ const StoreProvider = ({ value = [], ...props }) => {
     actionRequired: false,
     bookingWith: "",
     eventClick: false,
+    daySelected: false,
   });
   useEffect(() => {
     API.isLoggedIn()

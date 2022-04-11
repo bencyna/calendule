@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.calendarWidthController {
+  width: 60%;
+  display: inline-block;
+}
+
+.listNoDots {
+  text-decoration: none;
+}
