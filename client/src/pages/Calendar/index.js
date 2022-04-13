@@ -6,7 +6,7 @@ import "./style.css";
 import { useHistory } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
-import {Link } from 'react-router-dom'
+import {Link } from 'react-router-dom';
 import ScheduleList from "../../components/ScheduleList";
 
 function Calendar() {
