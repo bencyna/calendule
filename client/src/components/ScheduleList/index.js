@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
+import EventSpring from "../Event/EventSpring";
 
 function ScheduleList() {
   const [state, dispatch] = useStoreContext();
@@ -25,6 +26,7 @@ function ScheduleList() {
           return <li className="taskListItem">{booking.title}</li>;
         })}
       </ul>
+      <EventSpring/>
     </div>
   );
 }

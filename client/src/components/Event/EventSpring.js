@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import "./style.css"
 import FeatherIcon from "feather-icons-react";
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
@@ -6,23 +7,23 @@ import { useStoreContext } from "../../utils/GlobalState";
 import UpdateEvent from "../UpdateEvent";
 import TimePicker from "react-bootstrap-time-picker";
 
-function Event(props) {
+export default function EventSpring() {
   const [state, dispatch] = useStoreContext();
 
-  const deleteEvent = () => {
-    if (window.confirm("Cancel this Event?")) {
-      API.deletePost(state.currentBooking.id)
-        .then((res) => {
-          console.log("Ben changhe this to re mount the other component maybe");
-          props.setNoEvents(false);
-          dispatch({
-            type: "CLICKEDEVENT",
-            clickedEvent: false,
-          });
-        })
-        .catch((err) => console.log(err));
-    }
-  };
+//   const deleteEvent = () => {
+//     if (window.confirm("Cancel this Event?")) {
+//       API.deletePost(state.currentBooking.id)
+//         .then((res) => {
+//           console.log("Ben changhe this to re mount the other component maybe");
+//           props.setNoEvents(false);
+//           dispatch({
+//             type: "CLICKEDEVENT",
+//             clickedEvent: false,
+//           });
+//         })
+//         .catch((err) => console.log(err));
+//     }
+//   };
 
   const updateEvent = () => {
     dispatch({
@@ -32,8 +33,12 @@ function Event(props) {
   };
 
   return (
-    <div className="clickedEvent col-md-6">
-      <div className="listCOntainer">
+    <div className="overlay">
+    <div className="eventTitle">
+        <h6 className="inline-block ">title of event</h6>
+        <button className="inline-block minimise">minimise</button>
+    </div>
+    <div className="listCOntainer">
         <div className="updatePosts">
           <FeatherIcon
             icon="edit"
@@ -43,11 +48,11 @@ function Event(props) {
           <FeatherIcon
             icon="trash-2"
             className="updatePost"
-            onClick={deleteEvent}
+            // onClick={deleteEvent}
           />
         </div>
         <h2 className="h2 title">
-          {state.currentBooking.title} ~ {props.bookingWith}
+          {state.currentBooking.title} ~ {/* {props.bookingWith} */}
         </h2>
         <ul className="ul">
           <li className="li">
@@ -74,13 +79,6 @@ function Event(props) {
           </li>
         </ul>
       </div>
-      {state.modal ? (
-        <UpdateEvent setNoEvents={props.setNoEvents} />
-      ) : (
-        <div className="hide"></div>
-      )}
     </div>
-  );
+  )
 }
-
-export default Event;
