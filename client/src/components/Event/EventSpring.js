@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./style.css"
 import FeatherIcon from "feather-icons-react";
+import {Minimize2, Edit}  from 'react-feather';
+
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import { useStoreContext } from "../../utils/GlobalState";
@@ -9,6 +11,7 @@ import TimePicker from "react-bootstrap-time-picker";
 
 export default function EventSpring() {
   const [state, dispatch] = useStoreContext();
+  const [show, toggleOverlay] = useState("");
 
 //   const deleteEvent = () => {
 //     if (window.confirm("Cancel this Event?")) {
@@ -25,6 +28,15 @@ export default function EventSpring() {
 //     }
 //   };
 
+ const testShow = () => {
+     if (show == "") {
+        toggleOverlay("show");
+     }
+     else {
+        toggleOverlay("");
+     }
+ }
+
   const updateEvent = () => {
     dispatch({
       type: "modalClick",
@@ -33,18 +45,16 @@ export default function EventSpring() {
   };
 
   return (
-    <div className="overlay">
+    <div className={`overlay ${show}`} onClick={testShow}>
     <div className="eventTitle">
-        <h6 className="inline-block ">title of event</h6>
-        <button className="inline-block minimise">minimise</button>
+        <h6 className="inline-block eventHead">title of event</h6>
+        <Minimize2 className="inline-block minimise"/>
+
     </div>
     <div className="listCOntainer">
         <div className="updatePosts">
-          <FeatherIcon
-            icon="edit"
-            className="updatePost"
-            onClick={updateEvent}
-          />
+            <Edit className="updatePost"onClick={updateEvent}/>
+
           <FeatherIcon
             icon="trash-2"
             className="updatePost"

@@ -19,10 +19,28 @@
   position: absolute;
   top: 30%;
   width: 100%;
+  /* visibility: hidden; */
+  opacity: 0;
+  transition: visibility .5s, opacity 0.5s linear;
+}
+
+.overlay.show  {
+  visibility: visible;
+  opacity: 1;
 }
 
 .eventTitle {
   text-align: center;
   border-top: 1px solid;
+ transition:  ease-in-out .5s;
   border-bottom: 1px solid;
+}
+
+.updatePost {
+ transition:  ease-in-out .5s;
+ padding: .15rem;
+}
+
+.updatePost:hover{
+  color: black;
 }
