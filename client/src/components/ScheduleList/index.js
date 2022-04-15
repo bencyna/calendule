@@ -9,7 +9,7 @@ function ScheduleList() {
   const [bookings, setBookings] = useState([]);
   const [bookingWith, setBookingWith] = useState();
   const [noEvents, setNoEvents] = useState(false);
-  const [show, toggleOverlay] = useState("show");
+  const [show, toggleOverlay] = useState("");
 
   useEffect(() => {
     API.getAllBookings(state.user_id).then((res) => {
@@ -52,7 +52,7 @@ function ScheduleList() {
     <div className="scheduleList">
       <ul className="listNoDots">
         {bookings.map((booking) => {
-          return <li className="taskListItem" id={booking.id} onClick={clickEvent}>{booking.title}</li>;
+          return <li className="taskListItem" key={booking.id} id={booking.id} onClick={clickEvent}>{booking.title}</li>;
         })}
       </ul>
       <EventSpring show={show} toggleOverlay={toggleOverlay}/>
