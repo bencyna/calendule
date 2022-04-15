@@ -9,9 +9,8 @@ import { useStoreContext } from "../../utils/GlobalState";
 import UpdateEvent from "../UpdateEvent";
 import TimePicker from "react-bootstrap-time-picker";
 
-export default function EventSpring() {
+export default function EventSpring(props) {
   const [state, dispatch] = useStoreContext();
-  const [show, toggleOverlay] = useState("");
 
 //   const deleteEvent = () => {
 //     if (window.confirm("Cancel this Event?")) {
@@ -28,13 +27,8 @@ export default function EventSpring() {
 //     }
 //   };
 
- const testShow = () => {
-     if (show == "") {
-        toggleOverlay("show");
-     }
-     else {
-        toggleOverlay("");
-     }
+ const hideOverlay = () => {
+    props.toggleOverlay("");
  }
 
   const updateEvent = () => {
@@ -45,10 +39,10 @@ export default function EventSpring() {
   };
 
   return (
-    <div className={`overlay ${show}`} onClick={testShow}>
+    <div className={`overlay ${props.show}`}>
     <div className="eventTitle">
         <h6 className="inline-block eventHead">title of event</h6>
-        <Minimize2 className="inline-block minimise"/>
+        <Minimize2 className="inline-block minimise" onClick={hideOverlay}/>
 
     </div>
     <div className="listCOntainer">
