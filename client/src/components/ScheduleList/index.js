@@ -22,7 +22,7 @@ function ScheduleList() {
     <div className="scheduleList">
       <ul className="listNoDots">
         {bookings.map((booking) => {
-          return <li>{booking.title}</li>;
+          return <li className="taskListItem">{booking.title}</li>;
         })}
       </ul>
     </div>

@@ -4,3 +4,18 @@
   width: 35%;
   margin-bottom: 2rem;
 }
+
+.listNoDots {
+  list-style-type: none;
+}
+
+.taskListItem {
+  padding: .5rem;
+  cursor: pointer;
+ transition:  ease-in-out .5s;
+}
+
+.taskListItem:hover {
+  color: black;
+
+}
