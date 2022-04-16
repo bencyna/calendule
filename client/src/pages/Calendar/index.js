@@ -15,6 +15,7 @@ function Calendar() {
   const [all_events, setAllEvents] = useState({});
   const [detailedEvents, setDetailedEvents] = useState([])
   const [show_popup, setShowPopup] = useState("")
+  const [noEvents, setNoEvents] = useState(false);
 
 
   useEffect(() => {
@@ -31,7 +32,14 @@ function Calendar() {
 
   const handleDateClick = (arg) => {
     // Take you to events on this dat 
-    history.push(`/date/${arg.dateStr}`);
+    // history.push(`/date/${arg.dateStr}`);
+
+    API.getBookings(arg.dateStr, state.user_id).then((res) => {
+      if (res.data.length > 0) {
+        setNoEvents(true);
+      }
+      setDetailedEvents(res.data);
+    });
   };
 
   const handleDeleteAcc = () => {
@@ -43,7 +51,7 @@ function Calendar() {
   };
 
   const eventHover = (info) => {
-
+    
     // add the hover css to the title, on click of event, go straight to specific event
     // console.log(info);
   }
@@ -54,7 +62,6 @@ function Calendar() {
       type: "CURRENTBOOKING",
       currentBooking: getEvent[0],
     });
-
 
     // if (state.user_id === getEvent[0].receivedByUser.id) {
     //   setBookingWith(
@@ -70,6 +77,7 @@ function Calendar() {
     //       getEvent[0].receivedByUser.last_name
     //   );
     // }
+
     dispatch({
       type: "CLICKEDEVENT",
       clickedEvent: true,
@@ -103,7 +111,7 @@ function Calendar() {
             Delete account
           </button> */}
           </div>
-          <ScheduleList/>
+          <ScheduleList bookings = {detailedEvents} noEvents={noEvents}/>
         </div>
     </div>
   );

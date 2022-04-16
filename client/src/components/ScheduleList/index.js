@@ -4,27 +4,15 @@ import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import EventSpring from "../Event/EventSpring";
 
-function ScheduleList() {
+function ScheduleList(props) {
   const [state, dispatch] = useStoreContext();
-  const [bookings, setBookings] = useState([]);
   const [bookingWith, setBookingWith] = useState();
   const [noEvents, setNoEvents] = useState(false);
   const [show, toggleOverlay] = useState("");
-
-  useEffect(() => {
-    API.getAllBookings(state.user_id).then((res) => {
-      if (res.data.length > 0) {
-        setNoEvents(true);
-      }
-      console.log(res.data);
-      setBookings(res.data);
-    });
-  }, [noEvents]);
-
   
   const clickEvent = (event) => {
     const eventId = event.target.id;
-    const getEvent = bookings.filter((event) => event.id == eventId);
+    const getEvent = props.bookings.filter((event) => event.id == eventId);
     dispatch({
       type: "CURRENTBOOKING",
       currentBooking: getEvent[0],
@@ -51,7 +39,7 @@ function ScheduleList() {
   return (
     <div className="scheduleList">
       <ul className="listNoDots">
-        {bookings.map((booking) => {
+        {props.bookings.map((booking) => {
           return <li className="taskListItem" key={booking.id} id={booking.id} onClick={clickEvent}>{booking.title}</li>;
         })}
       </ul>
