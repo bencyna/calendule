@@ -7,7 +7,6 @@ import EventSpring from "../Event/EventSpring";
 function ScheduleList(props) {
   const [state, dispatch] = useStoreContext();
   const [bookingWith, setBookingWith] = useState();
-  const [noEvents, setNoEvents] = useState(false);
   const [show, toggleOverlay] = useState("");
   
   const clickEvent = (event) => {
@@ -39,11 +38,12 @@ function ScheduleList(props) {
   return (
     <div className="scheduleList">
       <ul className="listNoDots">
+        {/* title here that says all events or date */}
         {props.bookings.map((booking) => {
           return <li className="taskListItem" key={booking.id} id={booking.id} onClick={clickEvent}>{booking.title}</li>;
         })}
       </ul>
-      <EventSpring show={show} toggleOverlay={toggleOverlay}/>
+      <EventSpring show={show} toggleOverlay={toggleOverlay} bookingWith={bookingWith}/>
     </div>
   );
 }

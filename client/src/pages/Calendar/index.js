@@ -86,7 +86,8 @@ function Calendar() {
       type: "PREVENTCLOSE",
     });
     console.log(state.eventClick)
-    history.push(`/date/${info.event.startStr}`);
+    const arg = {"dateStr": info.event.startStr}
+    handleDateClick(arg);
     }
 
 

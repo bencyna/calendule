@@ -56,7 +56,7 @@ export default function EventSpring(props) {
           />
         </div>
         <h2 className="h2 title">
-          {state.currentBooking.title} ~ {/* {props.bookingWith} */}
+          {state.currentBooking.title} ~ {props.bookingWith}
         </h2>
         <ul className="ul">
           <li className="li">
