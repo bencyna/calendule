@@ -8,9 +8,19 @@ function ScheduleList(props) {
   const [state, dispatch] = useStoreContext();
   const [bookingWith, setBookingWith] = useState();
   const [show, toggleOverlay] = useState("");
+  const [showAddBtn, toggleBtn] = useState("show");
+  const [error, setError] = useState(false);
+
+  const [eventInput, setEventInput] = useState({
+    duration: "",
+    startTime: "",
+    endTime: "",
+    date: "",
+    time: 0,
+  });
   
   const clickEvent = (event) => {
-    const eventId = event.target.id;
+  const eventId = event.target.id;
     const getEvent = props.bookings.filter((event) => event.id == eventId);
     dispatch({
       type: "CURRENTBOOKING",
@@ -35,11 +45,59 @@ function ScheduleList(props) {
     toggleOverlay("show")
   };
 
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setEventInput({ ...eventInput, [name]: value });
+
+
+
+  };
+
+  const handleEventSubmit = (e) => {
+    e.preventDefault();
+    setError(false);
+    if (
+      (eventInput.title && eventInput.description,
+      eventInput.time,
+      eventInput.location)
+    ) {
+      dispatch({
+        type: "modalClick",
+      });
+      // api call then setEventinpiut to ()
+      API.createEvent({
+        title: eventInput.title,
+        description: eventInput.description,
+        time: eventInput.time,
+        date: state.date,
+        location: eventInput.location,
+        booker_id: state.user_id,
+        bookee_id: state.user_id,
+        accepted: false,
+        bookerPending: false,
+      })
+        .then((res) => {
+          alert("Event request succesful!");
+        })
+        .catch((err) => {
+          console.log(err)
+          alert("Uh oh! Something went wrong");
+          setError(true);
+        });
+    } else {
+      setError(true);
+    }
+  };
+
+
   return (
     <div className="scheduleList"> 
       <div className="scheduleHeader"> 
-        <input placeholder="Add task" className="inline-block addEventTitle"></input>
+        <input placeholder="Add to your calendar" onChange={handleInputChange} className="inline-block addEventTitle"></input>
         <input type="date" onChange={(e) => props.setSelectedDay(e.target.value)} className="inline-block eventDateTitle" value={props.selectedDay}></input>
+        <button type="button" onClick={handleEventSubmit} className={`${showAddBtn} addBtn`}>
+          Add
+        </button>
       </div>
       <ul className="listNoDots">
         {/* title here that says all events or date */}
