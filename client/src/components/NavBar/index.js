@@ -51,11 +51,6 @@ function NavBar() {
                 <FeatherIcon icon="search" />
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/all">
-                <FeatherIcon icon="list" />
-              </Link>
-            </li>
             {!state.logged_in ? (
               <li className="nav-item">
                 <Link className="nav-link hover" to="/login">

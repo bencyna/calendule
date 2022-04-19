@@ -15,6 +15,7 @@ function Calendar() {
   const [all_events, setAllEvents] = useState({});
   const [detailedEvents, setDetailedEvents] = useState([])
   const [show_popup, setShowPopup] = useState("")
+  const [slectedDay, setSelectedDay] = useState("")
   const [noEvents, setNoEvents] = useState(false);
 
 
@@ -33,7 +34,9 @@ function Calendar() {
   const handleDateClick = (arg) => {
     // Take you to events on this dat 
     // history.push(`/date/${arg.dateStr}`);
-
+    const formattedDay = arg.dateStr.replace("/", "-");
+    console.log(formattedDay)
+    setSelectedDay(formattedDay);
     API.getBookings(arg.dateStr, state.user_id).then((res) => {
       if (res.data.length > 0) {
         setNoEvents(true);
@@ -96,8 +99,8 @@ function Calendar() {
       <h1 className="title">
         Your Calendar
       </h1>
-      <div style={{display: 'flex'}}>
-        <div className="calendarWidthController inline-block">
+      <div className="mainContainer">
+        <div className="calendarWidthController">
           <FullCalendar
             plugins={[dayGridPlugin, interactionPlugin]}
             initialView="dayGridMonth"
@@ -112,7 +115,7 @@ function Calendar() {
             Delete account
           </button> */}
           </div>
-          <ScheduleList bookings = {detailedEvents} noEvents={noEvents}/>
+          <ScheduleList bookings = {detailedEvents} noEvents={noEvents} selectedDay={slectedDay} setSelectedDay={setSelectedDay}/>
         </div>
     </div>
   );

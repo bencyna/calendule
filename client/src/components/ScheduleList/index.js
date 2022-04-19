@@ -36,7 +36,11 @@ function ScheduleList(props) {
   };
 
   return (
-    <div className="scheduleList">
+    <div className="scheduleList"> 
+      <div className="scheduleHeader"> 
+        <input placeholder="Add task" className="inline-block addEventTitle"></input>
+        <input type="date" onChange={(e) => props.setSelectedDay(e.target.value)} className="inline-block eventDateTitle" value={props.selectedDay}></input>
+      </div>
       <ul className="listNoDots">
         {/* title here that says all events or date */}
         {props.bookings.map((booking) => {

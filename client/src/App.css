@@ -37,13 +37,54 @@
   }
 }
 
-.calendarWidthController {
-  width: 60%;
-  display: inline-block;
+@media (min-width: 900px) {
+  .calendarWidthController {
+    width: 60%;
+    display: inline-block;
+  }
+
+  .scheduleList {
+    border: .1px solid var(--fc-border-color, #e1a95f); 
+    display: inline-block;
+    width: 35%;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .mainContainer {
+    display: flex;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .calendarWidthController {
+    width: 100%;
+    display: block;
+  }
+
+  .scheduleList {
+    display: block;
+    width: 100%;
+  }
+  
 }
 
 .listNoDots {
   text-decoration: none;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  text-shadow: none !important;
+}
 
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
+.inline-block {
+  display: inline-block;
+}
