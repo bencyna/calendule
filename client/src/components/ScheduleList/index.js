@@ -55,6 +55,7 @@ function ScheduleList(props) {
 
   const handleEventSubmit = (e) => {
     e.preventDefault();
+    alert("hello")
     setError(false);
     if (
       (eventInput.title && eventInput.description,
@@ -93,11 +94,13 @@ function ScheduleList(props) {
   return (
     <div className="scheduleList"> 
       <div className="scheduleHeader"> 
-        <input placeholder="Add to your calendar" onChange={handleInputChange} className="inline-block addEventTitle"></input>
-        <input type="date" onChange={(e) => props.setSelectedDay(e.target.value)} className="inline-block eventDateTitle" value={props.selectedDay}></input>
-        <button type="button" onClick={handleEventSubmit} className={`${showAddBtn} addBtn`}>
-          Add
-        </button>
+        <input placeholder="Add to your calendar" onChange={handleInputChange} className="addEventTitle"></input>
+        <div className="headerExtras">
+          <input type="date" onChange={(e) => props.setSelectedDay(e.target.value)} className="inline-block eventDateTitle" value={props.selectedDay}></input>
+          <button type="button" onClick={handleEventSubmit} className={`${showAddBtn} inline-block addBtn`}>
+            Add
+          </button>
+        </div>
       </div>
       <ul className="listNoDots">
         {/* title here that says all events or date */}
