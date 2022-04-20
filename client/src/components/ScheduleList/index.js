@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import API from "../../utils/API";
 import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import EventSpring from "../Event/EventSpring";
 
 function ScheduleList(props) {
+  const eventInputRef = useRef(null);
   const [state, dispatch] = useStoreContext();
   const [bookingWith, setBookingWith] = useState();
   const [show, toggleOverlay] = useState("");
@@ -19,6 +20,10 @@ function ScheduleList(props) {
     time: 0,
     title: "",
   });
+
+  useEffect(()=>{
+    eventInputRef.current.focus();
+  }, []);
   
   const clickEvent = (event) => {
   const eventId = event.target.id;
@@ -61,7 +66,6 @@ function ScheduleList(props) {
 
   const handleEventSubmit = (e) => {
     e.preventDefault();
-    alert("hello")
     setError(false);
     if (
       (eventInput.title && eventInput.description,
@@ -100,7 +104,7 @@ function ScheduleList(props) {
   return (
     <div className="scheduleList"> 
       <div className="scheduleHeader"> 
-        <input placeholder="Add to your calendar" name="title" onChange={handleInputChange} className="addEventTitle"></input>
+        <input placeholder="Add to your calendar..." ref={eventInputRef} name="title" onChange={handleInputChange} className="addEventTitle"></input>
         <div className="headerExtras">
           <input type="date" onChange={(e) => props.setSelectedDay(e.target.value)} className="inline-block eventDateTitle" value={props.selectedDay}></input>
           <button type="button" onClick={handleEventSubmit} className={`${showAddBtn} inline-block addBtn`}>

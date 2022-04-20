@@ -24,11 +24,11 @@ Booking.init(
     },
     time: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     location: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     accepted: {
       type: DataTypes.BOOLEAN,
