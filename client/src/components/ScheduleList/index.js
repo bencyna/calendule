@@ -8,7 +8,7 @@ function ScheduleList(props) {
   const [state, dispatch] = useStoreContext();
   const [bookingWith, setBookingWith] = useState();
   const [show, toggleOverlay] = useState("");
-  const [showAddBtn, toggleBtn] = useState("show");
+  const [showAddBtn, toggleBtn] = useState("");
   const [error, setError] = useState(false);
 
   const [eventInput, setEventInput] = useState({
@@ -17,6 +17,7 @@ function ScheduleList(props) {
     endTime: "",
     date: "",
     time: 0,
+    title: "",
   });
   
   const clickEvent = (event) => {
@@ -48,10 +49,15 @@ function ScheduleList(props) {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setEventInput({ ...eventInput, [name]: value });
+    console.log(eventInput.title.length);
 
-
-
-  };
+      if (name == "title" && value.length > 0) {
+        toggleBtn("show")
+        }
+        else {
+          toggleBtn("")
+      }
+    };
 
   const handleEventSubmit = (e) => {
     e.preventDefault();
@@ -94,7 +100,7 @@ function ScheduleList(props) {
   return (
     <div className="scheduleList"> 
       <div className="scheduleHeader"> 
-        <input placeholder="Add to your calendar" onChange={handleInputChange} className="addEventTitle"></input>
+        <input placeholder="Add to your calendar" name="title" onChange={handleInputChange} className="addEventTitle"></input>
         <div className="headerExtras">
           <input type="date" onChange={(e) => props.setSelectedDay(e.target.value)} className="inline-block eventDateTitle" value={props.selectedDay}></input>
           <button type="button" onClick={handleEventSubmit} className={`${showAddBtn} inline-block addBtn`}>

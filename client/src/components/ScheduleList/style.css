@@ -44,6 +44,7 @@
   margin-left: 10px;
   border: none;
   outline: none;
+  padding: .25rem;
 }
 
 .eventDateTitle {
@@ -79,5 +80,6 @@
 }
 
 .headerExtras {
-  margin-top: 1rem;
+  margin-top: .5rem;
+  padding: .25rem;
 }
