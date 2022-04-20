@@ -63,11 +63,20 @@
 
 .addBtn {
   /* height: 0%; */
-  position: right;
+  width: 15%;
+  position: relative;
   background-color: white;
   visibility: hidden;
   opacity: 0;
   transition: all .8s linear;
   display: block;
-  right: 100px;
+  left: 80%;
+  background-color: #e1a95f;
+  border-radius: 10px;
+  color: white;
+  border: white solid;
+}
+
+.addBtn:hover {
+  background-color: #e7b675
 }
