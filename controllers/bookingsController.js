@@ -170,7 +170,7 @@ module.exports = {
     console.log(req.body);
     db.Booking.create(req.body)
       .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.status(422).json(err));
+      .catch((err) =>console.log(err));// res.status(422).json(err));
   },
   update: function (req, res) {
     db.Booking.update(req.body, {

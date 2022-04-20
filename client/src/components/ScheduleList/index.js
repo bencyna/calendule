@@ -68,9 +68,7 @@ function ScheduleList(props) {
     e.preventDefault();
     setError(false);
     if (
-      (eventInput.title && eventInput.description,
-      eventInput.time,
-      eventInput.location)
+      (eventInput.title && props.selectedDay)
     ) {
       dispatch({
         type: "modalClick",
@@ -80,11 +78,11 @@ function ScheduleList(props) {
         title: eventInput.title,
         description: eventInput.description,
         time: eventInput.time,
-        date: state.date,
+        date: props.selectedDay,
         location: eventInput.location,
         booker_id: state.user_id,
         bookee_id: state.user_id,
-        accepted: false,
+        accepted: true,
         bookerPending: false,
       })
         .then((res) => {
