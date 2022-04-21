@@ -101,6 +101,7 @@ function ScheduleList(props) {
   };
 
   const seeAllEvents = () => {
+    props.setSelectedDay("")
     props.updateBookings()
   }
 
