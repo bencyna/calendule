@@ -41,7 +41,7 @@ export default function EventSpring(props) {
   return (
     <div className={`overlay ${props.show}`}>
     <div className="eventTitle">
-        <h6 className="inline-block eventHead">title of event</h6>
+        <h6 className="inline-block eventHead">{state.currentBooking.title}</h6>
         <Minimize2 className="inline-block minimise" onClick={hideOverlay}/>
 
     </div>
@@ -55,9 +55,6 @@ export default function EventSpring(props) {
             // onClick={deleteEvent}
           />
         </div>
-        <h2 className="h2 title">
-          {state.currentBooking.title} ~ {props.bookingWith}
-        </h2>
         <ul className="ul">
           <li className="li">
             <FeatherIcon icon="info" className="detailsIcon" />
