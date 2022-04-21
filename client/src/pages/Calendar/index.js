@@ -20,16 +20,19 @@ function Calendar() {
 
 
   useEffect(() => {
-      API.getAllBookings(state.user_id).then((res) => {
-        setDetailedEvents(res.data);
-        const events =  res.data.map((event) => {
-          // event
-          return {title: event.title, date: event.date, id: event.id}
-        })
-        setAllEvents(events);
-        
-    });
+      updateBookings();
   }, []);
+
+  const updateBookings = () => {
+    API.getAllBookings(state.user_id).then((res) => {
+      setDetailedEvents(res.data);
+      const events =  res.data.map((event) => {
+        // event
+        return {title: event.title, date: event.date, id: event.id}
+      })
+      setAllEvents(events);
+  });
+  }
 
   const handleDateClick = (arg) => {
     // Take you to events on this dat 
