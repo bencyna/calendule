@@ -10,6 +10,7 @@
 .detailsIcon {
   margin-right: 1%;
   margin-left: 2%;
+  padding: .20rem;
 }
 
 .overlay {
@@ -46,4 +47,10 @@
 
 .updatePost:hover{
   color: black;
+}
+
+.eventDetailItem {
+  font-size: 1rem;
+  outline: none;
+  border: none;
 }

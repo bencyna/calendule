@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import "./style.css"
 import FeatherIcon from "feather-icons-react";
-import {Minimize2, Edit}  from 'react-feather';
+import {Minimize2, 
+    Edit, 
+    Trash2,
+    Info,
+    Map,
+    Calendar,
+    Clock,
+}  from 'react-feather';
 
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
@@ -49,27 +56,26 @@ export default function EventSpring(props) {
         <div className="updatePosts">
             <Edit className="updatePost"onClick={updateEvent}/>
 
-          <FeatherIcon
-            icon="trash-2"
+          <Trash2
             className="updatePost"
             // onClick={deleteEvent}
           />
         </div>
         <ul className="ul">
           <li className="li">
-            <FeatherIcon icon="info" className="detailsIcon" />
-            <Link to="#"> {state.currentBooking.description}</Link>
+            <Info className="detailsIcon" />
+            <input className="eventDetailItem" value = {state.currentBooking.description}></input>
           </li>
           <li className="li">
-            <FeatherIcon icon="map-pin" className="detailsIcon" />{" "}
-            <Link to="#"> {state.currentBooking.location}</Link>
+            <Map className="detailsIcon" />{" "}
+            <input className="eventDetailItem" value = {state.currentBooking.location}></input>
           </li>
           <li className="li">
-            <FeatherIcon icon="calendar" className="detailsIcon" />{" "}
-            <Link to="#"> {state.currentBooking.date}</Link>
+            <Calendar className="detailsIcon" />{" "}
+            <input className="eventDetailItem" value = {state.currentBooking.date}></input>
           </li>
           <li className="li">
-            <FeatherIcon icon="clock" className="detailsIcon" />{" "}
+            <Clock className="detailsIcon" />{" "}
             <TimePicker
               start="10:00"
               end="21:00"
