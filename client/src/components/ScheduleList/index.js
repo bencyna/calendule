@@ -86,7 +86,7 @@ function ScheduleList(props) {
         bookerPending: false,
       })
         .then((res) => {
-          alert("Event request succesful!");
+          props.updateBookings();
         })
         .catch((err) => {
           console.log(err)
