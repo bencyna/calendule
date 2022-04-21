@@ -118,7 +118,7 @@ function Calendar() {
             Delete account
           </button> */}
           </div>
-          <ScheduleList bookings = {detailedEvents} noEvents={noEvents} selectedDay={slectedDay} setSelectedDay={setSelectedDay} updateBookings={updateBookings}/>
+          <ScheduleList bookings = {detailedEvents} noEvents={noEvents} selectedDay={slectedDay} setSelectedDay={setSelectedDay} updateBookings={updateBookings} handleDateClick={handleDateClick}/>
         </div>
     </div>
   );

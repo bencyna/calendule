@@ -87,7 +87,8 @@ function ScheduleList(props) {
       })
         .then((res) => {
           setEventInput({ ...eventInput, title: "" });
-          props.updateBookings();
+          const arg = {"dateStr": props.selectedDay}
+          props.handleDateClick(arg);
         })
         .catch((err) => {
           console.log(err)
