@@ -100,6 +100,10 @@ function ScheduleList(props) {
     }
   };
 
+  const seeAllEvents = () => {
+    props.updateBookings()
+  }
+
 
   return (
     <div className="scheduleList"> 
@@ -107,6 +111,7 @@ function ScheduleList(props) {
         <input placeholder="Add to your calendar..." ref={eventInputRef} name="title" onChange={handleInputChange} value={eventInput.title} className="addEventTitle"></input>
         <div className="headerExtras">
           <input type="date" onChange={(e) => props.setSelectedDay(e.target.value)} className="inline-block eventDateTitle" value={props.selectedDay}></input>
+          <small className="seeAllEvents" onClick={seeAllEvents}> see all events</small> 
           <button type="button" onClick={handleEventSubmit} className={`${showAddBtn} inline-block addBtn`}>
             Add
           </button>

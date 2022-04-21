@@ -83,3 +83,11 @@
   margin-top: .5rem;
   padding: .25rem;
 }
+
+.seeAllEvents {
+  cursor: pointer;
+  transition:  ease-in-out .3s;
+}
+.seeAllEvents:hover{
+  color: rgb(238, 207, 207);
+}
