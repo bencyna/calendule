@@ -64,25 +64,19 @@ export default function EventSpring(props) {
         <ul className="ul">
           <li className="li">
             <Info className="detailsIcon" />
-            <input className="eventDetailItem" value = {state.currentBooking.description}></input>
+            <input className="eventDetailItem" value={state.currentBooking.description} placeholder="Add your description here..."></input>
           </li>
           <li className="li">
             <Map className="detailsIcon" />{" "}
-            <input className="eventDetailItem" value = {state.currentBooking.location}></input>
+            <input className="eventDetailItem" value={state.currentBooking.location} placeholder="remind yourself of where this is..."></input>
           </li>
           <li className="li">
             <Calendar className="detailsIcon" />{" "}
-            <input className="eventDetailItem" value = {state.currentBooking.date}></input>
+            <input type="date" className="eventDetailItem" value = {state.currentBooking.date}></input>
           </li>
           <li className="li">
             <Clock className="detailsIcon" />{" "}
-            <TimePicker
-              start="10:00"
-              end="21:00"
-              step={30}
-              value={state.currentBooking.time}
-              className="time"
-            />
+            <input type="time" className="eventDetailItem" value={state.currentBooking.time}></input>
           </li>
         </ul>
       </div>
