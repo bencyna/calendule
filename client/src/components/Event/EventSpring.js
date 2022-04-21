@@ -48,13 +48,13 @@ export default function EventSpring(props) {
   return (
     <div className={`overlay ${props.show}`}>
     <div className="eventTitle">
-        <h6 className="inline-block eventHead">{state.currentBooking.title}</h6>
+        <textarea className="inline-block eventHead" draggable="false" contenteditable="true" value ={state.currentBooking.title}></textarea>
         <Minimize2 className="inline-block minimise" onClick={hideOverlay}/>
 
     </div>
     <div className="listCOntainer">
         <div className="updatePosts">
-            <Edit className="updatePost"onClick={updateEvent}/>
+            {/* <Edit className="updatePost"onClick={updateEvent}/> */}
 
           <Trash2
             className="updatePost"
