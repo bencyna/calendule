@@ -88,6 +88,9 @@ function ScheduleList(props) {
           setEventInput({ ...eventInput, title: "" });
           const arg = {"dateStr": props.selectedDay}
           props.handleDateClick(arg);
+          // add to calendar
+          const joined = props.events.concat({title: res.data.title, date: res.data.date, id: res.data.id})
+          props.setAllEvents(joined)
         })
         .catch((err) => {
           console.log(err)
@@ -100,7 +103,6 @@ function ScheduleList(props) {
   };
 
   const handleEnter = (event) => {
-    console.log(event.key)
     if (event.key == "Enter"){
       handleEventSubmit(event)
     }

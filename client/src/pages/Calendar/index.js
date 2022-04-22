@@ -30,6 +30,7 @@ function Calendar() {
         // event
         return {title: event.title, date: event.date, id: event.id}
       })
+      console.log(events)
       setAllEvents(events);
   });
   }
@@ -118,7 +119,7 @@ function Calendar() {
             Delete account
           </button> */}
           </div>
-          <ScheduleList bookings = {detailedEvents} noEvents={noEvents} selectedDay={slectedDay} setSelectedDay={setSelectedDay} updateBookings={updateBookings} handleDateClick={handleDateClick}/>
+          <ScheduleList bookings = {detailedEvents} noEvents={noEvents} selectedDay={slectedDay} setSelectedDay={setSelectedDay} updateBookings={updateBookings} handleDateClick={handleDateClick} events={all_events} setAllEvents={setAllEvents}/>
         </div>
     </div>
   );
