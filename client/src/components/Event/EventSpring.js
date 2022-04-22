@@ -19,6 +19,17 @@ import TimePicker from "react-bootstrap-time-picker";
 export default function EventSpring(props) {
   const [state, dispatch] = useStoreContext();
 
+  // when items change, update the state
+  const editTask = (e) => {
+    const { name, value } = e.target;
+    dispatch({
+          type: "CURRENTBOOKING",
+          currentBooking: {
+              ...state.currentBooking, [name]: value
+          }
+      })
+  }
+
 //   const deleteEvent = () => {
 //     if (window.confirm("Cancel this Event?")) {
 //       API.deletePost(state.currentBooking.id)
@@ -64,19 +75,19 @@ export default function EventSpring(props) {
         <ul className="ul">
           <li className="li">
             <Info className="detailsIcon" />
-            <input className="eventDetailItem" value={state.currentBooking.description} placeholder="Add your description here..."></input>
+            <input className="eventDetailItem" name="description" onChange={editTask} value={state.currentBooking.description} placeholder="Add your description here..."></input>
           </li>
           <li className="li">
             <Map className="detailsIcon" />{" "}
-            <input className="eventDetailItem" value={state.currentBooking.location} placeholder="remind yourself of where this is..."></input>
+            <input className="eventDetailItem" name="location" onChange={editTask} value={state.currentBooking.location} placeholder="remind yourself of where this is..."></input>
           </li>
           <li className="li">
             <Calendar className="detailsIcon" />{" "}
-            <input type="date" className="eventDetailItem" value = {state.currentBooking.date}></input>
+            <input type="date" className="eventDetailItem" name="date" onChange={editTask} value={state.currentBooking.date}></input>
           </li>
           <li className="li">
             <Clock className="detailsIcon" />{" "}
-            <input type="time" className="eventDetailItem" value={state.currentBooking.time}></input>
+            <input type="time" className="eventDetailItem" name="time" onChange={editTask} value={state.currentBooking.time}></input>
           </li>
         </ul>
       </div>
