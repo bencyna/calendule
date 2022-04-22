@@ -54,7 +54,6 @@ function ScheduleList(props) {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setEventInput({ ...eventInput, [name]: value });
-    console.log(eventInput.title.length);
 
       if (name == "title" && value.length > 0) {
         toggleBtn("show")
@@ -100,6 +99,13 @@ function ScheduleList(props) {
     }
   };
 
+  const handleEnter = (event) => {
+    console.log(event.key)
+    if (event.key == "Enter"){
+      handleEventSubmit(event)
+    }
+  }
+
   const seeAllEvents = () => {
     props.updateBookings()
     props.setSelectedDay("")
@@ -109,7 +115,7 @@ function ScheduleList(props) {
   return (
     <div className="scheduleList"> 
       <div className="scheduleHeader"> 
-        <input placeholder="Add to your calendar..." ref={eventInputRef} name="title" onChange={handleInputChange} value={eventInput.title} className="addEventTitle"></input>
+        <input placeholder="Add to your calendar..." onKeyUp={handleEnter} ref={eventInputRef} name="title" onChange={handleInputChange} value={eventInput.title} className="addEventTitle"></input>
         <div className="headerExtras">
           <input type="date" onChange={(e) => props.setSelectedDay(e.target.value)} className="inline-block eventDateTitle" value={props.selectedDay}></input>
           <small className="seeAllEvents" onClick={seeAllEvents}> see all events</small> 
