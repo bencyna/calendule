@@ -13,7 +13,6 @@ function Event(props) {
     if (window.confirm("Cancel this Event?")) {
       API.deletePost(state.currentBooking.id)
         .then((res) => {
-          console.log("Ben changhe this to re mount the other component maybe");
           props.setNoEvents(false);
           dispatch({
             type: "CLICKEDEVENT",

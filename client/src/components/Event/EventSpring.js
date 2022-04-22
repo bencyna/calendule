@@ -28,22 +28,25 @@ export default function EventSpring(props) {
               ...state.currentBooking, [name]: value
           }
       })
+      // show the save edits button and also the reset btn
   }
 
-//   const deleteEvent = () => {
-//     if (window.confirm("Cancel this Event?")) {
-//       API.deletePost(state.currentBooking.id)
-//         .then((res) => {
-//           console.log("Ben changhe this to re mount the other component maybe");
-//           props.setNoEvents(false);
-//           dispatch({
-//             type: "CLICKEDEVENT",
-//             clickedEvent: false,
-//           });
-//         })
-//         .catch((err) => console.log(err));
-//     }
-//   };
+  const deleteEvent = () => {
+      console.log(state.currentBooking.id)
+    if (window.confirm("Cancel this Event?")) {
+      API.deletePost(state.currentBooking.id)
+        .then((res) => {
+          props.updateBookings()
+          hideOverlay()
+          props.setNoEvents(false);
+          dispatch({
+            type: "CLICKEDEVENT",
+            clickedEvent: false,
+          });
+        })
+        .catch((err) => console.log(err));
+    }
+  };
 
  const hideOverlay = () => {
     props.toggleOverlay("");
@@ -69,7 +72,7 @@ export default function EventSpring(props) {
 
           <Trash2
             className="updatePost"
-            // onClick={deleteEvent}
+            onClick={deleteEvent}
           />
         </div>
         <ul className="ul">

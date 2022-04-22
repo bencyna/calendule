@@ -124,7 +124,7 @@ function ScheduleList(props) {
           return <li className="taskListItem" key={booking.id} id={booking.id} onClick={clickEvent}>{booking.title}</li>;
         })}
       </ul>
-      <EventSpring show={show} toggleOverlay={toggleOverlay} bookingWith={bookingWith}/>
+      <EventSpring show={show} toggleOverlay={toggleOverlay} bookingWith={bookingWith} updateBookings={props.updateBookings}/>
     </div>
   );
 }
