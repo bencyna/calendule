@@ -86,9 +86,10 @@ function ScheduleList(props) {
       })
         .then((res) => {
           setEventInput({ ...eventInput, title: "" });
+          // reload the current date so new event is added
           const arg = {"dateStr": props.selectedDay}
           props.handleDateClick(arg);
-          // add to calendar
+          // add to calendar 
           const joined = props.events.concat({title: res.data.title, date: res.data.date, id: res.data.id})
           props.setAllEvents(joined)
         })
