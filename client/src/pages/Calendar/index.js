@@ -25,6 +25,7 @@ function Calendar() {
 
   const updateBookings = () => {
     API.getAllBookings(state.user_id).then((res) => {
+      // limit this to most upcoming 10 or something, then have see more option
       setDetailedEvents(res.data);
       const events =  res.data.map((event) => {
         // event
