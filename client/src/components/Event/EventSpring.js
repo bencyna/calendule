@@ -18,6 +18,7 @@ import TimePicker from "react-bootstrap-time-picker";
 
 export default function EventSpring(props) {
   const [state, dispatch] = useStoreContext();
+  const [showUpdateBtn, toggleUpdateBtn] = useState("");
 
   // when items change, update the state
   const editTask = (e) => {
@@ -28,6 +29,7 @@ export default function EventSpring(props) {
               ...state.currentBooking, [name]: value
           }
       })
+      toggleUpdateBtn("show")
       // show the save edits button and also the reset btn
   }
 
@@ -93,6 +95,14 @@ export default function EventSpring(props) {
             <input type="time" className="eventDetailItem" name="time" onChange={editTask} value={state.currentBooking.time}></input>
           </li>
         </ul>
+      </div>
+      <div className="editBtns">
+      <button type="button" onClick={updateEvent} className={`${showUpdateBtn} resetBtn`}>
+        reset changes
+      </button>
+      <button type="button" onClick={updateEvent} className={`${showUpdateBtn} updateBtn`}>
+        Edit
+      </button>
       </div>
     </div>
   )

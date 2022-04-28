@@ -55,3 +55,28 @@
   border: none;
   width: 90%;
 }
+
+.updateBtn.show  {
+  visibility: visible;
+  opacity: 1;
+  transition: all .4s linear;
+}
+
+.updateBtn {
+  /* height: 0%; */
+  width: 20%;
+  position: relative;
+  background-color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .8s linear;
+  background-color: #e1a95f;
+  border-radius: 10px;
+  color: white;
+  border: white solid;
+  float: right;
+}
+
+.updateBtn:hover {
+  background-color: #e7b675
+}
