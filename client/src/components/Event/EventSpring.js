@@ -59,6 +59,26 @@ export default function EventSpring(props) {
       type: "modalClick",
       date: state.currentBooking.date,
     });
+    if ( state.currentBooking.date &&  state.currentBooking.time) {
+        API.updatePost({
+          bookerPending: !state.currentBooking.bookerPending,
+          id: state.currentBooking.id,
+          date:  state.currentBooking.date,
+          time:  state.currentBooking.time,
+          description: state.currentBooking.description,
+          location: state.currentBooking.location,
+        })
+          .then((res) => {
+            alert("Reshedule requested");
+            dispatch({
+              type: "CLICKEDEVENT",
+              clickedEvent: false,
+            });
+          })
+          .catch((err) => console.log(err));
+      } else {
+        // setError(true);
+      }
   };
 
   return (
@@ -97,11 +117,11 @@ export default function EventSpring(props) {
         </ul>
       </div>
       <div className="editBtns">
-      <button type="button" onClick={updateEvent} className={`${showUpdateBtn} resetBtn`}>
-        reset changes
-      </button>
       <button type="button" onClick={updateEvent} className={`${showUpdateBtn} updateBtn`}>
-        Edit
+        Save changes
+      </button>
+      <button type="button" onClick={} className={`${showUpdateBtn} resetBtn`}>
+        reset changes
       </button>
       </div>
     </div>

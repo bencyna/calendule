@@ -56,6 +56,7 @@
   width: 90%;
 }
 
+.resetBtn.show,
 .updateBtn.show  {
   visibility: visible;
   opacity: 1;
@@ -64,19 +65,31 @@
 
 .updateBtn {
   /* height: 0%; */
-  width: 20%;
+  width: 30%;
   position: relative;
   background-color: white;
   visibility: hidden;
   opacity: 0;
   transition: all .8s linear;
-  background-color: #e1a95f;
+  color: #e1a95f;
   border-radius: 10px;
-  color: white;
   border: white solid;
   float: right;
 }
 
+.resetBtn {
+  /* height: 0%; */
+  width: 30%;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .8s linear;
+  color: #007bff;
+  border-radius: 10px;
+  border: white solid;
+  background-color: white;
+}
+
 .updateBtn:hover {
-  background-color: #e7b675
+  color: #e7b675
 }
