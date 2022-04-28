@@ -59,6 +59,8 @@ export default function EventSpring(props) {
       type: "modalClick",
       date: state.currentBooking.date,
     });
+    // figure out how to save time data and make time column appear correct
+    console.log(state.currentBooking.time)
     if ( state.currentBooking.date &&  state.currentBooking.time) {
         API.updatePost({
           bookerPending: !state.currentBooking.bookerPending,
@@ -80,6 +82,10 @@ export default function EventSpring(props) {
         // setError(true);
       }
   };
+
+  const resetChanges = () => {
+
+  }
 
   return (
     <div className={`overlay ${props.show}`}>
@@ -120,7 +126,7 @@ export default function EventSpring(props) {
       <button type="button" onClick={updateEvent} className={`${showUpdateBtn} updateBtn`}>
         Save changes
       </button>
-      <button type="button" onClick={} className={`${showUpdateBtn} resetBtn`}>
+      <button type="button" onClick={resetChanges} className={`${showUpdateBtn} resetBtn`}>
         reset changes
       </button>
       </div>
