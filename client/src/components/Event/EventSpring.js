@@ -19,9 +19,21 @@ import TimePicker from "react-bootstrap-time-picker";
 export default function EventSpring(props) {
   const [state, dispatch] = useStoreContext();
   const [showUpdateBtn, toggleUpdateBtn] = useState("");
+  const [savedEventData, setSavedEventData] = useState({})
 
   // when items change, update the state
   const editTask = (e) => {
+    if (Object.keys(savedEventData).length === 0) {
+        setSavedEventData({
+            bookerPending: !state.currentBooking.bookerPending,
+            id: state.currentBooking.id,
+            date:  state.currentBooking.date,
+            time:  state.currentBooking.time,
+            description: state.currentBooking.description,
+            location: state.currentBooking.location,
+        });
+    }
+
     const { name, value } = e.target;
     dispatch({
           type: "CURRENTBOOKING",
@@ -84,7 +96,12 @@ export default function EventSpring(props) {
   };
 
   const resetChanges = () => {
-
+      console.log(savedEventData)
+    dispatch({
+        type: "CURRENTBOOKING",
+        currentBooking: savedEventData,
+      });
+      console.log(state.currentBooking)
   }
 
   return (
