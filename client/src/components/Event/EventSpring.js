@@ -96,18 +96,16 @@ export default function EventSpring(props) {
   };
 
   const resetChanges = () => {
-      console.log(savedEventData)
     dispatch({
         type: "CURRENTBOOKING",
         currentBooking: savedEventData,
       });
-      console.log(state.currentBooking)
   }
 
   return (
     <div className={`overlay ${props.show}`}>
     <div className="eventTitle">
-        <textarea className="inline-block eventHead" draggable="false" contenteditable="true" value ={state.currentBooking.title}></textarea>
+        <textarea className="inline-block eventHead" draggable="false" value ={state.currentBooking.title}></textarea>
         <Minimize2 className="inline-block minimise" onClick={hideOverlay}/>
 
     </div>

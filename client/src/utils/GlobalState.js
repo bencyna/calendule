@@ -129,7 +129,7 @@ const StoreProvider = ({ value = [], ...props }) => {
     search: "",
     logged_in: false,
     user_id: "",
-    currentBooking: {},
+    currentBooking: {description: "", date: new Date(), location: "", time: ""},
     clickedEvent: false,
     actionRequired: false,
     bookingWith: "",
