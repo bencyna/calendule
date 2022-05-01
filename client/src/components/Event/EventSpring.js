@@ -89,9 +89,13 @@ export default function EventSpring(props) {
               clickedEvent: false,
             });
           })
-          .catch((err) => console.log(err));
+          .catch((err) => {
+            console.log(err);
+            alert("Issue with server")
+          }) 
       } else {
         // setError(true);
+        alert("date and or time missing")
       }
   };
 
