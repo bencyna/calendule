@@ -23,7 +23,7 @@ Booking.init(
       allowNull: false,
     },
     time: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     location: {

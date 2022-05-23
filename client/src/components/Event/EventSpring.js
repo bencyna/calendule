@@ -72,6 +72,7 @@ export default function EventSpring(props) {
       date: state.currentBooking.date,
     });
     // figure out how to save time data and make time column appear correct //
+    //
     console.log(state.currentBooking.time)
     if ( state.currentBooking.date &&  state.currentBooking.time) {
         API.updatePost({
