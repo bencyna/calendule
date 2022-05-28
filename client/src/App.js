@@ -18,15 +18,15 @@ function App() {
       <div>
         <StoreProvider>
           <Switch>
-            <Route exact path="/login" component={Welcome} />
+            <Route exact path="/login" component={Welcome}/>
             <>
               <NavBar />
               <Route component={Calendar} path="/" exact />
-              <Route exact path="/date/:id" component={Day} />
-              <Route exact path="/find" component={Find} />
-              <Route exact path="/user/:id" component={altUserCalendar} />
-              <Route exact path="/pending" component={Pending} />
-              <Route exact path="/pending/event/" component={PendingEvent} />
+              <Route exact path="/date/:id" component={Day}/>
+              <Route exact path="/find" component={Find}/>
+              <Route exact path="/user/:id" component={altUserCalendar}/>
+              <Route exact path="/pending" component={Pending}/>
+              <Route exact path="/pending/event/" component={PendingEvent}/>
             </>
           </Switch>
         </StoreProvider>
