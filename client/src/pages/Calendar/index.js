@@ -3,7 +3,7 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import "./style.css";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
 import {Link } from 'react-router-dom';
@@ -24,6 +24,13 @@ function Calendar() {
   }, []);
 
   const updateBookings = () => {
+    API.isLoggedIn().then((res) => {
+      console.log(res.data.logged_in)
+      if (res.data.logged_in != true) {
+        // redirect to login
+        window.location.replace("/login");
+      }
+    }); 
     API.getAllBookings(state.user_id).then((res) => {
       // limit this to most upcoming 10 or something, then have see more option
       setDetailedEvents(res.data);
@@ -31,9 +38,10 @@ function Calendar() {
         // event
         return {title: event.title, date: event.date, id: event.id}
       })
-      console.log(events)
       setAllEvents(events);
   });
+  console.log(state.user_id)
+
   }
 
   const handleDateClick = (arg) => {

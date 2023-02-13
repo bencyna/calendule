@@ -47,7 +47,8 @@ function SignUpForm() {
           history.push("/");
         })
         .catch((err) => {
-          setErrorMessage("That email is already in use");
+          console.log(err);
+          setErrorMessage("That didn't work, that email may already be in use");
           setError(true);
         });
     } else {
