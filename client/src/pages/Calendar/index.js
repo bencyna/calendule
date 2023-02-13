@@ -26,7 +26,7 @@ function Calendar() {
   const updateBookings = () => {
     API.isLoggedIn().then((res) => {
       console.log(res.data.logged_in)
-      if (res.data.logged_in != true) {
+      if (res.data.logged_in != true) { 
         // redirect to login
         window.location.replace("/login");
       }
