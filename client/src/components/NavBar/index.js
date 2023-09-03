@@ -19,7 +19,7 @@ function NavBar() {
       .catch((err) => {
         console.log(err);
       });
-  };
+  }; 
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
